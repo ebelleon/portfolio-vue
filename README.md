@@ -1,4 +1,8 @@
-# portfolio-vue
+# Portfolio of Leon Ebel
+
+This is the Portfolio of Leon Ebel written in Vue.js with Docker.
+
+![logo](src/assets/img/favicon/favicon-128.png)
 
 ## Project setup
 ```
@@ -20,12 +24,12 @@ npm run build
 npm run lint
 ```
 
-### Start development environment
+### Start Vue development environment with docker-compose
 ```
 docker-compose up --build
 ```
 
-### Build production environment
+### Build Vue production environment with docker-compose
 ```
 docker-compose -f docker-compose-prod.yml up -d --build
 ```
