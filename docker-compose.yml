@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: portfolio-develop
+    build:
+      context: .
+      target: develop
+    ports:
+    - '8080:8080'
+    volumes:
+    - '.:/app'
+    - '/app/node_modules'
+    command: /bin/sh -c "npm run serve"

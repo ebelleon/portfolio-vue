@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: portfolio-prod
+    build:
+      context: .
+      target: prod
+    restart: always
+    healthcheck:
+      test:  wget -q -t 1 --spider http://localhost || exit 1
+      interval: 5m
+      timeout: 3s
+    environment:
+      - VIRTUAL_HOST=ebelleon.de,www.ebelleon.de
+      - LETSENCRYPT_HOST=ebelleon.de,www.ebelleon.de
+      - LETSENCRYPT_EMAIL=ebel.leon@hotmail.com
+    networks:
+      - default
+      - nginx-proxy_default
+
+volumes:
+  data:
+
+networks:
+  nginx-proxy_default:
+    external: true
