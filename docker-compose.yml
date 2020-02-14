@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  nuxt:
+    container_name: portfolio-nuxt
+    build:
+      context: ./src/
+      target: build
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - NUXT_HOST=0.0.0.0
+    ports:
+      - "3000:3000"
+    command:
+      "npm run start"
+
+  app:
+    image: nginx:stable-alpine
+    container_name: portfolio-app
+    restart: always
+    # env_file:
+    #   - ./.env
+    ports:
+      - "80:80"
+    volumes:
+      - ./config:/etc/nginx
+    healthcheck:
+      test:  wget -q -t 1 --spider http://localhost || exit 1
+      interval: 5m
+      timeout: 3s
+    depends_on:
+      - nuxt
+    networks:
+      - default
+      # - nginx-proxy_default
+
+# networks:
+#   nginx-proxy_default:
+#     external: true
