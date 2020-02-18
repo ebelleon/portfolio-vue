@@ -1,44 +1,42 @@
 <template>
   <div>
     <div class="content">
-      <h1>Impressum</h1>
-      <h3>Angaben gem&auml;&szlig; &sect; 5 TMG:</h3>
+      <h1>{{ title }}</h1>
+      <h3>Angaben gemäß § 5 TMG:</h3>
 
       <p>
-        Leon Ebel<br /><br />
-        <a href="/#contact">Kontaktforumlar</a>
+        {{ fullName }}<br /><br />
+        <a href="/#contact">{{ contactForm }}</a>
       </p>
 
-      <h3>Haftung f&uuml;r Inhalte</h3>
+      <h3>Haftung für Inhalte</h3>
       <p>
         Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die
         Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir
-        jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir
-        gem&auml;&szlig; &sect; 7 Abs.1 TMG f&uuml;r eigene Inhalte auf diesen
-        Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8
-        bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet,
-        &uuml;bermittelte oder gespeicherte fremde Informationen zu
-        &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine
-        rechtswidrige T&auml;tigkeit hinweisen.
+        jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7
+        Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen
+        Gesetzen verantwortlich. Nach § 8 bis 10 TMG sind wir als
+        Diensteanbieter jedoch nicht verpflichtet, übermittelte oder
+        gespeicherte fremde Informationen zu überwachen oder nach Umständen zu
+        forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
       </p>
       <p>
         Verpflichtungen zur Entfernung oder Sperrung der Nutzung von
-        Informationen nach den allgemeinen Gesetzen bleiben hiervon
-        unber&uuml;hrt. Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem
-        Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung m&ouml;glich.
-        Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese
-        Inhalte umgehend entfernen.
+        Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+        Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
+        Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von
+        entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend
+        entfernen.
       </p>
 
-      <h3>Haftung f&uuml;r Links</h3>
+      <h3>Haftung für Links</h3>
       <p>
-        Unser Angebot enth&auml;lt Links zu externen Webseiten Dritter, auf
-        deren Inhalte wir keinen Einfluss haben. Deshalb k&ouml;nnen wir
-        f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen.
-        F&uuml;r die Inhalte der verlinkten Seiten ist stets der jeweilige
-        Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten
-        wurden zum Zeitpunkt der Verlinkung auf m&ouml;gliche
-        Rechtsverst&ouml;&szlig;e &uuml;berpr&uuml;ft. Rechtswidrige Inhalte
+        Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren
+        Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden
+        Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten
+        Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
+        verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der
+        Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte
         waren zum Zeitpunkt der Verlinkung nicht erkennbar.
       </p>
       <p>
@@ -51,12 +49,11 @@
       <h3>Urheberrecht</h3>
       <p>
         Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen
-        Seiten unterliegen dem deutschen Urheberrecht. Die
-        Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der
-        Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen
-        der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-        Downloads und Kopien dieser Seite sind nur f&uuml;r den privaten, nicht
-        kommerziellen Gebrauch gestattet.
+        Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung,
+        Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+        Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des
+        jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite
+        sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
       </p>
       <p>
         Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden,
@@ -68,40 +65,43 @@
       </p>
     </div>
 
-    <div class="cookieBanner">
-      <p>
-        Diese Website verwendet Cookies. Durch die weitere Nutzung der Website
-        stimmst du der <a href="/privacy/#cookies">Cookie-Nutzung</a> zu.
-      </p>
-      <div class="closeContainer">
-        <span class="close"></span>
-      </div>
-    </div>
+    <client-only>
+      <cookieBanner />
+    </client-only>
   </div>
 </template>
 
 <script>
+import CookieBanner from '@/components/CookieBanner.vue'
 export default {
+  components: {
+    CookieBanner
+  },
+  props: {
+    title: {
+      type: String,
+      default: 'Impressum'
+    },
+    fullName: {
+      type: String,
+      default: 'Leon Ebel'
+    },
+    contactForm: {
+      type: String,
+      default: 'Kontaktforumlar'
+    }
+  },
   head() {
     return {
-      script: [
-        {
-          hid: 'disclaimer-script',
-          src: '/js/disclaimer.js',
-          defer: true
-        }
-      ],
-      title: 'Impressum - Leon Ebel - Full Stack Developer'
+      title: `${this.title} - Leon Ebel - Full Stack Developer`
     }
   }
 }
 </script>
 
 <style lang="scss">
-@import 'layouts/partials/colors';
-@import 'layouts/partials/typography';
+@import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
-@import 'layouts/modules/cookie-banner';
 
 body {
   background-color: $transparent;
@@ -138,18 +138,5 @@ body {
   @include desktop {
     padding-left: 2em;
   }
-}
-
-.optOut {
-  font-weight: $bold;
-  margin: 0.8em 0;
-}
-
-.cookieBanner {
-  @include cookieBanner;
-}
-
-.closeContainer {
-  @include closeContainer;
 }
 </style>

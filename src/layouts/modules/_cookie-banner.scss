@@ -1,3 +1,6 @@
+@import 'layouts/partials/vars';
+@import 'layouts/modules/media-queries';
+
 @mixin cookieBanner {
   background-color: $wildDove;
   position: fixed;
