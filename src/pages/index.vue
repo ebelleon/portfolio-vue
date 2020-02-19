@@ -10,16 +10,16 @@
         My portfolio
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
-          class="button--grey"
+          class="button--green"
         >
           GitHub
         </a>
+        <nuxt-link class="button--grey" to="/impressum">{{
+          $t('imprint')
+        }}</nuxt-link>
       </div>
     </div>
   </div>
