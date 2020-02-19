@@ -1,10 +1,7 @@
-FROM node:lts-alpine AS build
+FROM node:lts-alpine
 WORKDIR /app
-COPY . .
+COPY package*.json ./
 RUN npm ci
-RUN npm run generate
-RUN rm /app/dist/README.md
-RUN npm prune --production
-
-FROM nginx:stable-alpine AS server
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY . .
+RUN npm run build
+EXPOSE 2222

@@ -1,24 +1,40 @@
 version: '3.7'
 
 services:
-  app:
-    container_name: portfolio
+  nuxt:
+    container_name: portfolio-nuxt
     build:
       context: ./src/
-      target: server
     restart: always
-    # env_file:
-    #   - ./.env
     environment:
       - NODE_ENV=production
+      - NUXT_HOST=${NUXT_HOST}
+      - NUXT_PORT=${NUXT_PORT}
+    command:
+      "npm run start"
+
+  app:
+    image: nginx:stable-alpine
+    container_name: portfolio-app
+    restart: always
+    # TODO: add environment variables
+    environment:
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
     ports:
       - "80:80"
     volumes:
       - ./config:/etc/nginx
     healthcheck:
       test:  wget -q -t 1 --spider http://localhost || exit 1
-      interval: 5m
+      interval: 30m
       timeout: 3s
+    logging:
+      driver: 'json-file'
+      options:
+        max-file: '5'
+        max-size: '10m'
+    depends_on:
+      - nuxt
     networks:
       - default
       # - nginx-proxy_default
