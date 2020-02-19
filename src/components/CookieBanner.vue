@@ -1,9 +1,8 @@
 <template>
   <div v-if="isOpen" class="cookieBanner">
     <p>
-      Diese Website verwendet Cookies. Durch die weitere Nutzung der Website
-      stimmst du der
-      <nuxt-link to="/privacy/#cookies">Cookie-Nutzung</nuxt-link> zu.
+      {{ $t('cookiePolicyText') }}
+      <nuxt-link to="/privacy/#cookies">{{ $t('moreInfo') }}</nuxt-link>
     </p>
     <div class="closeContainer">
       <span class="close" @click="accept"></span>
@@ -26,13 +25,13 @@ export default {
   methods: {
     getCookieBannerState() {
       if (process.browser) {
-        return localStorage.getItem('closedCookieBanner', true)
+        return localStorage.getItem('closedCookieBanner')
       }
     },
     accept() {
       if (process.browser) {
         this.isOpen = false
-        localStorage.setItem('closedCookieBanner', true)
+        localStorage.setItem('closedCookieBanner', 1)
       }
     }
   }
