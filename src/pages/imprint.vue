@@ -33,7 +33,7 @@
 import CookieBanner from '@/components/CookieBanner.vue'
 import LangToggle from '@/components/LangToggle.vue'
 export default {
-  layout: 'imprint',
+  layout: 'disclaimer',
   components: {
     CookieBanner,
     LangToggle
