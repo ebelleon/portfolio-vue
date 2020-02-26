@@ -11,16 +11,16 @@
       </p>
 
       <h3>{{ $t('imprint.liabilityContent') }}</h3>
-      <p>{{ $t('imprint.liabilityContentText') }}</p>
-      <p>{{ $t('imprint.liabilityContentTextTwo') }}</p>
+      <p>{{ $t('imprint.liabilityContentDesc') }}</p>
+      <p>{{ $t('imprint.liabilityContentDescTwo') }}</p>
 
       <h3>{{ $t('imprint.liabilityLinks') }}</h3>
-      <p>{{ $t('imprint.liabilityLinksText') }}</p>
-      <p>{{ $t('imprint.liabilityLinksTextTwo') }}</p>
+      <p>{{ $t('imprint.liabilityLinksDesc') }}</p>
+      <p>{{ $t('imprint.liabilityLinksDescTwo') }}</p>
 
       <h3>{{ $t('imprint.copyright') }}</h3>
-      <p>{{ $t('imprint.copyrightText') }}</p>
-      <p>{{ $t('imprint.copyrightTextTwo') }}</p>
+      <p>{{ $t('imprint.copyrightDesc') }}</p>
+      <p>{{ $t('imprint.copyrightDescTwo') }}</p>
     </div>
 
     <client-only>

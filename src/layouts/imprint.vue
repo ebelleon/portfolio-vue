@@ -34,11 +34,6 @@ body {
 
   ul {
     padding-left: 2.35em;
-
-    li {
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-    }
   }
 
   @include desktop {
