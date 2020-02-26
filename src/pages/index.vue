@@ -1,14 +1,10 @@
 <!-- eslint-disable vue-i18n/no-raw-text -->
 <template>
   <div class="container">
-    <div>
+    <div class="homeText">
       <logo />
-      <h1 class="title">
-        portfolio-vue
-      </h1>
-      <h2 class="subtitle">
-        My portfolio
-      </h2>
+      <h1 class="homeTitle">{{ $t('name') }}</h1>
+      <h2 class="homeSubtitle">{{ $t('jobTitle') }}</h2>
       <div class="links">
         <a
           href="https://github.com/nuxt/nuxt.js"
@@ -35,32 +31,50 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import 'layouts/partials/vars';
+@import 'layouts/modules/media-queries';
+
 .container {
-  margin: 0 auto;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.homeText {
+  // color: $alabaster;
+  padding: 0 10vw;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.homeTitle {
+  font-size: 3.2em;
+  font-weight: $light;
+  margin: 0;
+
+  @include tablet {
+    font-size: 4em;
+  }
+}
+
+.homeSubtitle {
+  font-size: 1.2em;
+  font-weight: $thin;
+  margin: 0;
+
+  @include tablet {
+    font-size: $headlineDefault;
+  }
+}
+
+.title {
+  color: $codGray;
+  font-size: $headlineDefault;
+  font-weight: $bold;
+  margin: 0.83em 1em 1.66em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .links {

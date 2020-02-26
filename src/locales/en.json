@@ -1,6 +1,9 @@
 {
+  "name": "Leon Ebel",
+  "jobTitle": "Full Stack Web Developer",
+
   "cookiePolicyText": "This website uses cookies. By continuing to use this website, you consent to the use of the Cookies Policy.",
-  
+
   "imprint": "Imprint",
   "liabilityHeadline": "Information according to § 5 TMG:",
   "liabilityContent": "Liability for contents",
@@ -12,6 +15,8 @@
   "copyright": "Copyright",
   "copyrightText": "The contents and works on these pages created by the site operators are subject to German copyright law. Duplication, processing, distribution and any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator. Downloads and copies of these pages are only permitted for private, non-commercial use.",
   "copyrightTextTwo": "Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, contents of third parties are marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. As soon as we become aware of any infringements, we will remove such content immediately.",
+
+  "privacy": "Privacy Statement",
 
   "chooseLang": "Select language",
   "moreInfo": "Learn more",
