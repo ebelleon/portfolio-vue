@@ -7,6 +7,7 @@
 <style lang="scss">
 @import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
+@import 'layouts/modules/cookie-banner';
 
 body {
   background-color: $transparent;
@@ -43,5 +44,18 @@ body {
   @include desktop {
     padding-left: 2em;
   }
+}
+
+.optOut {
+  font-weight: $bold;
+  margin: 0.8em 0;
+}
+
+.cookieBanner {
+  @include cookieBanner;
+}
+
+.closeContainer {
+  @include closeContainer;
 }
 </style>

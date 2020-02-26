@@ -2,25 +2,25 @@
   <div>
     <langToggle />
     <div class="content">
-      <h1>{{ $t('imprint') }}</h1>
-      <h3>{{ $t('liabilityHeadline') }}</h3>
+      <h1>{{ $t('imprint.title') }}</h1>
+      <h3>{{ $t('imprint.liabilityHeadline') }}</h3>
 
       <p>
-        {{ fullName }}<br /><br />
-        <nuxt-link to="/#contact">{{ $t('contactForm') }}</nuxt-link>
+        {{ $t('shared.fullName') }}<br /><br />
+        <nuxt-link to="/#contact">{{ $t('shared.contactForm') }}</nuxt-link>
       </p>
 
-      <h3>{{ $t('liabilityContent') }}</h3>
-      <p>{{ $t('liabilityContentText') }}</p>
-      <p>{{ $t('liabilityContentTextTwo') }}</p>
+      <h3>{{ $t('imprint.liabilityContent') }}</h3>
+      <p>{{ $t('imprint.liabilityContentText') }}</p>
+      <p>{{ $t('imprint.liabilityContentTextTwo') }}</p>
 
-      <h3>{{ $t('liabilityLinks') }}</h3>
-      <p>{{ $t('liabilityLinksText') }}</p>
-      <p>{{ $t('liabilityLinksTextTwo') }}</p>
+      <h3>{{ $t('imprint.liabilityLinks') }}</h3>
+      <p>{{ $t('imprint.liabilityLinksText') }}</p>
+      <p>{{ $t('imprint.liabilityLinksTextTwo') }}</p>
 
-      <h3>{{ $t('copyright') }}</h3>
-      <p>{{ $t('copyrightText') }}</p>
-      <p>{{ $t('copyrightTextTwo') }}</p>
+      <h3>{{ $t('imprint.copyright') }}</h3>
+      <p>{{ $t('imprint.copyrightText') }}</p>
+      <p>{{ $t('imprint.copyrightTextTwo') }}</p>
     </div>
 
     <client-only>
@@ -38,12 +38,6 @@ export default {
     CookieBanner,
     LangToggle
   },
-  props: {
-    fullName: {
-      type: String,
-      default: 'Leon Ebel'
-    }
-  },
   nuxtI18n: {
     paths: {
       en: '/imprint',
@@ -53,7 +47,7 @@ export default {
   head() {
     return {
       title: `${
-        this.$i18n.messages[this.$i18n.locale].imprint
+        this.$i18n.messages[this.$i18n.locale].imprint.title
       } - Leon Ebel - Full Stack Developer`
     }
   }

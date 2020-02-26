@@ -1,21 +1,19 @@
-<!-- eslint-disable vue-i18n/no-raw-text -->
 <template>
-  <div class="container">
-    <div class="homeText">
-      <logo />
-      <h1 class="homeTitle">{{ $t('name') }}</h1>
-      <h2 class="homeSubtitle">{{ $t('jobTitle') }}</h2>
-      <div class="links">
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--green"
-        >
-          GitHub
-        </a>
-        <nuxt-link class="button--grey" to="/impressum">{{
-          $t('imprint')
-        }}</nuxt-link>
+  <div>
+    <langToggle />
+    <div class="container">
+      <div class="homeText">
+        <logo />
+        <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
+        <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
+        <div class="links">
+          <nuxt-link class="button--green" to="/datenschutz">
+            {{ $t('privacy.title') }}
+          </nuxt-link>
+          <nuxt-link class="button--grey" to="/impressum">
+            {{ $t('imprint.title') }}
+          </nuxt-link>
+        </div>
       </div>
     </div>
   </div>
@@ -23,10 +21,12 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import LangToggle from '@/components/LangToggle.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    LangToggle
   }
 }
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div v-if="isOpen" class="cookieBanner">
     <p>
-      {{ $t('cookiePolicyText') }}
-      <nuxt-link to="/privacy/#cookies">{{ $t('moreInfo') }}</nuxt-link>
+      {{ $t('cookieBanner.consent') }}
+      <nuxt-link to="/privacy/#cookies">{{ $t('shared.moreInfo') }}</nuxt-link>
     </p>
     <div class="closeContainer">
       <span class="close" @click="accept"></span>
