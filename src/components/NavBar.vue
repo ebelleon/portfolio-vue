@@ -6,18 +6,9 @@
       </span>
     </button>
 
-    <ul class="navList">
+    <ul v-for="item in links" :key="item" class="navList">
       <li>
-        <nuxt-link to="#home" class="active">{{ $t('home.home') }}</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="#aboutMe">{{ $t('home.aboutMe') }}</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="#experience">{{ $t('home.experience') }}</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="#contact">{{ $t('home.contact') }}</nuxt-link>
+        <nuxt-link :to="item.href">{{ item.i18n }}</nuxt-link>
       </li>
     </ul>
   </nav>
@@ -26,6 +17,16 @@
 <script>
 // TODO: add Sticky Nav & Hightlighted Nav
 export default {
+  data() {
+    return {
+      links: [
+        { href: '#home', i18n: this.$t('home.home') },
+        { href: '#aboutMe', i18n: this.$t('home.aboutMe') },
+        { href: '#experience', i18n: this.$t('home.experience') },
+        { href: '#contact', i18n: this.$t('home.contact') }
+      ]
+    }
+  },
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale)
