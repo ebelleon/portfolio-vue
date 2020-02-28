@@ -1,6 +1,10 @@
 {
   "home": {
-    "jobTitle": "Full Stack Web Entwickler"
+    "jobTitle": "Full Stack Web Entwickler",
+    "home": "Home",
+    "aboutMe": "Über mich",
+    "experience": "Erfahrung",
+    "contact": "Kontakt"
   },
   "cookieBanner": {
     "consent": "Diese Website verwendet Cookies. Durch die weitere Nutzung der Website stimmst du der Cookie-Nutzung zu."

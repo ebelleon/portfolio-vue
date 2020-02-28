@@ -1,32 +1,37 @@
 <template>
   <div>
-    <langToggle />
-    <div class="container">
-      <div class="homeText">
-        <logo />
-        <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
-        <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
-        <div class="links">
-          <nuxt-link class="button--green" :to="localePath('privacy')">
-            {{ $t('privacy.title') }}
-          </nuxt-link>
-          <nuxt-link class="button--grey" :to="localePath('imprint')">
-            {{ $t('imprint.title') }}
-          </nuxt-link>
+    <section id="home">
+      <langToggle />
+      <div class="container">
+        <div class="homeText">
+          <logo />
+          <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
+          <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
+          <div class="links">
+            <nuxt-link class="button--grey" :to="localePath('privacy')">
+              {{ $t('privacy.title') }}
+            </nuxt-link>
+            <nuxt-link class="button--grey" :to="localePath('imprint')">
+              {{ $t('imprint.title') }}
+            </nuxt-link>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    <navBar />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '@/components/Logo.vue'
 import LangToggle from '@/components/LangToggle.vue'
+import NavBar from '@/components/NavBar.vue'
 
 export default {
   components: {
     Logo,
-    LangToggle
+    LangToggle,
+    NavBar
   }
 }
 </script>
