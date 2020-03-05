@@ -37,10 +37,17 @@ export default {
 @import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
 
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .container {
   min-height: 100vh;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
