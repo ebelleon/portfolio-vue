@@ -6,7 +6,7 @@
       </span>
     </button>
 
-    <ul v-for="item in links" :key="item" class="navList">
+    <ul v-for="(item, index) in links" :key="index" class="navList">
       <li>
         <nuxt-link :to="item.href">{{ item.i18n }}</nuxt-link>
       </li>

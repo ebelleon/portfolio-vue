@@ -4,7 +4,6 @@
       <langToggle />
       <div class="container">
         <div class="homeText">
-          <logo />
           <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
           <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
           <div class="links">
@@ -23,13 +22,11 @@
 </template>
 
 <script>
-import Logo from '@/components/Logo.vue'
 import LangToggle from '@/components/LangToggle.vue'
 import NavBar from '@/components/NavBar.vue'
 
 export default {
   components: {
-    Logo,
     LangToggle,
     NavBar
   }
@@ -45,12 +42,12 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  text-align: center;
 }
 
 .homeText {
   // color: $alabaster;
   padding: 0 10vw;
+  text-align: center;
 }
 
 .homeTitle {
