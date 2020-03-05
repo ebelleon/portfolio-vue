@@ -3,8 +3,7 @@ version: '3.7'
 services:
   nuxt:
     container_name: portfolio-nuxt
-    build:
-      context: ./src/
+    build: .
     restart: always
     environment:
       - NODE_ENV=production
@@ -23,7 +22,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./config:/etc/nginx
+      - ../nginx:/etc/nginx
     healthcheck:
       test:  wget -q -t 1 --spider http://localhost || exit 1
       interval: 30m
