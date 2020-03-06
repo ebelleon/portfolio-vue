@@ -33,7 +33,6 @@ export default {
 @import 'layouts/modules/dropdown';
 
 .langDropdown {
-  align-self: flex-end;
   border-radius: 3px;
   border: 1px solid $codGray;
   margin: 0.77em;

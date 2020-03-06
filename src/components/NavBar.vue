@@ -1,17 +1,26 @@
 <template>
-  <nav class="navbar">
-    <button class="hamburger hamburger--boring" type="button">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
-
-    <ul v-for="(item, index) in links" :key="index" class="navList">
-      <li>
-        <nuxt-link :to="item.href">{{ item.i18n }}</nuxt-link>
-      </li>
-    </ul>
-  </nav>
+  <div>
+    <div>
+      <nav class="navbar">
+        <button
+          class="hamburger hamburger--boring"
+          type="button"
+          @click="toggleBurgerMenu()"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </nav>
+    </div>
+    <div v-if="burgerMenuOpen" class="navList">
+      <ul v-for="(item, index) in links" :key="index">
+        <li>
+          <nuxt-link :to="item.href">{{ item.i18n }}</nuxt-link>
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -24,12 +33,17 @@ export default {
         { href: '#aboutMe', i18n: this.$t('home.aboutMe') },
         { href: '#experience', i18n: this.$t('home.experience') },
         { href: '#contact', i18n: this.$t('home.contact') }
-      ]
+      ],
+      burgerMenuOpen: false
     }
   },
-  computed: {
-    availableLocales() {
-      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale)
+  methods: {
+    toggleBurgerMenu() {
+      const hamburger = this.$el.querySelector('.hamburger')
+      hamburger.classList.contains('is-active')
+        ? hamburger.classList.remove('is-active')
+        : hamburger.classList.toggle('is-active')
+      this.burgerMenuOpen = !this.burgerMenuOpen
     }
   }
 }
@@ -38,11 +52,12 @@ export default {
 <style lang="scss" scoped>
 @import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
+@import 'layouts/vendor/burger_menu/hamburgers';
 
 .navbar {
-  background-color: $flagstone;
-  border-bottom: 2px solid $alabaster;
-  display: inline-block;
+  // background-color: $flagstone;
+  // border-bottom: 2px solid $alabaster;
+  // display: inline-block;
   font-size: 1em;
   width: 100%;
 
@@ -51,10 +66,6 @@ export default {
     background-color: $alabaster;
     border-radius: 2px;
     color: $wildDove;
-  }
-
-  ul {
-    list-style-type: none;
   }
 }
 
@@ -67,8 +78,6 @@ export default {
 
 // Buger Menu Navbar
 .navList {
-  display: none;
-
   li {
     letter-spacing: 2px;
     margin: 0 5em 0.4em 0;
@@ -80,8 +89,12 @@ export default {
     }
   }
 
+  ul {
+    list-style-type: none;
+  }
+
   a {
-    color: $alabaster;
+    color: $codGray;
     padding: 1px 4px 2px 6px;
     text-decoration: none;
   }
@@ -98,20 +111,6 @@ export default {
         margin: 0;
       }
     }
-  }
-}
-
-.hamburger {
-  &.is-active {
-    float: right;
-
-    & ~ .navList {
-      display: inline-block;
-    }
-  }
-
-  @include tablet {
-    display: none;
   }
 }
 </style>

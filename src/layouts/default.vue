@@ -30,13 +30,27 @@ body {
   box-sizing: border-box;
 }
 
+svg:not(:root) {
+  overflow: hidden;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .button--grey {
   border-radius: 4px;
   border: 1px solid #35495e;
   color: #35495e;
   display: inline-block;
   margin-left: 15px;
-  padding: 10px 30px;
+  padding: 10px 20px;
   text-decoration: none;
 
   &:hover {

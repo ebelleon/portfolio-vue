@@ -1,7 +1,17 @@
 <template>
   <div>
-    <section id="home">
+    <header>
+      <navBar />
       <langToggle />
+    </header>
+    <div v-if="burgerMenuOpen" class="navList">
+      <ul v-for="(item, index) in links" :key="index">
+        <li>
+          <nuxt-link :to="item.href">{{ item.i18n }}</nuxt-link>
+        </li>
+      </ul>
+    </div>
+    <section id="home">
       <div class="container">
         <div class="homeText">
           <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
@@ -17,16 +27,21 @@
         </div>
       </div>
     </section>
-    <navBar />
+
+    <client-only>
+      <cookieBanner />
+    </client-only>
   </div>
 </template>
 
 <script>
+import CookieBanner from '@/components/CookieBanner.vue'
 import LangToggle from '@/components/LangToggle.vue'
 import NavBar from '@/components/NavBar.vue'
 
 export default {
   components: {
+    CookieBanner,
     LangToggle,
     NavBar
   }
@@ -37,18 +52,17 @@ export default {
 @import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
 
-section {
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.container {
+  justify-content: center;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
 }
 
 .homeText {
