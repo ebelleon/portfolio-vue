@@ -9,19 +9,11 @@
 @import 'layouts/modules/media-queries';
 @import 'layouts/modules/cookie-banner';
 
-body {
-  background-color: $transparent;
-  font-family: $robotoSlab;
-  font-style: normal;
-  margin: 0;
-  padding: 0;
-}
-
 .content {
   font-size: 0.85em;
+  font-weight: $light;
   padding: 0.5em 1em;
   word-break: break-word;
-  font-weight: $light;
 
   a {
     color: #0645ad;

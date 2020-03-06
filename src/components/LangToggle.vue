@@ -34,8 +34,8 @@ export default {
 
 .langDropdown {
   align-self: flex-end;
-  border: 1px solid $codGray;
   border-radius: 3px;
+  border: 1px solid $codGray;
   margin: 0.77em;
   text-align: center;
 
@@ -45,15 +45,15 @@ export default {
 }
 
 .langDropdownList {
+  @include dropdownDefault;
   cursor: pointer;
   list-style-type: none;
-  @include dropdownDefault;
   padding: 0;
 
   a {
     color: $codGray;
-    text-decoration: none;
     list-style-type: none;
+    text-decoration: none;
   }
 
   li {
@@ -66,8 +66,8 @@ export default {
 
 .langDropdownToggle {
   float: left;
-  opacity: 0;
   margin: -1em;
+  opacity: 0;
 
   &:checked ~ .langDropdownList {
     max-height: 122px;

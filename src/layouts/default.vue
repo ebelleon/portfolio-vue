@@ -9,16 +9,19 @@
 
 html,
 body {
-  font: 300 1em $robotoSlab;
+  min-height: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background-color: $transparent;
   color: $codGray;
-  padding: 0;
+  font: 300 1em $robotoSlab;
   margin: 0;
   overflow-x: hidden;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
 }
 
 *,
@@ -28,17 +31,17 @@ body {
 }
 
 .button--grey {
-  display: inline-block;
   border-radius: 4px;
   border: 1px solid #35495e;
   color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
+  display: inline-block;
   margin-left: 15px;
+  padding: 10px 30px;
+  text-decoration: none;
 
   &:hover {
-    color: #fff;
     background-color: #35495e;
+    color: #fff;
   }
 }
 </style>
