@@ -1,6 +1,9 @@
 <template>
   <div>
-    <header>
+    <header class="headContainer">
+      <nav class="navbarContainer">
+        <nuxt-link to="/">{{ $t('shared.back') }}</nuxt-link>
+      </nav>
       <langToggle />
     </header>
     <div class="content">
