@@ -1,6 +1,8 @@
 <template>
   <div>
-    <langToggle />
+    <header>
+      <langToggle />
+    </header>
     <div class="content">
       <h1>{{ $t('privacy.privacyStatement') }}</h1>
 
@@ -156,6 +158,7 @@
 <script>
 import CookieBanner from '@/components/CookieBanner.vue'
 import LangToggle from '@/components/LangToggle.vue'
+
 export default {
   layout: 'disclaimer',
   components: {

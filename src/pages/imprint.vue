@@ -1,6 +1,8 @@
 <template>
   <div>
-    <langToggle />
+    <header>
+      <langToggle />
+    </header>
     <div class="content">
       <h1>{{ $t('imprint.title') }}</h1>
       <h3>{{ $t('imprint.liabilityHeadline') }}</h3>
