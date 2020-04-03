@@ -30,10 +30,6 @@ body {
   box-sizing: border-box;
 }
 
-svg:not(:root) {
-  overflow: hidden;
-}
-
 section {
   display: flex;
   flex-direction: column;
@@ -42,6 +38,11 @@ section {
 header {
   display: flex;
   justify-content: space-between;
+}
+
+.headContainer {
+  align-items: center;
+  margin: 0.77em;
 }
 
 .button--grey {

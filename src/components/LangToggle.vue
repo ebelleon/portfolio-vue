@@ -35,7 +35,6 @@ export default {
 .langDropdown {
   border-radius: 3px;
   border: 1px solid $codGray;
-  margin: 0.77em;
   text-align: center;
 
   label {

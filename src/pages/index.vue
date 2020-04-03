@@ -1,16 +1,9 @@
 <template>
   <div>
-    <header>
-      <navBar />
-      <langToggle />
+    <header class="headContainer">
+      <navbar />
+      <langtoggle />
     </header>
-    <div v-if="burgerMenuOpen" class="navList">
-      <ul v-for="(item, index) in links" :key="index">
-        <li>
-          <nuxt-link :to="item.href">{{ item.i18n }}</nuxt-link>
-        </li>
-      </ul>
-    </div>
     <section id="home">
       <div class="container">
         <div class="homeText">
@@ -27,28 +20,27 @@
         </div>
       </div>
     </section>
-
     <client-only>
-      <cookieBanner />
+      <cookiebanner />
     </client-only>
   </div>
 </template>
 
 <script>
-import CookieBanner from '@/components/CookieBanner.vue'
-import LangToggle from '@/components/LangToggle.vue'
-import NavBar from '@/components/NavBar.vue'
+import cookiebanner from '@/components/CookieBanner.vue'
+import langtoggle from '@/components/LangToggle.vue'
+import navbar from '@/components/NavBar.vue'
 
 export default {
   components: {
-    CookieBanner,
-    LangToggle,
-    NavBar
+    cookiebanner,
+    langtoggle,
+    navbar
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
 
@@ -56,7 +48,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 90vh;
 
   @include tablet {
     flex-direction: row;
