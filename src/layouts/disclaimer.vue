@@ -15,8 +15,12 @@
   padding: 0.5em 1em;
   word-break: break-word;
 
+  h1 {
+    margin-top: 0;
+  }
+
   a {
-    color: #0645ad;
+    color: $link;
     text-decoration: none;
 
     &:hover {

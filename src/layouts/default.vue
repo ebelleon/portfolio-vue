@@ -6,6 +6,7 @@
 
 <style lang="scss">
 @import 'layouts/partials/vars';
+@import 'layouts/modules/media-queries';
 
 html,
 body {
@@ -19,9 +20,13 @@ body {
   -webkit-text-size-adjust: 100%;
   background-color: $transparent;
   color: $codGray;
-  font: 300 1em $robotoSlab;
+  font: 300 0.85em $robotoSlab;
   margin: 0;
   overflow-x: hidden;
+
+  @include tablet {
+    font-size: 1em;
+  }
 }
 
 *,
@@ -47,16 +52,17 @@ header {
 
 .button--grey {
   border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
+  border: 1px solid $spelunking;
+  color: $spelunking;
   display: inline-block;
-  margin-left: 15px;
-  padding: 10px 20px;
+  margin-top: 15px;
+  min-width: 140px;
+  padding: 10px 0;
   text-decoration: none;
 
   &:hover {
-    background-color: #35495e;
-    color: #fff;
+    background-color: $spelunking;
+    color: $alabaster;
   }
 }
 </style>

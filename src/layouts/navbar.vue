@@ -22,7 +22,7 @@
     text-transform: uppercase;
 
     &:hover {
-      background-color: $wildDove;
+      background-color: $spelunking;
       color: $alabaster;
     }
   }

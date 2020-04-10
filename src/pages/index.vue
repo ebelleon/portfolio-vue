@@ -9,14 +9,12 @@
         <div class="homeText">
           <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
           <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
-          <div class="links">
-            <nuxt-link class="button--grey" :to="localePath('privacy')">
-              {{ $t('privacy.title') }}
-            </nuxt-link>
-            <nuxt-link class="button--grey" :to="localePath('imprint')">
-              {{ $t('imprint.title') }}
-            </nuxt-link>
-          </div>
+          <nuxt-link class="button--grey" :to="localePath('privacy')">
+            {{ $t('privacy.title') }}
+          </nuxt-link>
+          <nuxt-link class="button--grey" :to="localePath('imprint')">
+            {{ $t('imprint.title') }}
+          </nuxt-link>
         </div>
       </div>
     </section>
@@ -58,7 +56,6 @@ export default {
 }
 
 .homeText {
-  // color: $alabaster;
   padding: 0 10vw;
   text-align: center;
 }
@@ -90,9 +87,5 @@ export default {
   margin: 0.83em 1em 1.66em;
   text-align: center;
   text-transform: uppercase;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>

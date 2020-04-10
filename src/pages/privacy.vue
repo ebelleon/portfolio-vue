@@ -50,7 +50,10 @@
         {{ $t('shared.street') }} <br />
         {{ $t('shared.zip') }}
       </p>
-      <p>{{ $t('shared.email') }}</p>
+      <p>
+        {{ $t('shared.email') }}
+        <a href="mailto:ebel@mailbox.org"> {{ $t('shared.emailAddress') }}</a>
+      </p>
       <p>{{ $t('privacy.responsibilityDescOne') }}</p>
 
       <h3>{{ $t('privacy.revocation') }}</h3>
