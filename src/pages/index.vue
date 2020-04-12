@@ -1,10 +1,6 @@
 <template>
   <div>
-    <header class="headContainer">
-      <burgermenu />
-      <langtoggle />
-    </header>
-    <!--<nav />-->
+    <navigation />
     <section id="home">
       <div class="container">
         <div class="homeText">
@@ -27,16 +23,12 @@
 
 <script>
 import cookiebanner from '@/components/CookieBanner.vue'
-import langtoggle from '@/components/LangToggle.vue'
-import burgermenu from '@/components/BurgerMenu.vue'
-// import nav from '@/components/Nav.vue'
+import navigation from '@/components/Navigation.vue'
 
 export default {
   components: {
     cookiebanner,
-    langtoggle,
-    burgermenu
-    // nav
+    navigation
   }
 }
 </script>

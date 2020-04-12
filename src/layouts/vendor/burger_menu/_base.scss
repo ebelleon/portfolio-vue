@@ -1,20 +1,101 @@
+@import 'vars';
+
 // Hamburger
 // ==================================================
 .hamburger {
-  width: 64px;
-  height: 42px;
-  display: block;
-  cursor: pointer;
-  z-index: 110;
-  pointer-events: auto;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  display: block;
+  height: 42px;
+  width: 64px;
+  pointer-events: auto;
+  z-index: 110;
+
+  &:hover {
+    .hamburger__line-in {
+      &::before, &::after {
+        -webkit-transform: translateX(200%);
+        transform: translateX(200%);
+      }
+    }
+    .hamburger__line-in--01,
+    .hamburger__line-in--02,
+    .hamburger__line-in--03 {
+      &::before, &::after {
+        -webkit-transition-duration: 1s;
+        transition-duration: 1s;
+      }
+    }
+    .hamburger__line-in--cross01,
+    .hamburger__line-in--cross02 {
+      &::before, &::after {
+        -webkit-transition-duration: 0s;
+        transition-duration: 0s;
+      }
+    }
+  }
+
+  &.is-opened-navi {
+    &:hover {
+      .hamburger__line-in--01,
+      .hamburger__line-in--02,
+      .hamburger__line-in--03 {
+        &::before, &::after {
+          -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+        }
+      }
+      .hamburger__line-in--cross01,
+      .hamburger__line-in--cross02 {
+        &::before, &::after {
+          -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+        }
+      }
+    }
+    .hamburger__line-in--01,
+    .hamburger__line-in--02,
+    .hamburger__line-in--03 {
+      -webkit-transform: translateX(33.3%);
+      transform: translateX(33.3%);
+    }
+    .hamburger__line-in--cross01,
+    .hamburger__line-in--cross02 {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    .hamburger__line-in--01 {
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+    .hamburger__line-in--02 {
+      -webkit-transition-delay: 0.05s;
+      transition-delay: 0.05s;
+    }
+    .hamburger__line-in--03 {
+      -webkit-transition-delay: 0.1s;
+      transition-delay: 0.1s;
+    }
+    .hamburger__line-in--cross01 {
+      -webkit-transition-delay: 0.25s;
+      transition-delay: 0.25s;
+    }
+    .hamburger__line-in--cross02 {
+      -webkit-transition-delay: 0.3s;
+      transition-delay: 0.3s;
+    }
+  }
 }
 
 .hamburger__line {
-  width: 28px;
+  -webkit-transition-duration: 0.6s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   height: 2px;
+  width: 28px;
   overflow: hidden;
   position: absolute;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   z-index: 10;
 }
 
@@ -24,25 +105,34 @@
   position: absolute;
   top: 0;
   left: 0;
-}
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 
-.hamburger__line-in::before,
-.hamburger__line-in::after {
-  width: 28px;
-  height: 2px;
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  background-color: $button-line;
-}
+  &::before, &::after {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: $button-line;
+    content: '';
+    display: block;
+    height: 2px;
+    width: 28px;
+    position: absolute;
+    top: 0;
+    transition-property: -webkit-transform;
+    transition-property: transform, -webkit-transform;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  }
 
-.hamburger__line-in::before {
-  left: -56px;
-}
+  &::before {
+    left: -56px;
+  }
 
-.hamburger__line-in::after {
-  left: 0;
+  &::after {
+    left: 0;
+  }
 }
 
 .hamburger__line--01,
@@ -77,34 +167,14 @@
   transform: rotate(-45deg);
 }
 
-.hamburger__line {
-  -webkit-transition-duration: 0.6s;
-  transition-duration: 0.6s;
-  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.hamburger__line-in {
-  -webkit-transition-duration: 0.6s;
-  transition-duration: 0.6s;
-  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.hamburger__line-in::before,
-.hamburger__line-in::after {
-  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-}
-
 .hamburger__line-in--cross01,
 .hamburger__line-in--cross02 {
   -webkit-transform: translateX(-33.3%);
   transform: translateX(-33.3%);
+
+  &::before, &::after {
+    background-color: $color-menu;
+  }
 }
 
 .hamburger__line-in--01 {
@@ -115,23 +185,21 @@
 .hamburger__line-in--02 {
   -webkit-transition-delay: 0.25s;
   transition-delay: 0.25s;
-}
 
-.hamburger__line-in--02::before,
-.hamburger__line-in--02::after {
-  -webkit-transition-delay: 0.05s;
-  transition-delay: 0.05s;
+  &::before, &::after {
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+  }
 }
 
 .hamburger__line-in--03 {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
-}
 
-.hamburger__line-in--03::before,
-.hamburger__line-in--03::after {
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
+  &::before, &::after {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+  }
 }
 
 .hamburger__line-in--cross01 {
@@ -142,90 +210,9 @@
 .hamburger__line-in--cross02 {
   -webkit-transition-delay: 0.05s;
   transition-delay: 0.05s;
-}
 
-.hamburger__line-in--cross02::before,
-.hamburger__line-in--cross02::after {
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
-}
-
-.hamburger.is-opened-navi .hamburger__line-in--01,
-.hamburger.is-opened-navi .hamburger__line-in--02,
-.hamburger.is-opened-navi .hamburger__line-in--03 {
-  -webkit-transform: translateX(33.3%);
-  transform: translateX(33.3%);
-}
-
-.hamburger.is-opened-navi .hamburger__line-in--cross01,
-.hamburger.is-opened-navi .hamburger__line-in--cross02 {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-}
-
-.hamburger.is-opened-navi .hamburger__line-in--01 {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.hamburger.is-opened-navi .hamburger__line-in--02 {
-  -webkit-transition-delay: 0.05s;
-  transition-delay: 0.05s;
-}
-
-.hamburger.is-opened-navi .hamburger__line-in--03 {
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
-}
-
-.hamburger.is-opened-navi .hamburger__line-in--cross01 {
-  -webkit-transition-delay: 0.25s;
-  transition-delay: 0.25s;
-}
-
-.hamburger.is-opened-navi .hamburger__line-in--cross02 {
-  -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-}
-
-.hamburger:hover .hamburger__line-in::before,
-.hamburger:hover .hamburger__line-in::after {
-  -webkit-transform: translateX(200%);
-  transform: translateX(200%);
-}
-
-.hamburger:hover .hamburger__line-in--01::before,
-.hamburger:hover .hamburger__line-in--01::after,
-.hamburger:hover .hamburger__line-in--02::before,
-.hamburger:hover .hamburger__line-in--02::after,
-.hamburger:hover .hamburger__line-in--03::before,
-.hamburger:hover .hamburger__line-in--03::after {
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-}
-
-.hamburger:hover .hamburger__line-in--cross01::before,
-.hamburger:hover .hamburger__line-in--cross01::after,
-.hamburger:hover .hamburger__line-in--cross02::before,
-.hamburger:hover .hamburger__line-in--cross02::after {
-  -webkit-transition-duration: 0s;
-  transition-duration: 0s;
-}
-
-.hamburger.is-opened-navi:hover .hamburger__line-in--cross01::before,
-.hamburger.is-opened-navi:hover .hamburger__line-in--cross01::after,
-.hamburger.is-opened-navi:hover .hamburger__line-in--cross02::before,
-.hamburger.is-opened-navi:hover .hamburger__line-in--cross02::after {
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-}
-
-.hamburger.is-opened-navi:hover .hamburger__line-in--01::before,
-.hamburger.is-opened-navi:hover .hamburger__line-in--01::after,
-.hamburger.is-opened-navi:hover .hamburger__line-in--02::before,
-.hamburger.is-opened-navi:hover .hamburger__line-in--02::after,
-.hamburger.is-opened-navi:hover .hamburger__line-in--03::before,
-.hamburger.is-opened-navi:hover .hamburger__line-in--03::after {
-  -webkit-transition-duration: 0s;
-  transition-duration: 0s;
+  &::before, &::after {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+  }
 }

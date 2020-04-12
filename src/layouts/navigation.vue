@@ -7,7 +7,7 @@
 <style lang="scss">
 @import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
-@import 'layouts/vendor/burger_menu/hamburgers';
+@import 'layouts/vendor/burger_menu/hamburger';
 
 .navbarContainer {
   display: flex;

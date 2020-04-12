@@ -1,8 +1,8 @@
-@import '../modules/media-queries';
-@import '../modules/input-field';
-@import '../modules/dropdown';
-@import '../modules/skills-pictures';
-@import '../modules/cookie-banner';
+@import 'layouts/modules/media-queries';
+@import 'layouts/modules/input-field';
+@import 'layouts/modules/dropdown';
+@import 'layouts/modules/skills-pictures';
+@import 'layouts/modules/cookie-banner';
 
 @keyframes slideDown {
   0% { transform: translateY(-150px) }

@@ -1,3 +1,5 @@
+@import 'layouts/modules/media-queries';
+
 @if index($hamburger-types, landonfire) {
   .global-menu {
     width: 100vw;
@@ -16,7 +18,7 @@
   .global-menu__item {
     color: $color-menu;
     font-family: $font-family-menu;
-    font-size: $font-size-menu;
+    font-size: $font-size-menu-mobile;
     font-weight: $font-weight-menu;
     opacity: 0;
     transform: translateY(-100%);
@@ -25,6 +27,14 @@
     margin: 0.25em 0;
     transition: transform 0.1s, opacity 0.1s;
     transition-timing-function: ease-out;
+
+    @include tablet {
+      font-size: $font-size-menu-tablet;
+    }
+
+    @include desktop {
+      font-size: $font-size-menu-desktop;
+    }
 
     &:nth-child(odd) {
       transform: translateX(100%) rotate(10deg) scale(0.5);
