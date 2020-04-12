@@ -6,10 +6,10 @@
         <div class="homeText">
           <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
           <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
-          <nuxt-link class="button--grey" :to="localePath('privacy')">
+          <nuxt-link class="buttonGrey" :to="localePath('privacy')">
             {{ $t('privacy.title') }}
           </nuxt-link>
-          <nuxt-link class="button--grey" :to="localePath('imprint')">
+          <nuxt-link class="buttonGrey" :to="localePath('imprint')">
             {{ $t('imprint.title') }}
           </nuxt-link>
         </div>

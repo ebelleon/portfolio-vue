@@ -20,12 +20,12 @@
       </div>
       <langtoggle />
     </header>
-    <div class="global-menu">
-      <div class="global-menu__wrap" style="display: none;">
+    <div class="globalMenu">
+      <div class="globalMenu__wrap">
         <nuxt-link
           v-for="(item, index) in links"
           :key="index"
-          class="global-menu__item"
+          class="globalMenu__item"
           :to="item.href"
         >
           <span @click="hamburgerClick">{{ item.i18n }}</span>
@@ -34,12 +34,12 @@
     </div>
     <svg
       ref="shapeOverlays"
-      class="shape-overlays"
+      class="shapeOverlays"
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
     >
-      <path class="shape-overlays__path"></path>
-      <path class="shape-overlays__path"></path>
+      <path class="shapeOverlays__path"></path>
+      <path class="shapeOverlays__path"></path>
     </svg>
   </div>
 </template>
@@ -78,7 +78,6 @@ export default {
     this.overlay.elem = this.$refs.shapeOverlays
     // get all path.shape-overlays__path elements
     this.overlay.path = this.overlay.elem.querySelectorAll('path')
-    document.querySelector('.global-menu__wrap').style.display = 'block'
   },
   methods: {
     // easing
@@ -99,13 +98,13 @@ export default {
     },
     open() {
       this.overlay.isOpened = true
-      this.overlay.elem.classList.add('is-opened')
+      this.overlay.elem.classList.add('isOpened')
       this.overlay.timeStart = Date.now()
       this.renderLoop()
     },
     close() {
       this.overlay.isOpened = false
-      this.overlay.elem.classList.remove('is-opened')
+      this.overlay.elem.classList.remove('isOpened')
       this.overlay.timeStart = Date.now()
       this.renderLoop()
     },
@@ -177,21 +176,21 @@ export default {
     },
     hamburgerClick() {
       const elemHamburger = this.$refs.hamburger
-      const gNavItems = document.querySelectorAll('.global-menu__item')
+      const gNavItems = document.querySelectorAll('.globalMenu__item')
       const overlay = this.overlay
       if (overlay.isAnimating) {
         return false
       }
       this.toggle()
       if (overlay.isOpened === true) {
-        elemHamburger.classList.add('is-opened-navi')
+        elemHamburger.classList.add('isOpenedNavi')
         for (let i = 0; i < gNavItems.length; i++) {
-          gNavItems[i].classList.add('is-opened')
+          gNavItems[i].classList.add('isOpened')
         }
       } else {
-        elemHamburger.classList.remove('is-opened-navi')
+        elemHamburger.classList.remove('isOpenedNavi')
         for (let j = 0; j < gNavItems.length; j++) {
-          gNavItems[j].classList.remove('is-opened')
+          gNavItems[j].classList.remove('isOpened')
         }
       }
     }

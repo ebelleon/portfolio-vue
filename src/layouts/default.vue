@@ -50,7 +50,7 @@ header {
   margin: 0.77em;
 }
 
-.button--grey {
+.buttonGrey {
   border-radius: 4px;
   border: 1px solid $spelunking;
   color: $spelunking;
