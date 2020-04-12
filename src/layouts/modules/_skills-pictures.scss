@@ -32,7 +32,7 @@ $skillsBgSize:
   90%  90%,  // Tux | Linux
   100% 100%; // jQuery
 
-  @mixin pic($bg-img: null, $bg-size: null) {
+@mixin pic($bg-img: null, $bg-size: null) {
   -moz-background-size: $bg-size;
   -o-background-size: $bg-size;
   -webkit-background-size: $bg-size;
