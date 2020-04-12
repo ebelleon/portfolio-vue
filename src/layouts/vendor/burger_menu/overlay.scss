@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@import 'vars';
+
+// Types
+// ==================================================
+$hamburger-types: (
+  landonfire,
+) !default;
+
+// Hamburger types
+// ==================================================
+@import 'types/landonfire';

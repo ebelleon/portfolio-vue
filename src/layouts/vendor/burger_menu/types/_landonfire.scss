@@ -76,6 +76,7 @@
       &:nth-of-type(4) {
         transition-delay: 0.7s;
       }
+    }
   }
 
   .shape-overlays {
@@ -91,7 +92,7 @@
     }
   }
 
-  .shape-overlays__path
+  .shape-overlays__path {
     &:nth-of-type(1) {
       fill: $path-fill-1;
     }
@@ -100,27 +101,27 @@
       fill: $path-fill-2;
     }
   }
-}
 
-/* Fade effect */
-a {
-	text-decoration: none;
-	color: #5d93d8;
-	color: var(--color-link);
-	outline: none;
-}
+  /* Fade effect */
+  a {
+    text-decoration: none;
+    color: #5d93d8;
+    color: var(--color-link);
+    outline: none;
+  }
 
-a:hover,
-a:focus {
-	color: #423c2b;
-	color: var(--color-link-hover);
-	outline: none;
-}
+  a:hover,
+  a:focus {
+    color: #423c2b;
+    color: var(--color-link-hover);
+    outline: none;
+  }
 
-.hidden {
-	position: absolute;
-	overflow: hidden;
-	width: 0;
-	height: 0;
-	pointer-events: none;
+  .hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
 }

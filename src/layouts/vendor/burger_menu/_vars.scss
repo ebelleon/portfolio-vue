@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 // Settings
 // ==================================================
 $color-text: #c04444 !default;
@@ -22,17 +20,3 @@ $font-weight-menu: 400 !default;
 $button-bg: #fff !default;
 $button-circle: #c14343 !default;
 $button-line: #2d2c2b !default;
-
-// Types
-// ==================================================
-$hamburger-types: (
-  landonfire,
-) !default;
-
-// Base Hamburger (We need this)
-// ==================================================
-@import 'base';
-
-// Hamburger types
-// ==================================================
-@import 'types/landonfire';
