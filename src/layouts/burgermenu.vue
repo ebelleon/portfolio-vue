@@ -7,10 +7,10 @@
 <style lang="scss">
 @import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
+@import 'layouts/vendor/burger_menu/hamburgers';
 
 .navbarContainer {
   display: flex;
-  font-size: 1em;
 
   a {
     border-radius: 2px;
