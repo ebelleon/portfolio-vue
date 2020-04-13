@@ -37,19 +37,6 @@ export default {
 @import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 90vh;
-
-  @include tablet {
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-  }
-}
-
 .homeText {
   padding: 0 10vw;
   text-align: center;

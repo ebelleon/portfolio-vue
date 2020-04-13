@@ -35,9 +35,17 @@ body {
   box-sizing: border-box;
 }
 
-section {
+.container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
 }
 
 header {
@@ -48,6 +56,11 @@ header {
 .headContainer {
   align-items: center;
   margin: 0.77em;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
 }
 
 .buttonGrey {
