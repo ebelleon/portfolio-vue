@@ -6,6 +6,7 @@
 
 <style lang="scss">
 @import 'layouts/partials/vars';
+@import 'layouts/partials/fontawesome-custom';
 @import 'layouts/modules/media-queries';
 
 html,
@@ -36,26 +37,17 @@ body {
 }
 
 .container {
+  background-color: $transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 90vh;
 
   @include tablet {
+    align-items: center;
     flex-direction: row;
     justify-content: left;
-    align-items: center;
   }
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.headContainer {
-  align-items: center;
-  margin: 0.77em;
 }
 
 section {

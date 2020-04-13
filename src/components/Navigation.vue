@@ -201,6 +201,14 @@ export default {
 @import 'layouts/modules/media-queries';
 @import 'layouts/vendor/burger_menu/hamburger';
 
+.headContainer {
+  align-items: center;
+  background-color: $transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.77em;
+}
+
 .navbarContainer {
   display: flex;
 
