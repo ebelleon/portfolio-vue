@@ -7,7 +7,7 @@
         class="langDropdownToggle"
       />
       <ul class="langDropdownList">
-        <li>{{ $t('shared.chooseLang') }}</li>
+        <li><fa :icon="['fas', 'language']" />{{ $t('shared.chooseLang') }}</li>
         <li v-for="locale in availableLocales" :key="locale.code">
           <nuxt-link :to="switchLocalePath(locale.code)">{{
             locale.name
