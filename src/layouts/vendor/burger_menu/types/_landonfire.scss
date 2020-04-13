@@ -2,31 +2,33 @@
 
 @if index($hamburger-types, landonfire) {
   .globalMenu {
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    text-align: center;
-    justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+    justify-content: center;
     left: 0;
     pointer-events: none;
+    position: fixed;
+    text-align: center;
+    top: 0;
     z-index: 100;
   }
 
   .globalMenu__item {
     color: $color-menu;
+    display: block;
     font-family: $font-family-menu;
     font-size: $font-size-menu-mobile;
     font-weight: $font-weight-menu;
-    opacity: 0;
-    transform: translateY(-100%);
-    pointer-events: none;
-    display: block;
     margin: 0.25em 0;
-    transition: transform 0.1s, opacity 0.1s;
+    opacity: 0;
+    outline: none;
+    pointer-events: none;
+    text-decoration: none;
+    transform: translateY(-100%);
     transition-timing-function: ease-out;
+    transition: transform 0.1s, opacity 0.1s;
 
     @include tablet {
       font-size: $font-size-menu-tablet;
@@ -66,9 +68,9 @@
 
     &.isOpened {
       opacity: 1;
+      pointer-events: auto;
       transform: translateX(0) rotate(0);
       transition-duration: 0.4s;
-      pointer-events: auto;
       transition-timing-function: ease;
 
       &:nth-of-type(1) {
@@ -90,12 +92,12 @@
   }
 
   .shapeOverlays {
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
+    left: 0;
     pointer-events: none;
     position: fixed;
     top: 0;
-    left: 0;
 
     &.isOpened {
       pointer-events: auto;
@@ -110,20 +112,5 @@
     &:nth-of-type(2) {
       fill: $path-fill-2;
     }
-  }
-
-  /* Fade effect */
-  a {
-    text-decoration: none;
-    color: #5d93d8;
-    color: var(--color-link);
-    outline: none;
-  }
-
-  a:hover,
-  a:focus {
-    color: #423c2b;
-    color: var(--color-link-hover);
-    outline: none;
   }
 }

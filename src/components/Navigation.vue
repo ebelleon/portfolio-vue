@@ -74,9 +74,7 @@ export default {
     }
   },
   mounted() {
-    // get svg.shape-overlays element
     this.overlay.elem = this.$refs.shapeOverlays
-    // get all path.shape-overlays__path elements
     this.overlay.path = this.overlay.elem.querySelectorAll('path')
   },
   methods: {
