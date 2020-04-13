@@ -38,12 +38,7 @@ export default {
       // { property: 'og:image', content: 'https://www.ebelleon.de/assets/img/background.jpg'} TODO: UNCOMMENT THIS FOR PRODUCTION
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto+Slab:300,700&display=swap'
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
