@@ -37,9 +37,7 @@ export default {
       }
       // { property: 'og:image', content: 'https://www.ebelleon.de/assets/img/background.jpg'} TODO: UNCOMMENT THIS FOR PRODUCTION
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
    ** Customize the progress-bar color

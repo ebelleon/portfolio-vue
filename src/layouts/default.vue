@@ -37,16 +37,35 @@ body {
 }
 
 .container {
-  background-color: $transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 90vh;
+}
 
-  @include tablet {
-    align-items: center;
-    flex-direction: row;
-    justify-content: left;
+.headContainer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.77em;
+}
+
+.navbarContainer {
+  display: flex;
+
+  a {
+    border-radius: 2px;
+    color: $codGray;
+    letter-spacing: 2px;
+    margin-right: 0.5em;
+    padding: 1px 4px 2px 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $spelunking;
+      color: $alabaster;
+    }
   }
 }
 
@@ -69,5 +88,14 @@ section {
     background-color: $spelunking;
     color: $alabaster;
   }
+}
+
+.title {
+  color: $codGray;
+  font-size: $headlineDefault;
+  font-weight: $bold;
+  margin: 0.83em 1em 1.66em;
+  text-align: center;
+  text-transform: uppercase;
 }
 </style>
