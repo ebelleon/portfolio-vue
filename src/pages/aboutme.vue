@@ -23,9 +23,9 @@
           </p>
           <p class="aboutMeParagraph">
             {{ $t('aboutMe.since') }}
-            <!-- eslint-disable-next-line -->
+            {{ /* eslint-disable-next-line */ }}
             <span class="strong">{{ $t('shared.city') }}.</span>
-            <!-- eslint-disable-next-line -->
+            {{ /* eslint-disable-next-line */ }}
             {{ $t('aboutMe.apprenticeship') }}
             <span class="strong">{{ $t('aboutMe.apprenticeshipName') }}</span>
             {{ $t('aboutMe.completed') }}
@@ -75,6 +75,7 @@ export default {
 <style lang="scss" scoped>
 @import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
+@import 'layouts/modules/page-transition';
 
 .aboutMeWrapper {
   hyphens: auto;

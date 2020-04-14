@@ -6,9 +6,11 @@
         <div class="homeText">
           <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
           <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
-          <nuxt-link class="buttonGrey" :to="localePath('privacy')">
-            {{ $t('privacy.title') }}
-          </nuxt-link>
+          <transition :duration="10">
+            <nuxt-link class="buttonGrey" :to="localePath('privacy')">
+              {{ $t('privacy.title') }}
+            </nuxt-link>
+          </transition>
           <nuxt-link class="buttonGrey" :to="localePath('imprint')">
             {{ $t('imprint.title') }}
           </nuxt-link>
@@ -36,6 +38,7 @@ export default {
 <style lang="scss" scoped>
 @import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
+@import 'layouts/modules/page-transition';
 
 .homeContainer {
   @include tablet {
