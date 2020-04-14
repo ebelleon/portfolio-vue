@@ -39,7 +39,6 @@ import CookieBanner from '@/components/CookieBanner.vue'
 import LangToggle from '@/components/LangToggle.vue'
 
 export default {
-  layout: 'disclaimer',
   components: {
     CookieBanner,
     LangToggle
@@ -59,3 +58,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@import 'layouts/modules/disclaimer';
+</style>
