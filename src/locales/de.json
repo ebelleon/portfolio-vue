@@ -6,6 +6,32 @@
     "home": "Home",
     "jobTitle": "Full Stack Web Entwickler"
   },
+  "aboutMe": {
+    "myname": "Mein Name ist Leon Ebel, ich bin",
+    "developer": "Softwareentwickler,",
+    "specialized": "spezialisiert auf",
+    "webdev": "Webentwicklung.",
+    "workinin": "Dabei arbeite ich sowohl im",
+    "frontend": "Frontend",
+    "aswellas": "als auch",
+    "backend": "Backend,",
+    "technologies": "mit Technologien wie PHP, Node.js, oder Docker.",
+    "since": "Seit 2016 arbeit ich als Webentwickler in",
+    "apprenticeship": "Dabei habe ich Anfang 2019 die Ausbildung zum",
+    "apprenticeshipName": "Fachinformatiker für Anwendungsentwicklung",
+    "completed": "bei Jochen Schweizer abgeschlossen.",
+    "my": "Mein",
+    "interest": "Interesse für Computer und Software",
+    "began": "begann schon in meiner Jugend, damals faszinierte es mich wie Computerprogramme funktionieren und wie sie aufgebaut sind. Mittlerweile finde ich es auch spannend neue Technologien und Infrastrukturen kennenzulernen.",
+    "whenIm": "Wenn ich mal",
+    "notDevelop": "nicht programmiere",
+    "orAt": "oder in der",
+    "work": "Arbeit",
+    "iWillBe": "bin, findet man mich meistens beim",
+    "sport": "Sport",
+    "orInFront": "oder vor dem",
+    "tv": "Fernseher."
+  },
   "cookieBanner": {
     "consent": "Diese Website verwendet Cookies. Durch die weitere Nutzung der Website stimmst du der Cookie-Nutzung zu."
   },
@@ -115,6 +141,7 @@
     "fullName": "Leon Ebel",
     "moreInfo": "Mehr erfahren",
     "street": "Gollierstr. 78",
-    "zip": "80339 München"
+    "zip": "80339",
+    "city": "München"
   }
 }

@@ -40,7 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 85vh;
 }
 
 .headContainer {

@@ -39,8 +39,8 @@
       <p>{{ $t('privacy.responsibilityDesc') }}</p>
       <p>
         {{ $t('shared.fullName') }}<br />
-        {{ $t('shared.street') }} <br />
-        {{ $t('shared.zip') }}
+        {{ $t('shared.street') }}<br />
+        {{ $t('shared.zip') }} {{ $t('shared.city') }}
       </p>
       <p>
         {{ $t('shared.email') }}

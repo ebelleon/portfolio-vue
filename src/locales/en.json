@@ -6,6 +6,32 @@
     "home": "Home",
     "jobTitle": "Full Stack Web Developer"
   },
+  "aboutMe": {
+    "myname": "My name is Leon Ebel, I'm a",
+    "developer": "Software Developer,",
+    "specialized": "specialized in",
+    "webdev": "Web Development.",
+    "workinin": "I'm working both in",
+    "frontend": "Frontend",
+    "aswellas": "and",
+    "backend": "Backend,",
+    "technologies": "with Technologies like PHP, Node.js or Docker.",
+    "since": "Since 2016 I work as a Web Developer in",
+    "apprenticeship": "At the beginning of 2019 I completed my training as an",
+    "apprenticeshipName": "IT specialist for application development",
+    "completed": "at Jochen Schweizer.",
+    "my": "My",
+    "interest": "interest in Computers and Software",
+    "began": "began in my Youth, already back then I was fascinated how Computerprogramms work and how they are strucured. Meanwhile I find it very interesting to learn new Technologies and Infrastructures.",
+    "whenIm": "When I'm",
+    "notDevelop": "not programming",
+    "orAt": "or at",
+    "work": "work,",
+    "iWillBe": "you'll find me doing",
+    "sport": "Sport",
+    "orInFront": "or in front of the",
+    "tv": "TV."
+  },
   "cookieBanner": {
     "consent": "This website uses cookies. By continuing to use this website, you consent to the use of the Cookies Policy."
   },
@@ -115,6 +141,7 @@
     "fullName": "Leon Ebel",
     "moreInfo": "Learn more",
     "street": "Gollierstr. 78",
-    "zip": "80339 Munich"
+    "zip": "80339",
+    "city": "Munich"
   }
 }
