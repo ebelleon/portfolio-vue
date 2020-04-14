@@ -40,6 +40,7 @@
     >
       <path class="shapeOverlays__path"></path>
       <path class="shapeOverlays__path"></path>
+      <path class="shape-overlays__path"></path>
     </svg>
   </div>
 </template>
@@ -66,8 +67,8 @@ export default {
         isAnimating: false
       },
       links: [
-        { href: '/', i18n: this.$t('home.home') },
-        { href: '/aboutMe', i18n: this.$t('home.aboutMe') },
+        { href: this.localePath('index'), i18n: this.$t('home.home') },
+        { href: this.localePath('aboutme'), i18n: this.$t('home.aboutMe') },
         { href: '#experience', i18n: this.$t('home.experience') },
         { href: '#contact', i18n: this.$t('home.contact') }
       ]
@@ -83,7 +84,7 @@ export default {
       return t < 0.5 ? 4.0 * t * t * t : 0.5 * (2.0 * t - 2.0) ** 3.0 + 1.0
     },
     toggle() {
-      this.overlayisAnimating = true
+      this.overlay.isAnimating = true
       for (let i = 0; i < this.overlay.numPoints; i++) {
         this.overlay.delayPointsArray[i] =
           Math.random() * this.overlay.delayPointsMax
@@ -175,12 +176,11 @@ export default {
     hamburgerClick() {
       const elemHamburger = this.$refs.hamburger
       const gNavItems = document.querySelectorAll('.globalMenu__item')
-      const overlay = this.overlay
-      if (overlay.isAnimating) {
+      if (this.overlay.isAnimating) {
         return false
       }
       this.toggle()
-      if (overlay.isOpened === true) {
+      if (this.overlay.isOpened === true) {
         elemHamburger.classList.add('isOpenedNavi')
         for (let i = 0; i < gNavItems.length; i++) {
           gNavItems[i].classList.add('isOpened')
@@ -196,6 +196,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import 'layouts/vendor/burger_menu/hamburger';
 </style>
