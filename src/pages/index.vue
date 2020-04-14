@@ -2,7 +2,7 @@
   <div>
     <navigation />
     <section id="home">
-      <div class="container">
+      <div class="container homeContainer">
         <div class="homeText">
           <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
           <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
@@ -36,6 +36,14 @@ export default {
 <style lang="scss" scoped>
 @import 'layouts/partials/vars';
 @import 'layouts/modules/media-queries';
+
+.homeContainer {
+  @include tablet {
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+  }
+}
 
 .homeText {
   padding: 0 10vw;
