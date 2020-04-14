@@ -98,4 +98,8 @@ section {
   text-align: center;
   text-transform: uppercase;
 }
+
+.strong {
+  font-weight: $regular;
+}
 </style>

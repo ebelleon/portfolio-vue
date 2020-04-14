@@ -14,22 +14,14 @@
       <p>{{ $t('privacy.generalInfosDesc') }}</p>
 
       <h3>{{ $t('privacy.dataCollection') }}</h3>
-      <p>
-        <strong>{{ $t('privacy.dataCollectionQuestionOne') }}</strong>
-      </p>
+      <p class="strong">{{ $t('privacy.dataCollectionQuestionOne') }}</p>
       <p>{{ $t('privacy.dataCollectionAnswerOne') }}</p>
-      <p>
-        <strong>{{ $t('privacy.dataCollectionQuestionTwo') }}</strong>
-      </p>
+      <p class="strong">{{ $t('privacy.dataCollectionQuestionTwo') }}</p>
       <p>{{ $t('privacy.dataCollectionAnswerTwo') }}</p>
       <p>{{ $t('privacy.dataCollectionAnswerTwoOne') }}</p>
-      <p>
-        <strong>{{ $t('privacy.dataCollectionQuestionThree') }}</strong>
-      </p>
+      <p class="strong">{{ $t('privacy.dataCollectionQuestionThree') }}</p>
       <p>{{ $t('privacy.dataCollectionAnswerThree') }}</p>
-      <p>
-        <strong>{{ $t('privacy.dataCollectionQuestionFour') }}</strong>
-      </p>
+      <p class="strong">{{ $t('privacy.dataCollectionQuestionFour') }}</p>
       <p>{{ $t('privacy.dataCollectionAnswerFour') }}</p>
       <p>{{ $t('privacy.dataCollectionAnswerFourOne') }}</p>
 
@@ -60,12 +52,8 @@
       <p>{{ $t('privacy.revocationDesc') }}</p>
 
       <h3>{{ $t('privacy.objectionRight') }}</h3>
-      <p>
-        <strong>{{ $t('privacy.objectionRightDesc') }} </strong>
-      </p>
-      <p>
-        <strong>{{ $t('privacy.objectionRightDescOne') }} </strong>
-      </p>
+      <p class="strong">{{ $t('privacy.objectionRightDesc') }}</p>
+      <p class="strong">{{ $t('privacy.objectionRightDescOne') }}</p>
 
       <h3>{{ $t('privacy.appealRight') }}</h3>
       <p>{{ $t('privacy.appealRightDesc') }}</p>
