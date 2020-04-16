@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <nuxt />
   </div>
 </template>
@@ -20,14 +20,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   background-color: $transparent;
-  color: $codGray;
-  font: 300 0.85em $robotoSlab;
   margin: 0;
   overflow-x: hidden;
-
-  @include tablet {
-    font-size: 1em;
-  }
 }
 
 *,
@@ -37,20 +31,24 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 85vh;
+  color: $codGray;
+  font: 300 0.85em $robotoSlab;
+  min-height: 100vh;
+  transition: all 0.8s cubic-bezier(0.55, 0, 0.1, 1);
+
+  @include tablet {
+    font-size: 1em;
+  }
 }
 
-.headContainer {
+.headWrapper {
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 0.77em;
 }
 
-.navbarContainer {
+.navbarWrapper {
   display: flex;
 
   a {
@@ -72,6 +70,8 @@ body {
 section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
 }
 
 .buttonGrey {

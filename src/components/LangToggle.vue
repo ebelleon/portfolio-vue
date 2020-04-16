@@ -52,13 +52,13 @@ export default {
     color: $codGray;
     list-style-type: none;
     text-decoration: none;
+    padding: 0.6em 3.5em;
   }
 
   li {
     color: $codGray;
     font-weight: $thin;
     line-height: 40px;
-    padding: 0 0.88235em;
   }
 }
 
