@@ -91,7 +91,7 @@ export default {
     ]
   ],
   /*
-   ** i18n config
+   ** Translation module configuration
    */
   i18n: {
     locales: [

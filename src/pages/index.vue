@@ -2,7 +2,7 @@
   <div>
     <navigation />
     <section id="home">
-      <div class="container homeContainer">
+      <div class="homeWrapper">
         <div class="homeText">
           <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
           <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
@@ -40,9 +40,10 @@ export default {
 @import 'layouts/modules/media-queries';
 @import 'layouts/modules/page-transition';
 
-.homeContainer {
+.homeWrapper {
   @include tablet {
     align-items: center;
+    display: flex;
     flex-direction: row;
     justify-content: left;
   }

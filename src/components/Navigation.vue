@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="headContainer">
+    <header class="headWrapper">
       <div ref="hamburger" class="hamburger" @click="hamburgerClick">
         <div class="hamburger__line hamburger__line--01">
           <div class="hamburger__line-in hamburger__line-in--01"></div>
