@@ -4,6 +4,18 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      }
+    }
+  }
+}
+</script>
+
 <style lang="scss">
 @import 'layouts/partials/vars';
 @import 'layouts/partials/fontawesome-custom';

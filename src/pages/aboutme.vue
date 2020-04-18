@@ -3,7 +3,7 @@
     <navigation />
     <section id="aboutMe">
       <div class="aboutMeWrapper">
-        <h1 class="title">{{ $t('home.aboutMe') }}</h1>
+        <h1 class="title">{{ $t('title.aboutMe') }}</h1>
         <img
           class="aboutMePicture"
           src="~/assets/img/pic.jpg"
@@ -65,6 +65,13 @@ export default {
     paths: {
       en: '/aboutme',
       de: '/uebermich'
+    }
+  },
+  head() {
+    return {
+      title: `${
+        this.$i18n.messages[this.$i18n.locale].title.aboutMe
+      } — Leon Ebel — Full Stack Developer`
     }
   }
 }
