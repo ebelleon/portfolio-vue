@@ -6,11 +6,9 @@
         <div class="homeText">
           <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
           <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
-          <transition :duration="10">
-            <nuxt-link class="buttonGrey" :to="localePath('privacy')">
-              {{ $t('title.privacy') }}
-            </nuxt-link>
-          </transition>
+          <nuxt-link class="buttonGrey" :to="localePath('privacy')">
+            {{ $t('title.privacy') }}
+          </nuxt-link>
           <nuxt-link class="buttonGrey" :to="localePath('imprint')">
             {{ $t('title.imprint') }}
           </nuxt-link>
