@@ -1,17 +1,11 @@
 <template>
-  <div>
+  <div class="homeBackground">
     <navigation />
     <section id="home">
       <div class="homeWrapper">
         <div class="homeText">
           <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
           <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
-          <nuxt-link class="buttonGrey" :to="localePath('privacy')">
-            {{ $t('title.privacy') }}
-          </nuxt-link>
-          <nuxt-link class="buttonGrey" :to="localePath('imprint')">
-            {{ $t('title.imprint') }}
-          </nuxt-link>
         </div>
       </div>
     </section>
@@ -33,11 +27,19 @@ export default {
 @import 'layouts/modules/media-queries';
 @import 'layouts/modules/page-transition';
 
+.homeBackground {
+  background: url(../assets/img/background.jpg) no-repeat center transparent;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
 .homeWrapper {
+  justify-content: center;
+  color: $alabaster;
+  display: flex;
+
   @include tablet {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
     justify-content: left;
   }
 }
@@ -74,5 +76,19 @@ export default {
   margin: 0.83em 1em 1.66em;
   text-align: center;
   text-transform: uppercase;
+}
+
+/deep/ .langDropdown {
+  border-color: $alabaster;
+}
+
+/deep/ .langDropdownList {
+  a {
+    color: $alabaster;
+  }
+
+  li {
+    color: $alabaster;
+  }
 }
 </style>
