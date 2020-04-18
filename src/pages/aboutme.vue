@@ -78,24 +78,30 @@ export default {
 @import 'layouts/modules/page-transition';
 
 .aboutMeWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em;
   hyphens: auto;
-  -ms-hyphens: auto;
   -moz-hyphens: auto;
+  -ms-hyphens: auto;
   -webkit-hyphens: auto;
 
   @include desktop {
+    display: initial;
     margin-right: 10em;
+    padding-bottom: initial;
   }
 }
 
 .aboutMePicture {
+  align-self: center;
   border: 2px solid $codGray;
   border-left-style: dashed;
   border-radius: 50%;
   border-right-style: dashed;
   height: 150px;
   width: 150px;
-  margin: 4em 6em;
+  margin: 2em 4em 6em;
   transition: all 0.3s ease;
 
   &:hover {
@@ -104,7 +110,8 @@ export default {
 
   @include desktop {
     float: left;
-    margin: 3em 2.25em 10em 9em;
+    margin-left: 9em;
+    margin-top: 5.5em;
     height: 164px;
     width: 164px;
   }
