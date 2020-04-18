@@ -67,10 +67,10 @@ export default {
         isAnimating: false
       },
       links: [
-        { href: this.localePath('index'), i18n: this.$t('home.home') },
-        { href: this.localePath('aboutme'), i18n: this.$t('home.aboutMe') },
-        { href: '#experience', i18n: this.$t('home.experience') },
-        { href: '#contact', i18n: this.$t('home.contact') }
+        { href: this.localePath('index'), i18n: this.$t('title.home') },
+        { href: this.localePath('aboutme'), i18n: this.$t('title.aboutMe') },
+        { href: '#experience', i18n: this.$t('title.experience') },
+        { href: '#contact', i18n: this.$t('title.contact') }
       ]
     }
   },

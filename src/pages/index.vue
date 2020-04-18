@@ -8,11 +8,11 @@
           <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
           <transition :duration="10">
             <nuxt-link class="buttonGrey" :to="localePath('privacy')">
-              {{ $t('privacy.title') }}
+              {{ $t('title.privacy') }}
             </nuxt-link>
           </transition>
           <nuxt-link class="buttonGrey" :to="localePath('imprint')">
-            {{ $t('imprint.title') }}
+            {{ $t('title.imprint') }}
           </nuxt-link>
         </div>
       </div>

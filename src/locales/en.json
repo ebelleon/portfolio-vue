@@ -1,10 +1,14 @@
 {
   "home": {
+    "jobTitle": "Full Stack Web Developer"
+  },
+  "title": {
     "aboutMe": "About me",
     "contact": "Contact",
     "experience": "Skills",
     "home": "Home",
-    "jobTitle": "Full Stack Web Developer"
+    "imprint": "Imprint",
+    "privacy": "Privacy"
   },
   "aboutMe": {
     "myname": "My name is Leon Ebel, I'm a",
@@ -36,7 +40,6 @@
     "consent": "This website uses cookies. By continuing to use this website, you consent to the use of the Cookies Policy."
   },
   "imprint": {
-    "title": "Imprint",
     "copyright": "Copyright",
     "copyrightDesc": "The contents and works on these pages created by the site operators are subject to German copyright law. Duplication, processing, distribution and any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator. Downloads and copies of these pages are only permitted for private, non-commercial use.",
     "copyrightDescTwo": "Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, contents of third parties are marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. As soon as we become aware of any infringements, we will remove such content immediately.",
@@ -49,7 +52,6 @@
     "liabilityLinksDescTwo": "A permanent control of the contents of the linked pages is not reasonable without concrete evidence of an infringement. As soon as we become aware of any legal infringements, we will remove such links immediately."
   },
   "privacy": {
-    "title": "Privacy",
     "privacyStatement": "Privacy Statement",
     "overviewHeadline": "1. Data Protection at a glance",
     "generalInfos": "General information",

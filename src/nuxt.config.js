@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Leon Ebel - Full Stack Developer - Portfolio',
+    title: 'Leon Ebel — Full Stack Developer — Portfolio',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -12,7 +12,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Portfolio of Leon Ebel - Front-/ Backend Developer based in Munich, Germany.'
+          'Portfolio of Leon Ebel — Front-/ Backend Developer based in Munich, Germany.'
       },
       {
         name: 'keywords',
@@ -26,7 +26,7 @@ export default {
       { name: 'apple-mobile-app-status-bar-style', content: '#FF7860' },
       {
         property: 'og:title',
-        content: 'Leon Ebel - Full Stack Developer - Portfolio'
+        content: 'Leon Ebel — Full Stack Developer — Portfolio'
       },
       { property: 'og:url', content: 'https://www.ebelleon.de' },
       { property: 'og:type', content: 'website' },

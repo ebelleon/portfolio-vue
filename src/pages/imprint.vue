@@ -7,7 +7,7 @@
       <langToggle />
     </header>
     <div class="content">
-      <h1>{{ $t('imprint.title') }}</h1>
+      <h1>{{ $t('title.imprint') }}</h1>
       <h3>{{ $t('imprint.liabilityHeadline') }}</h3>
 
       <p>
@@ -52,8 +52,8 @@ export default {
   head() {
     return {
       title: `${
-        this.$i18n.messages[this.$i18n.locale].imprint.title
-      } - Leon Ebel - Full Stack Developer`
+        this.$i18n.messages[this.$i18n.locale].title.imprint
+      } — Leon Ebel — Full Stack Developer`
     }
   }
 }

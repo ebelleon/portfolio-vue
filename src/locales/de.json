@@ -1,10 +1,14 @@
 {
   "home": {
+    "jobTitle": "Full Stack Web Entwickler"
+  },
+  "title": {
     "aboutMe": "Über mich",
     "contact": "Kontakt",
     "experience": "Erfahrung",
     "home": "Home",
-    "jobTitle": "Full Stack Web Entwickler"
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
   },
   "aboutMe": {
     "myname": "Mein Name ist Leon Ebel, ich bin",
@@ -36,7 +40,6 @@
     "consent": "Diese Website verwendet Cookies. Durch die weitere Nutzung der Website stimmst du der Cookie-Nutzung zu."
   },
   "imprint": {
-    "title": "Impressum",
     "copyright": "Urheberrecht",
     "copyrightDesc": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.",
     "copyrightDescTwo": "Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.",
@@ -49,7 +52,6 @@
     "liabilityLinksDescTwo": "Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen."
   },
   "privacy": {
-    "title": "Datenschutz",
     "privacyStatement": "Datenschutzerklärung",
     "overviewHeadline": "1. Datenschutz auf einen Blick",
     "generalInfos": "Allgemeine Hinweise",
