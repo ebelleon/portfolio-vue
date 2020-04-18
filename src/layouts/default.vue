@@ -1,11 +1,19 @@
 <template>
   <div class="container">
     <nuxt />
+    <client-only>
+      <cookiebanner />
+    </client-only>
   </div>
 </template>
 
 <script>
+import cookiebanner from '@/components/CookieBanner.vue'
+
 export default {
+  components: {
+    cookiebanner
+  },
   head() {
     return {
       htmlAttrs: {

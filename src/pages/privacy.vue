@@ -4,7 +4,7 @@
       <nav class="navbarWrapper">
         <nuxt-link to="/">{{ $t('shared.back') }}</nuxt-link>
       </nav>
-      <langToggle />
+      <langtoggle />
     </header>
     <div class="content">
       <h1>{{ $t('privacy.privacyStatement') }}</h1>
@@ -142,21 +142,15 @@
         </a>
       </p>
     </div>
-
-    <client-only>
-      <cookieBanner />
-    </client-only>
   </div>
 </template>
 
 <script>
-import CookieBanner from '@/components/CookieBanner.vue'
-import LangToggle from '@/components/LangToggle.vue'
+import langtoggle from '@/components/LangToggle.vue'
 
 export default {
   components: {
-    CookieBanner,
-    LangToggle
+    langtoggle
   },
   nuxtI18n: {
     paths: {

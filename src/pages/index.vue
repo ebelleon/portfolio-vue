@@ -17,19 +17,14 @@
         </div>
       </div>
     </section>
-    <client-only>
-      <cookiebanner />
-    </client-only>
   </div>
 </template>
 
 <script>
-import cookiebanner from '@/components/CookieBanner.vue'
 import navigation from '@/components/Navigation.vue'
 
 export default {
   components: {
-    cookiebanner,
     navigation
   }
 }
