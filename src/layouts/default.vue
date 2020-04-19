@@ -36,9 +36,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'assets/style/partials/vars';
-@import 'assets/style/partials/fontawesome-custom';
-@import 'assets/style/modules/media-queries';
+@import 'assets/scss/partials/vars';
+@import 'assets/scss/partials/fontawesome-custom';
+@import 'assets/scss/modules/media-queries';
 
 .container {
   color: $codGray;

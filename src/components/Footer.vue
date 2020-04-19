@@ -77,8 +77,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'assets/style/partials/vars';
-@import 'assets/style/modules/media-queries';
+@import 'assets/scss/partials/vars';
+@import 'assets/scss/modules/media-queries';
 
 footer {
   background-color: $footer;
