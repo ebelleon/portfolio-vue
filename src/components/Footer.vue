@@ -40,6 +40,12 @@ export default {
       currentYear: null,
       linksSocialMedia: [
         {
+          href: 'https://twitter.com/ImEberon',
+          title: 'Twitter',
+          label: 'Personal Twitter',
+          icon: 'twitter'
+        },
+        {
           href: 'https://www.linkedin.com/in/ebelleon',
           title: 'LinkedIn',
           label: 'Personal LinkedIn',
@@ -70,7 +76,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import 'assets/style/partials/vars';
 @import 'assets/style/modules/media-queries';
 
@@ -93,6 +99,21 @@ footer {
     color: $codGray;
     text-decoration: none;
     padding: 0 0.77em;
+
+    &:hover {
+      .fa-twitter {
+        color: #1da1f2;
+      }
+      .fa-linkedin {
+        color: #0077b5;
+      }
+      .fa-xing {
+        color: #026466;
+      }
+      .fa-github {
+        color: #24292e;
+      }
+    }
   }
 
   @include tablet {
