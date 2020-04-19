@@ -1,6 +1,10 @@
 <template>
-  <div class="container">
-    <nuxt />
+  <div>
+    <div class="container">
+      <navigation v-if="!home" />
+      <nuxt />
+    </div>
+
     <client-only>
       <cookiebanner />
     </client-only>
@@ -8,11 +12,18 @@
 </template>
 
 <script>
+import navigation from '@/components/Navigation.vue'
 import cookiebanner from '@/components/CookieBanner.vue'
 
 export default {
   components: {
-    cookiebanner
+    cookiebanner,
+    navigation
+  },
+  computed: {
+    home() {
+      return this.$route.path === this.localePath('index')
+    }
   },
   head() {
     return {
@@ -32,6 +43,7 @@ export default {
 html,
 body {
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {

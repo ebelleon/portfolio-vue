@@ -9,14 +9,17 @@
         </div>
       </div>
     </section>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from '@/components/Footer.vue'
 import navigation from '@/components/Navigation.vue'
 
 export default {
   components: {
+    Footer,
     navigation
   }
 }
@@ -89,6 +92,13 @@ export default {
 
   li {
     color: $alabaster;
+  }
+}
+
+/deep/ .hamburger__line-in {
+  &::before,
+  &::after {
+    background-color: $alabaster;
   }
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <navigation />
     <section id="aboutMe">
       <div class="aboutMeWrapper">
         <h1 class="title">{{ $t('title.aboutMe') }}</h1>
@@ -50,12 +49,7 @@
 </template>
 
 <script>
-import navigation from '@/components/Navigation.vue'
-
 export default {
-  components: {
-    navigation
-  },
   nuxtI18n: {
     paths: {
       en: '/aboutme',

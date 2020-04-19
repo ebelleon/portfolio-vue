@@ -11,7 +11,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
-    "stylelint": "npx stylelint layouts/*.vue"
+    "stylelint:vue": "npx stylelint layouts/*.vue",
+    "stylelint:scss": "npx stylelint assets/style/*/*.scss"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
