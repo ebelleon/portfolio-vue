@@ -1,23 +1,28 @@
 <template>
   <div>
     <header class="headWrapper">
-      <div ref="hamburger" class="hamburger" @click="hamburgerClick">
-        <div class="hamburger__line hamburger__line--01">
-          <div class="hamburger__line-in hamburger__line-in--01"></div>
+      <nav v-if="disclaimer" class="navbarWrapper">
+        <nuxt-link :to="localePath('/')">{{ $t('shared.back') }}</nuxt-link>
+      </nav>
+      <nav v-else>
+        <div ref="hamburger" class="hamburger" @click="hamburgerClick">
+          <div class="hamburger__line hamburger__line--01">
+            <div class="hamburger__line-in hamburger__line-in--01"></div>
+          </div>
+          <div class="hamburger__line hamburger__line--02">
+            <div class="hamburger__line-in hamburger__line-in--02"></div>
+          </div>
+          <div class="hamburger__line hamburger__line--03">
+            <div class="hamburger__line-in hamburger__line-in--03"></div>
+          </div>
+          <div class="hamburger__line hamburger__line--cross01">
+            <div class="hamburger__line-in hamburger__line-in--cross01"></div>
+          </div>
+          <div class="hamburger__line hamburger__line--cross02">
+            <div class="hamburger__line-in hamburger__line-in--cross02"></div>
+          </div>
         </div>
-        <div class="hamburger__line hamburger__line--02">
-          <div class="hamburger__line-in hamburger__line-in--02"></div>
-        </div>
-        <div class="hamburger__line hamburger__line--03">
-          <div class="hamburger__line-in hamburger__line-in--03"></div>
-        </div>
-        <div class="hamburger__line hamburger__line--cross01">
-          <div class="hamburger__line-in hamburger__line-in--cross01"></div>
-        </div>
-        <div class="hamburger__line hamburger__line--cross02">
-          <div class="hamburger__line-in hamburger__line-in--cross02"></div>
-        </div>
-      </div>
+      </nav>
       <langtoggle />
     </header>
     <div class="globalMenu">
@@ -72,6 +77,14 @@ export default {
         { href: '#experience', i18n: this.$t('title.experience') },
         { href: '#contact', i18n: this.$t('title.contact') }
       ]
+    }
+  },
+  computed: {
+    disclaimer() {
+      return (
+        this.$route.path === this.localePath('imprint') ||
+        this.$route.path === this.localePath('privacy')
+      )
     }
   },
   mounted() {
