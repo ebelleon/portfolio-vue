@@ -16,9 +16,10 @@ services:
     image: nginx:stable-alpine
     container_name: portfolio-app
     restart: always
-    # TODO: add environment variables
     environment:
       - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     ports:
       - "80:80"
     volumes:
