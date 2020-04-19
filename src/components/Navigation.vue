@@ -211,4 +211,30 @@ export default {
 
 <style lang="scss">
 @import 'assets/style/vendor/burger_menu/hamburger';
+
+.headWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.77em;
+}
+
+.navbarWrapper {
+  display: flex;
+
+  a {
+    border-radius: 2px;
+    color: $codGray;
+    letter-spacing: 2px;
+    margin-right: 0.5em;
+    padding: 1px 4px 2px 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $spelunking;
+      color: $alabaster;
+    }
+  }
+}
 </style>

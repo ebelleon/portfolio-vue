@@ -40,28 +40,6 @@ export default {
 @import 'assets/style/partials/fontawesome-custom';
 @import 'assets/style/modules/media-queries';
 
-html,
-body {
-  min-height: 100%;
-  scroll-behavior: smooth;
-}
-
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  background-color: $transparent;
-  margin: 0;
-  overflow-x: hidden;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 .container {
   color: $codGray;
   font: 300 0.85em $robotoSlab;
@@ -71,39 +49,6 @@ body {
   @include tablet {
     font-size: 1em;
   }
-}
-
-.headWrapper {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.77em;
-}
-
-.navbarWrapper {
-  display: flex;
-
-  a {
-    border-radius: 2px;
-    color: $codGray;
-    letter-spacing: 2px;
-    margin-right: 0.5em;
-    padding: 1px 4px 2px 6px;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:hover {
-      background-color: $spelunking;
-      color: $alabaster;
-    }
-  }
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 90vh;
 }
 
 .buttonGrey {
@@ -120,47 +65,5 @@ section {
     background-color: $spelunking;
     color: $alabaster;
   }
-}
-
-.title {
-  color: $codGray;
-  font-size: $headlineDefault;
-  font-weight: $bold;
-  margin: 0.83em 1em 1.66em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-// disclaimer
-.content {
-  font-size: 0.85em;
-  font-weight: $light;
-  padding: 0.5em 1em;
-  word-break: break-word;
-
-  h1 {
-    margin-top: 0;
-  }
-
-  a {
-    color: $link;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  ul {
-    padding-left: 2.35em;
-  }
-
-  @include desktop {
-    padding-left: 2em;
-  }
-}
-
-.strong {
-  font-weight: $regular;
 }
 </style>
