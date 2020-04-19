@@ -157,5 +157,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'assets/style/modules/disclaimer';
+@import 'assets/style/partials/vars';
+
+.optOut {
+  font-weight: $bold;
+  margin: 0.8em 0;
+}
 </style>

@@ -131,6 +131,35 @@ section {
   text-transform: uppercase;
 }
 
+// disclaimer
+.content {
+  font-size: 0.85em;
+  font-weight: $light;
+  padding: 0.5em 1em;
+  word-break: break-word;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  a {
+    color: $link;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    padding-left: 2.35em;
+  }
+
+  @include desktop {
+    padding-left: 2em;
+  }
+}
+
 .strong {
   font-weight: $regular;
 }
