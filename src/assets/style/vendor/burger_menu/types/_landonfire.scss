@@ -1,4 +1,4 @@
-@import 'layouts/modules/media-queries';
+@import 'assets/style/modules/media-queries';
 
 @if index($hamburger-types, landonfire) {
   .globalMenu {
@@ -98,6 +98,7 @@
     pointer-events: none;
     position: fixed;
     top: 0;
+    z-index: 1;
 
     &.isOpened {
       pointer-events: auto;

@@ -29,8 +29,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'layouts/partials/vars';
-@import 'layouts/modules/dropdown';
+@import 'assets/style/partials/vars';
+@import 'assets/style/modules/dropdown';
 
 .langDropdown {
   border-radius: 3px;

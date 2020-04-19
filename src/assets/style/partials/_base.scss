@@ -1,0 +1,9 @@
+@import 'assets/style/modules/media-queries';
+@import 'assets/style/modules/input-field';
+@import 'assets/style/modules/dropdown';
+@import 'assets/style/modules/skills-pictures';
+@import 'assets/style/modules/cookie-banner';
+
+@keyframes slideDown {
+  0% { transform: translateY(-150px) }
+}

@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'layouts/modules/cookie-banner';
+@import 'assets/style/modules/cookie-banner';
 
 .cookieBanner {
   @include cookieBanner;

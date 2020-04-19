@@ -23,9 +23,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'layouts/partials/vars';
-@import 'layouts/modules/media-queries';
-@import 'layouts/modules/page-transition';
+@import 'assets/style/partials/vars';
+@import 'assets/style/modules/media-queries';
+@import 'assets/style/modules/page-transition';
 
 .homeBackground {
   background: url(../assets/img/background.jpg) no-repeat center transparent;

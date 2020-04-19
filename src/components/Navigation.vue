@@ -197,5 +197,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'layouts/vendor/burger_menu/hamburger';
+@import 'assets/style/vendor/burger_menu/hamburger';
 </style>

@@ -25,9 +25,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'layouts/partials/vars';
-@import 'layouts/partials/fontawesome-custom';
-@import 'layouts/modules/media-queries';
+@import 'assets/style/partials/vars';
+@import 'assets/style/partials/fontawesome-custom';
+@import 'assets/style/modules/media-queries';
 
 html,
 body {

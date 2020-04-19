@@ -1,5 +1,5 @@
-@import 'layouts/partials/vars';
-@import 'layouts/modules/media-queries';
+@import 'assets/style/partials/vars';
+@import 'assets/style/modules/media-queries';
 
 @mixin cookieBanner {
   background-color: $wildDove;

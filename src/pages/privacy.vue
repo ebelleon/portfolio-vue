@@ -170,5 +170,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'layouts/modules/disclaimer';
+@import 'assets/style/modules/disclaimer';
 </style>
