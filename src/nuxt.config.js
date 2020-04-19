@@ -37,7 +37,37 @@ export default {
       }
       // { property: 'og:image', content: 'https://www.ebelleon.de/assets/img/background.jpg'} TODO: UNCOMMENT THIS FOR PRODUCTION
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        href: '/fonts/montserrat-v14-latin-700.woff2',
+        crossorigin: 'anonymous'
+      },
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        href: '/fonts/roboto-slab-v11-latin-300.woff2',
+        crossorigin: 'anonymous'
+      },
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        href: '/fonts/roboto-slab-v11-latin-regular.woff2',
+        crossorigin: 'anonymous'
+      },
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        href: '/fonts/roboto-slab-v11-latin-700.woff2',
+        crossorigin: 'anonymous'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -46,7 +76,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/style/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -84,7 +114,7 @@ export default {
           },
           {
             set: '@fortawesome/free-brands-svg-icons',
-            icons: ['faLinkedin', 'faGithub', 'faXing']
+            icons: ['faLinkedin', 'faGithub', 'faXing', 'faTwitter']
           }
         ]
       }
