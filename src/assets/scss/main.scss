@@ -21,6 +21,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   background-color: $transparent;
+  color: $codGray;
+  font: 300 0.85em $robotoSlab;
   margin: 0;
   overflow-x: hidden;
 }

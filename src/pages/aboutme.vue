@@ -105,7 +105,6 @@ export default {
   @include desktop {
     float: left;
     margin-left: 9em;
-    margin-top: 5.5em;
     height: 164px;
     width: 164px;
   }

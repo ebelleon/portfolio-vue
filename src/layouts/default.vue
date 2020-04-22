@@ -1,24 +1,24 @@
 <template>
   <div>
+    <Navigation v-if="!home" />
     <div class="container">
-      <navigation v-if="!home" />
       <nuxt />
     </div>
 
     <client-only>
-      <cookiebanner />
+      <Cookiebanner />
     </client-only>
   </div>
 </template>
 
 <script>
-import navigation from '@/components/Navigation.vue'
-import cookiebanner from '@/components/CookieBanner.vue'
+import Navigation from '@/components/Header/Navigation.vue'
+import Cookiebanner from '@/components/CookieBanner.vue'
 
 export default {
   components: {
-    cookiebanner,
-    navigation
+    Cookiebanner,
+    Navigation
   },
   computed: {
     home() {
@@ -41,8 +41,6 @@ export default {
 @import 'assets/scss/modules/media-queries';
 
 .container {
-  color: $codGray;
-  font: 300 0.85em $robotoSlab;
   min-height: 100vh;
   transition: all 0.8s cubic-bezier(0.55, 0, 0.1, 1);
 
