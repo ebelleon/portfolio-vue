@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <header class="headWrapper">
+  <header>
+    <div class="headWrapper">
       <nav v-if="disclaimer" class="navbarWrapper">
         <nuxt-link :to="localePath('/')">{{ $t('shared.back') }}</nuxt-link>
       </nav>
@@ -24,7 +24,7 @@
         </div>
       </nav>
       <langtoggle />
-    </header>
+    </div>
     <div class="globalMenu">
       <div class="globalMenu__wrap">
         <nuxt-link
@@ -47,11 +47,11 @@
       <path class="shapeOverlays__path"></path>
       <path class="shape-overlays__path"></path>
     </svg>
-  </div>
+  </header>
 </template>
 
 <script>
-import langtoggle from '@/components/LangToggle.vue'
+import langtoggle from '@/components/Header/LangToggle.vue'
 
 export default {
   components: {

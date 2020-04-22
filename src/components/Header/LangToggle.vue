@@ -36,6 +36,7 @@ export default {
   border-radius: 3px;
   border: 1px solid $codGray;
   text-align: center;
+  z-index: 110;
 
   label {
     margin: 0;
