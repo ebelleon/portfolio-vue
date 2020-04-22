@@ -1,26 +1,30 @@
 <template>
-  <div class="homeBackground">
-    <navigation />
-    <section id="home">
-      <div class="homeWrapper">
-        <div class="homeText">
-          <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
-          <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
+  <div>
+    <header>
+      <Navigation />
+    </header>
+    <div class="homeBackground">
+      <section id="home">
+        <div class="homeWrapper">
+          <div class="homeText">
+            <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
+            <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <Footer />
   </div>
 </template>
 
 <script>
 import Footer from '@/components/Footer.vue'
-import navigation from '@/components/Navigation.vue'
+import Navigation from '@/components/Header/Navigation.vue'
 
 export default {
   components: {
     Footer,
-    navigation
+    Navigation
   }
 }
 </script>
@@ -35,6 +39,9 @@ export default {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 
 .homeWrapper {
