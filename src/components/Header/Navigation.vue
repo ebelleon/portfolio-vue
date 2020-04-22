@@ -209,7 +209,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import 'assets/scss/vendor/burger_menu/hamburger';
 
 .headWrapper {

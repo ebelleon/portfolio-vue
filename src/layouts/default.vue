@@ -1,9 +1,10 @@
 <template>
   <div>
-    <Navigation v-if="!home" />
+    <Navigation />
     <div class="container">
       <nuxt />
     </div>
+    <Footer v-if="home" />
 
     <client-only>
       <Cookiebanner />
@@ -13,12 +14,14 @@
 
 <script>
 import Navigation from '@/components/Header/Navigation.vue'
+import Footer from '@/components/Footer.vue'
 import Cookiebanner from '@/components/CookieBanner.vue'
 
 export default {
   components: {
-    Cookiebanner,
-    Navigation
+    Navigation,
+    Footer,
+    Cookiebanner
   },
   computed: {
     home() {
@@ -41,8 +44,7 @@ export default {
 @import 'assets/scss/modules/media-queries';
 
 .container {
-  min-height: 100vh;
-  transition: all 0.8s cubic-bezier(0.55, 0, 0.1, 1);
+  color: $codGray;
 
   @include tablet {
     font-size: 1em;
