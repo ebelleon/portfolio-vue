@@ -1,8 +1,8 @@
 <template>
   <div>
     <section id="aboutMe">
+      <h1 class="title">{{ $t('title.aboutMe') }}</h1>
       <div class="aboutMeWrapper">
-        <h1 class="title">{{ $t('title.aboutMe') }}</h1>
         <img
           class="aboutMePicture"
           src="~/assets/img/pic.jpg"
@@ -18,8 +18,7 @@
           {{ $t('aboutMe.aswellas') }}
           <span class="strong">{{ $t('aboutMe.backend') }}</span>
           {{ $t('aboutMe.technologies') }}
-        </p>
-        <p class="aboutMeParagraph">
+          <span class="customBreak"><br /></span>
           {{ $t('aboutMe.since') }}
           {{ /* eslint-disable-next-line */ }}
           <span class="strong">{{ $t('shared.city') }}.</span>
@@ -27,13 +26,11 @@
           {{ $t('aboutMe.apprenticeship') }}
           <span class="strong">{{ $t('aboutMe.apprenticeshipName') }}</span>
           {{ $t('aboutMe.completed') }}
-        </p>
-        <p class="aboutMeParagraph">
+          <span class="customBreak"><br /></span>
           {{ $t('aboutMe.my') }}
           <span class="strong">{{ $t('aboutMe.interest') }}</span>
           {{ $t('aboutMe.began') }}
-        </p>
-        <p class="aboutMeParagraph">
+          <span class="customBreak"><br /></span>
           {{ $t('aboutMe.whenIm') }}
           <span class="strong">{{ $t('aboutMe.notDevelop') }}</span>
           {{ $t('aboutMe.orAt') }}
@@ -81,9 +78,9 @@ export default {
   -webkit-hyphens: auto;
 
   @include desktop {
-    display: initial;
-    margin-right: 10em;
-    padding-bottom: initial;
+    flex-direction: row;
+    margin: 0 5rem;
+    padding-bottom: 0;
   }
 }
 
@@ -93,9 +90,9 @@ export default {
   border-left-style: dashed;
   border-radius: 50%;
   border-right-style: dashed;
+  margin-bottom: 4rem;
   height: 150px;
   width: 150px;
-  margin: 2em 4em 6em;
   transition: all 0.3s ease;
 
   &:hover {
@@ -103,17 +100,19 @@ export default {
   }
 
   @include desktop {
-    float: left;
-    margin-left: 9em;
     height: 164px;
     width: 164px;
+    margin-bottom: 0;
   }
 }
 
 .aboutMeParagraph {
   line-height: 2;
-  margin: 0;
-  padding: 0.77em 1.66em;
+  padding: 0 2rem;
   text-align: justify;
+}
+
+.customBreak {
+  display: table;
 }
 </style>
