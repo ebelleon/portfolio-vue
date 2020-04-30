@@ -6,23 +6,21 @@
           {{ $t('shared.back') }}
         </nuxt-link>
       </nav>
-      <nav v-else>
-        <div ref="hamburger" class="hamburger" @click="hamburgerClick">
-          <div class="hamburger__line hamburger__line--01">
-            <div class="hamburger__line-in hamburger__line-in--01" />
-          </div>
-          <div class="hamburger__line hamburger__line--02">
-            <div class="hamburger__line-in hamburger__line-in--02" />
-          </div>
-          <div class="hamburger__line hamburger__line--03">
-            <div class="hamburger__line-in hamburger__line-in--03" />
-          </div>
-          <div class="hamburger__line hamburger__line--cross01">
-            <div class="hamburger__line-in hamburger__line-in--cross01" />
-          </div>
-          <div class="hamburger__line hamburger__line--cross02">
-            <div class="hamburger__line-in hamburger__line-in--cross02" />
-          </div>
+      <nav v-else ref="hamburger" class="hamburger" @click="hamburgerClick">
+        <div class="hamburger__line hamburger__line--01">
+          <div class="hamburger__line-in hamburger__line-in--01" />
+        </div>
+        <div class="hamburger__line hamburger__line--02">
+          <div class="hamburger__line-in hamburger__line-in--02" />
+        </div>
+        <div class="hamburger__line hamburger__line--03">
+          <div class="hamburger__line-in hamburger__line-in--03" />
+        </div>
+        <div class="hamburger__line hamburger__line--cross01">
+          <div class="hamburger__line-in hamburger__line-in--cross01" />
+        </div>
+        <div class="hamburger__line hamburger__line--cross02">
+          <div class="hamburger__line-in hamburger__line-in--cross02" />
         </div>
       </nav>
       <langtoggle />

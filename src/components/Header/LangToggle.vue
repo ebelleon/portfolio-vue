@@ -43,6 +43,10 @@ export default {
   }
 }
 
+.langDropdownToggle {
+  @include dropdownBtn('langDropdownList');
+}
+
 .langDropdownList {
   @include dropdownDefault;
   cursor: pointer;
@@ -60,20 +64,6 @@ export default {
     color: $codGray;
     font-weight: $thin;
     line-height: 40px;
-  }
-}
-
-.langDropdownToggle {
-  float: left;
-  margin: -1em;
-  opacity: 0;
-
-  &:checked ~ .langDropdownList {
-    max-height: 122px;
-  }
-
-  &:not(:checked) ~ .langDropdownList {
-    max-height: 40px;
   }
 }
 </style>
