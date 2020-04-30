@@ -2,35 +2,37 @@
   <div v-if="isOpen" class="cookieBanner">
     <p>
       {{ $t('cookieBanner.consent') }}
-      <nuxt-link :to="localePath('privacy') + '#cookies'">{{
-        $t('shared.moreInfo')
-      }}</nuxt-link>
+      <nuxt-link :to="localePath('privacy') + '#cookies'">
+        {{
+          $t('shared.moreInfo')
+        }}
+      </nuxt-link>
     </p>
     <div class="closeContainer">
-      <span class="close" @click="accept"></span>
+      <span class="close" @click="accept" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       isOpen: false
     }
   },
-  created() {
+  created () {
     if (!this.getCookieBannerState() === true) {
       this.isOpen = true
     }
   },
   methods: {
-    getCookieBannerState() {
+    getCookieBannerState () {
       if (process.browser) {
         return localStorage.getItem('closedCookieBanner')
       }
     },
-    accept() {
+    accept () {
       if (process.browser) {
         this.isOpen = false
         localStorage.setItem('closedCookieBanner', 1)

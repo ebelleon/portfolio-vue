@@ -24,11 +24,11 @@ export default {
     Cookiebanner
   },
   computed: {
-    home() {
+    home () {
       return this.$route.path === this.localePath('index')
     }
   },
-  head() {
+  head () {
     return {
       htmlAttrs: {
         lang: this.$i18n.locale

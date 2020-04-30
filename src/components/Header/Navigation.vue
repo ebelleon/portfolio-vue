@@ -2,24 +2,26 @@
   <header>
     <div class="headWrapper">
       <nav v-if="disclaimer" class="navbarWrapper">
-        <nuxt-link :to="localePath('/')">{{ $t('shared.back') }}</nuxt-link>
+        <nuxt-link :to="localePath('/')">
+          {{ $t('shared.back') }}
+        </nuxt-link>
       </nav>
       <nav v-else>
         <div ref="hamburger" class="hamburger" @click="hamburgerClick">
           <div class="hamburger__line hamburger__line--01">
-            <div class="hamburger__line-in hamburger__line-in--01"></div>
+            <div class="hamburger__line-in hamburger__line-in--01" />
           </div>
           <div class="hamburger__line hamburger__line--02">
-            <div class="hamburger__line-in hamburger__line-in--02"></div>
+            <div class="hamburger__line-in hamburger__line-in--02" />
           </div>
           <div class="hamburger__line hamburger__line--03">
-            <div class="hamburger__line-in hamburger__line-in--03"></div>
+            <div class="hamburger__line-in hamburger__line-in--03" />
           </div>
           <div class="hamburger__line hamburger__line--cross01">
-            <div class="hamburger__line-in hamburger__line-in--cross01"></div>
+            <div class="hamburger__line-in hamburger__line-in--cross01" />
           </div>
           <div class="hamburger__line hamburger__line--cross02">
-            <div class="hamburger__line-in hamburger__line-in--cross02"></div>
+            <div class="hamburger__line-in hamburger__line-in--cross02" />
           </div>
         </div>
       </nav>
@@ -43,9 +45,9 @@
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
     >
-      <path class="shapeOverlays__path"></path>
-      <path class="shapeOverlays__path"></path>
-      <path class="shape-overlays__path"></path>
+      <path class="shapeOverlays__path" />
+      <path class="shapeOverlays__path" />
+      <path class="shape-overlays__path" />
     </svg>
   </header>
 </template>
@@ -57,7 +59,7 @@ export default {
   components: {
     langtoggle
   },
-  data() {
+  data () {
     return {
       overlay: {
         elem: null,
@@ -80,23 +82,23 @@ export default {
     }
   },
   computed: {
-    disclaimer() {
+    disclaimer () {
       return (
         this.$route.path === this.localePath('imprint') ||
         this.$route.path === this.localePath('privacy')
       )
     }
   },
-  mounted() {
+  mounted () {
     this.overlay.elem = this.$refs.shapeOverlays
     this.overlay.path = this.overlay.elem.querySelectorAll('path')
   },
   methods: {
     // easing
-    cubicInOut(t) {
+    cubicInOut (t) {
       return t < 0.5 ? 4.0 * t * t * t : 0.5 * (2.0 * t - 2.0) ** 3.0 + 1.0
     },
-    toggle() {
+    toggle () {
       this.overlay.isAnimating = true
       for (let i = 0; i < this.overlay.numPoints; i++) {
         this.overlay.delayPointsArray[i] =
@@ -108,19 +110,19 @@ export default {
         this.close()
       }
     },
-    open() {
+    open () {
       this.overlay.isOpened = true
       this.overlay.elem.classList.add('isOpened')
       this.overlay.timeStart = Date.now()
       this.renderLoop()
     },
-    close() {
+    close () {
       this.overlay.isOpened = false
       this.overlay.elem.classList.remove('isOpened')
       this.overlay.timeStart = Date.now()
       this.renderLoop()
     },
-    updatePath(time) {
+    updatePath (time) {
       const points = []
       for (let i = 0; i < this.overlay.numPoints; i++) {
         points[i] =
@@ -143,10 +145,10 @@ export default {
           points[i + 1]
         } ${p} `
       }
-      str += this.overlay.isOpened ? `H 100 V 0` : `H 0 V 0`
+      str += this.overlay.isOpened ? 'H 100 V 0' : 'H 0 V 0'
       return str
     },
-    render() {
+    render () {
       if (this.overlay.isOpened) {
         for (let i = 0; i < this.overlay.path.length; i++) {
           this.overlay.path[i].setAttribute(
@@ -171,7 +173,7 @@ export default {
         }
       }
     },
-    renderLoop() {
+    renderLoop () {
       this.render()
       if (
         Date.now() - this.overlay.timeStart <
@@ -186,7 +188,7 @@ export default {
         this.overlay.isAnimating = false
       }
     },
-    hamburgerClick() {
+    hamburgerClick () {
       const elemHamburger = this.$refs.hamburger
       const gNavItems = document.querySelectorAll('.globalMenu__item')
       if (this.overlay.isAnimating) {

@@ -5,7 +5,7 @@
         id="langDropdownToggle"
         type="checkbox"
         class="langDropdownToggle"
-      />
+      >
       <ul class="langDropdownList">
         <li><fa :icon="['fas', 'language']" />{{ $t('shared.chooseLang') }}</li>
         <li v-for="locale in availableLocales" :key="locale.code">
@@ -21,8 +21,8 @@
 <script>
 export default {
   computed: {
-    availableLocales() {
-      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale)
+    availableLocales () {
+      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
     }
   }
 }

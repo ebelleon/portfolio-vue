@@ -10,7 +10,7 @@
         target="_blank"
         rel="noopener nofollow"
       >
-        <fa :icon="['fab', item.icon]"></fa>
+        <fa :icon="['fab', item.icon]" />
       </a>
     </div>
 
@@ -27,15 +27,16 @@
         :key="index"
         target="_self"
         :to="item.href"
-        >{{ item.i18n }}</nuxt-link
       >
+        {{ item.i18n }}
+      </nuxt-link>
     </div>
   </footer>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       currentYear: null,
       linksSocialMedia: [
@@ -70,7 +71,7 @@ export default {
       ]
     }
   },
-  created() {
+  created () {
     this.currentYear = new Date().getFullYear()
   }
 }

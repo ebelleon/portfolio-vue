@@ -15,7 +15,7 @@
         stroke="none"
         fill="#000000"
         fill-rule="evenodd"
-      ></path>
+      />
     </g>
   </svg>
 </template>

@@ -1,13 +1,15 @@
 <template>
   <div>
     <section id="aboutMe">
-      <h1 class="title">{{ $t('title.aboutMe') }}</h1>
+      <h1 class="title">
+        {{ $t('title.aboutMe') }}
+      </h1>
       <div class="aboutMeWrapper">
         <img
           class="aboutMePicture"
           src="~/assets/img/pic.jpg"
           alt="Leon Ebel"
-        />
+        >
         <p class="aboutMeParagraph">
           {{ $t('aboutMe.myname') }}
           <span class="strong">{{ $t('aboutMe.developer') }}</span>
@@ -18,7 +20,7 @@
           {{ $t('aboutMe.aswellas') }}
           <span class="strong">{{ $t('aboutMe.backend') }}</span>
           {{ $t('aboutMe.technologies') }}
-          <span class="customBreak"><br /></span>
+          <span class="customBreak"><br></span>
           {{ $t('aboutMe.since') }}
           {{ /* eslint-disable-next-line */ }}
           <span class="strong">{{ $t('shared.city') }}.</span>
@@ -26,11 +28,11 @@
           {{ $t('aboutMe.apprenticeship') }}
           <span class="strong">{{ $t('aboutMe.apprenticeshipName') }}</span>
           {{ $t('aboutMe.completed') }}
-          <span class="customBreak"><br /></span>
+          <span class="customBreak"><br></span>
           {{ $t('aboutMe.my') }}
           <span class="strong">{{ $t('aboutMe.interest') }}</span>
           {{ $t('aboutMe.began') }}
-          <span class="customBreak"><br /></span>
+          <span class="customBreak"><br></span>
           {{ $t('aboutMe.whenIm') }}
           <span class="strong">{{ $t('aboutMe.notDevelop') }}</span>
           {{ $t('aboutMe.orAt') }}
@@ -53,7 +55,7 @@ export default {
       de: '/uebermich'
     }
   },
-  head() {
+  head () {
     return {
       title: `${
         this.$i18n.messages[this.$i18n.locale].title.aboutMe

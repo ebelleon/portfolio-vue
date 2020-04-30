@@ -4,8 +4,12 @@
       <section id="home">
         <div class="homeWrapper">
           <div class="homeText">
-            <h1 class="homeTitle">{{ $t('shared.fullName') }}</h1>
-            <h2 class="homeSubtitle">{{ $t('home.jobTitle') }}</h2>
+            <h1 class="homeTitle">
+              {{ $t('shared.fullName') }}
+            </h1>
+            <h2 class="homeSubtitle">
+              {{ $t('home.jobTitle') }}
+            </h2>
           </div>
         </div>
       </section>

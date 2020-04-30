@@ -4,8 +4,10 @@
     <h3>{{ $t('imprint.liabilityHeadline') }}</h3>
 
     <p>
-      {{ $t('shared.fullName') }}<br /><br />
-      <nuxt-link to="/#contact">{{ $t('shared.contactForm') }}</nuxt-link>
+      {{ $t('shared.fullName') }}<br><br>
+      <nuxt-link to="/#contact">
+        {{ $t('shared.contactForm') }}
+      </nuxt-link>
     </p>
 
     <h3>{{ $t('imprint.liabilityContent') }}</h3>
@@ -30,7 +32,7 @@ export default {
       de: '/impressum'
     }
   },
-  head() {
+  head () {
     return {
       title: `${
         this.$i18n.messages[this.$i18n.locale].title.imprint

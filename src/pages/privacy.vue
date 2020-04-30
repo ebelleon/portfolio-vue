@@ -7,14 +7,22 @@
     <p>{{ $t('privacy.generalInfosDesc') }}</p>
 
     <h3>{{ $t('privacy.dataCollection') }}</h3>
-    <p class="strong">{{ $t('privacy.dataCollectionQuestionOne') }}</p>
+    <p class="strong">
+      {{ $t('privacy.dataCollectionQuestionOne') }}
+    </p>
     <p>{{ $t('privacy.dataCollectionAnswerOne') }}</p>
-    <p class="strong">{{ $t('privacy.dataCollectionQuestionTwo') }}</p>
+    <p class="strong">
+      {{ $t('privacy.dataCollectionQuestionTwo') }}
+    </p>
     <p>{{ $t('privacy.dataCollectionAnswerTwo') }}</p>
     <p>{{ $t('privacy.dataCollectionAnswerTwoOne') }}</p>
-    <p class="strong">{{ $t('privacy.dataCollectionQuestionThree') }}</p>
+    <p class="strong">
+      {{ $t('privacy.dataCollectionQuestionThree') }}
+    </p>
     <p>{{ $t('privacy.dataCollectionAnswerThree') }}</p>
-    <p class="strong">{{ $t('privacy.dataCollectionQuestionFour') }}</p>
+    <p class="strong">
+      {{ $t('privacy.dataCollectionQuestionFour') }}
+    </p>
     <p>{{ $t('privacy.dataCollectionAnswerFour') }}</p>
     <p>{{ $t('privacy.dataCollectionAnswerFourOne') }}</p>
 
@@ -31,8 +39,8 @@
     <h3>{{ $t('privacy.responsibility') }}</h3>
     <p>{{ $t('privacy.responsibilityDesc') }}</p>
     <p>
-      {{ $t('shared.fullName') }}<br />
-      {{ $t('shared.street') }}<br />
+      {{ $t('shared.fullName') }}<br>
+      {{ $t('shared.street') }}<br>
       {{ $t('shared.zip') }} {{ $t('shared.city') }}
     </p>
     <p>
@@ -45,8 +53,12 @@
     <p>{{ $t('privacy.revocationDesc') }}</p>
 
     <h3>{{ $t('privacy.objectionRight') }}</h3>
-    <p class="strong">{{ $t('privacy.objectionRightDesc') }}</p>
-    <p class="strong">{{ $t('privacy.objectionRightDescOne') }}</p>
+    <p class="strong">
+      {{ $t('privacy.objectionRightDesc') }}
+    </p>
+    <p class="strong">
+      {{ $t('privacy.objectionRightDescOne') }}
+    </p>
 
     <h3>{{ $t('privacy.appealRight') }}</h3>
     <p>{{ $t('privacy.appealRightDesc') }}</p>
@@ -73,7 +85,9 @@
 
     <!--  -->
     {{ /* eslint-disable vue-i18n/no-raw-text */ }}
-    <h2 id="cookies">3. {{ $t('privacy.dataCollection') }}</h2>
+    <h2 id="cookies">
+      3. {{ $t('privacy.dataCollection') }}
+    </h2>
     {{ /* eslint-disable vue-i18n/no-raw-text */ }}
     <h3>{{ $t('privacy.cookies') }}</h3>
     <p>{{ $t('privacy.cookiesDesc') }}</p>
@@ -94,11 +108,11 @@
     <p>{{ $t('privacy.matomoDescThree') }}</p>
     <p>{{ $t('privacy.matomoDescFour') }}</p>
     <div class="optOut">
-      <input id="enableMatomo" type="radio" name="matomoPreference" checked />
+      <input id="enableMatomo" type="radio" name="matomoPreference" checked>
       <label for="enableMatomo">{{ $t('privacy.matomoEnable') }}</label>
     </div>
     <div class="optOut">
-      <input id="disableMatomo" type="radio" name="matomoPreference" />
+      <input id="disableMatomo" type="radio" name="matomoPreference">
       <label for="disableMatomo">{{ $t('privacy.matomoDisable') }}</label>
     </div>
 
@@ -146,7 +160,7 @@ export default {
       de: '/datenschutz'
     }
   },
-  head() {
+  head () {
     return {
       title: `${
         this.$i18n.messages[this.$i18n.locale].privacy.privacyStatement
