@@ -210,7 +210,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'assets/scss/vendor/burger_menu/hamburger';
+@import '~@/assets/scss/vendor/burger_menu/hamburger';
 
 .headWrapper {
   align-items: center;

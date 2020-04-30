@@ -1,4 +1,4 @@
-@import 'assets/scss/modules/media-queries';
+@import '../../../modules/media-queries';
 
 @if index($hamburger-types, landonfire) {
   .globalMenu {

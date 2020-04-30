@@ -1,5 +1,5 @@
-@import 'assets/scss/partials/vars';
-@import 'assets/scss/modules/media-queries';
+@import '../partials/vars';
+@import 'media-queries';
 
 @mixin cookieBanner {
   background-color: $wildDove;

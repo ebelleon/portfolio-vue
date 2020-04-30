@@ -13,7 +13,7 @@ module.exports = {
     'font-weight-notation': 'numeric',
     'function-comma-space-after': 'always',
     'function-name-case': 'lower',
-    indentation: 2,
+    'indentation': 2,
     'string-no-newline': true,
     'string-quotes': 'single'
   }

@@ -14,9 +14,9 @@
 </template>
 
 <style lang="scss" scoped>
-@import 'assets/scss/partials/vars';
-@import 'assets/scss/modules/media-queries';
-@import 'assets/scss/modules/page-transition';
+@import '~@/assets/scss/partials/vars';
+@import '~@/assets/scss/modules/media-queries';
+@import '~@/assets/scss/modules/page-transition';
 
 .homeBackground {
   background: url(../assets/img/background.jpg) no-repeat center transparent;

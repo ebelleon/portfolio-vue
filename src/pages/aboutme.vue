@@ -64,9 +64,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'assets/scss/partials/vars';
-@import 'assets/scss/modules/media-queries';
-@import 'assets/scss/modules/page-transition';
+@import '~@/assets/scss/partials/vars';
+@import '~@/assets/scss/modules/media-queries';
+@import '~@/assets/scss/modules/page-transition';
 
 .aboutMeWrapper {
   display: flex;
@@ -79,7 +79,7 @@ export default {
 
   @include desktop {
     flex-direction: row;
-    margin: 0 5rem;
+    margin: 0 10rem;
     padding-bottom: 0;
   }
 }
@@ -110,6 +110,7 @@ export default {
   line-height: 2;
   padding: 0 2rem;
   text-align: justify;
+  margin: 0;
 }
 
 .customBreak {

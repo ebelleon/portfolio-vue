@@ -26,10 +26,6 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-}
-
 section {
   display: flex;
   flex-direction: column;
@@ -41,13 +37,12 @@ section {
 .title {
   font-size: $headlineDefault;
   font-weight: $bold;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
 }
 
 // disclaimer
 .content {
-  font-size: 0.85em;
   font-weight: $light;
   padding: 0.5em 1em;
   word-break: break-word;

@@ -1,4 +1,5 @@
 export default {
+  srcDir: 'src/',
   mode: 'universal',
   /*
    ** Headers of the page
@@ -76,7 +77,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/scss/main.scss'],
+  css: ['~/assets/scss/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -140,8 +141,8 @@ export default {
     vueI18n: {
       fallbackLocale: 'en',
       messages: {
-        de: require('./locales/de.json'),
-        en: require('./locales/en.json')
+        de: require('./src/locales/de.json'),
+        en: require('./src/locales/en.json')
       }
     }
   },
