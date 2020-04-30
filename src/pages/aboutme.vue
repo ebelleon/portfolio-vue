@@ -79,7 +79,6 @@ export default {
 
   @include desktop {
     flex-direction: row;
-    // margin: 0 10rem;
     padding-bottom: 0;
   }
 }
