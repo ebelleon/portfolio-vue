@@ -1,50 +1,48 @@
 <template>
-  <div>
-    <section id="aboutMe">
-      <h1 class="title">
-        {{ $t('title.aboutMe') }}
-      </h1>
-      <div class="aboutMeWrapper">
-        <img
-          class="aboutMePicture"
-          src="~/assets/img/pic.jpg"
-          alt="Leon Ebel"
-        >
-        <p class="aboutMeParagraph">
-          {{ $t('aboutMe.myname') }}
-          <span class="strong">{{ $t('aboutMe.developer') }}</span>
-          {{ $t('aboutMe.specialized') }}
-          <span class="strong">{{ $t('aboutMe.webdev') }}</span>
-          {{ $t('aboutMe.workinin') }}
-          <span class="strong">{{ $t('aboutMe.frontend') }}</span>
-          {{ $t('aboutMe.aswellas') }}
-          <span class="strong">{{ $t('aboutMe.backend') }}</span>
-          {{ $t('aboutMe.technologies') }}
-          <span class="customBreak"><br></span>
-          {{ $t('aboutMe.since') }}
-          {{ /* eslint-disable-next-line */ }}
-          <span class="strong">{{ $t('shared.city') }}.</span>
-          {{ /* eslint-disable-next-line */ }}
-          {{ $t('aboutMe.apprenticeship') }}
-          <span class="strong">{{ $t('aboutMe.apprenticeshipName') }}</span>
-          {{ $t('aboutMe.completed') }}
-          <span class="customBreak"><br></span>
-          {{ $t('aboutMe.my') }}
-          <span class="strong">{{ $t('aboutMe.interest') }}</span>
-          {{ $t('aboutMe.began') }}
-          <span class="customBreak"><br></span>
-          {{ $t('aboutMe.whenIm') }}
-          <span class="strong">{{ $t('aboutMe.notDevelop') }}</span>
-          {{ $t('aboutMe.orAt') }}
-          <span class="strong">{{ $t('aboutMe.work') }}</span>
-          {{ $t('aboutMe.iWillBe') }}
-          <span class="strong">{{ $t('aboutMe.sport') }}</span>
-          {{ $t('aboutMe.orInFront') }}
-          <span class="strong">{{ $t('aboutMe.tv') }}</span>
-        </p>
-      </div>
-    </section>
-  </div>
+  <section id="aboutMe">
+    <h1 class="title">
+      {{ $t('title.aboutMe') }}
+    </h1>
+    <div class="aboutMeWrapper">
+      <img
+        class="aboutMePicture"
+        src="~/assets/img/pic.jpg"
+        alt="Leon Ebel"
+      >
+      <p class="aboutMeParagraph">
+        {{ $t('aboutMe.myname') }}
+        <span class="strong">{{ $t('aboutMe.developer') }}</span>
+        {{ $t('aboutMe.specialized') }}
+        <span class="strong">{{ $t('aboutMe.webdev') }}</span>
+        {{ $t('aboutMe.workinin') }}
+        <span class="strong">{{ $t('aboutMe.frontend') }}</span>
+        {{ $t('aboutMe.aswellas') }}
+        <span class="strong">{{ $t('aboutMe.backend') }}</span>
+        {{ $t('aboutMe.technologies') }}
+        <span class="customBreak"><br></span>
+        {{ $t('aboutMe.since') }}
+        {{ /* eslint-disable-next-line */ }}
+        <span class="strong">{{ $t('shared.city') }}.</span>
+        {{ /* eslint-disable-next-line */ }}
+        {{ $t('aboutMe.apprenticeship') }}
+        <span class="strong">{{ $t('aboutMe.apprenticeshipName') }}</span>
+        {{ $t('aboutMe.completed') }}
+        <span class="customBreak"><br></span>
+        {{ $t('aboutMe.my') }}
+        <span class="strong">{{ $t('aboutMe.interest') }}</span>
+        {{ $t('aboutMe.began') }}
+        <span class="customBreak"><br></span>
+        {{ $t('aboutMe.whenIm') }}
+        <span class="strong">{{ $t('aboutMe.notDevelop') }}</span>
+        {{ $t('aboutMe.orAt') }}
+        <span class="strong">{{ $t('aboutMe.work') }}</span>
+        {{ $t('aboutMe.iWillBe') }}
+        <span class="strong">{{ $t('aboutMe.sport') }}</span>
+        {{ $t('aboutMe.orInFront') }}
+        <span class="strong">{{ $t('aboutMe.tv') }}</span>
+      </p>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -81,7 +79,7 @@ export default {
 
   @include desktop {
     flex-direction: row;
-    margin: 0 10rem;
+    // margin: 0 10rem;
     padding-bottom: 0;
   }
 }
@@ -92,7 +90,7 @@ export default {
   border-left-style: dashed;
   border-radius: 50%;
   border-right-style: dashed;
-  margin-bottom: 4rem;
+  margin: 1rem 0 3rem 0;
   height: 150px;
   width: 150px;
   transition: all 0.3s ease;
@@ -105,6 +103,8 @@ export default {
     height: 164px;
     width: 164px;
     margin-bottom: 0;
+    left: 4.5rem;
+    position: absolute;
   }
 }
 
@@ -113,6 +113,10 @@ export default {
   padding: 0 2rem;
   text-align: justify;
   margin: 0;
+
+  @include desktop {
+    padding: 0 17rem;
+  }
 }
 
 .customBreak {

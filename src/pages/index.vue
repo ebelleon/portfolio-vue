@@ -1,19 +1,17 @@
 <template>
-  <div>
-    <div class="homeBackground">
-      <section id="home">
-        <div class="homeWrapper">
-          <div class="homeText">
-            <h1 class="homeTitle">
-              {{ $t('shared.fullName') }}
-            </h1>
-            <h2 class="homeSubtitle">
-              {{ $t('home.jobTitle') }}
-            </h2>
-          </div>
+  <div class="homeBackground">
+    <section id="home">
+      <div class="homeWrapper">
+        <div class="homeText">
+          <h1 class="homeTitle">
+            {{ $t('shared.fullName') }}
+          </h1>
+          <h2 class="homeSubtitle">
+            {{ $t('home.jobTitle') }}
+          </h2>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </template>
 
