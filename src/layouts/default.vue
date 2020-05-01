@@ -7,7 +7,7 @@
     <Footer v-if="home" />
 
     <client-only>
-      <Cookiebanner />
+      <CookieBanner />
     </client-only>
   </div>
 </template>
@@ -15,17 +15,17 @@
 <script>
 import Navigation from '@/components/Header/Navigation.vue'
 import Footer from '@/components/Footer.vue'
-import Cookiebanner from '@/components/CookieBanner.vue'
+import CookieBanner from '@/components/CookieBanner.vue'
 
 export default {
   components: {
     Navigation,
     Footer,
-    Cookiebanner
+    CookieBanner
   },
   computed: {
     home () {
-      return this.$route.path === this.localePath('index')
+      return this.$route.path === this.localePath('/')
     }
   },
   head () {
@@ -39,9 +39,79 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~@/assets/scss/partials/vars';
-@import '~@/assets/scss/partials/fontawesome-custom';
-@import '~@/assets/scss/modules/media-queries';
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background-color: $transparent;
+  font: 300 0.85em $robotoSlab;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 85vh;
+}
+
+.title {
+  align-self: center;
+  font-size: $headlineDefault;
+  font-weight: $bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+// disclaimer
+.content {
+  font-weight: $light;
+  padding: 0.5em 1em;
+  word-break: break-word;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  a {
+    color: $link;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    padding-left: 2.35em;
+  }
+
+  @include desktop {
+    padding-left: 2em;
+  }
+}
+
+.strong {
+  font-weight: $regular;
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-150px) }
+}
 
 .container {
   color: $codGray;

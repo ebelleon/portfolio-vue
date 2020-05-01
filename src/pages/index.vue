@@ -16,9 +16,6 @@
 </template>
 
 <style lang="scss" scoped>
-@import '~@/assets/scss/partials/vars';
-@import '~@/assets/scss/modules/media-queries';
-
 .homeBackground {
   background: url(../assets/img/background.jpg) no-repeat center transparent;
   -webkit-background-size: cover;

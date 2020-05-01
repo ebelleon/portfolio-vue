@@ -29,7 +29,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/assets/scss/partials/vars';
 @import '~@/assets/scss/modules/dropdown';
 
 .langDropdown {
@@ -44,7 +43,16 @@ export default {
 }
 
 .langDropdownToggle {
-  @include dropdownBtn('langDropdownList');
+  opacity: 0;
+  position: absolute;
+
+  &:not(:checked) ~ .langDropdownList {
+    max-height: 2.5rem;
+  }
+
+  &:checked ~ .langDropdownList {
+    max-height: 9rem;
+  }
 }
 
 .langDropdownList {

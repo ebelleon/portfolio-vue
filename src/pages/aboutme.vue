@@ -11,7 +11,8 @@
       >
       <p class="aboutMeParagraph">
         {{ $t('aboutMe.myname') }}
-        <span class="strong">{{ $t('aboutMe.developer') }}</span>
+        {{ /* eslint-disable-next-line */ }}
+        <span class="strong">{{ $t('aboutMe.developer') }},</span>
         {{ $t('aboutMe.specialized') }}
         <span class="strong">{{ $t('aboutMe.webdev') }}</span>
         {{ $t('aboutMe.workinin') }}
@@ -23,7 +24,6 @@
         {{ $t('aboutMe.since') }}
         {{ /* eslint-disable-next-line */ }}
         <span class="strong">{{ $t('shared.city') }}.</span>
-        {{ /* eslint-disable-next-line */ }}
         {{ $t('aboutMe.apprenticeship') }}
         <span class="strong">{{ $t('aboutMe.apprenticeshipName') }}</span>
         {{ $t('aboutMe.completed') }}
@@ -64,9 +64,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/assets/scss/partials/vars';
-@import '~@/assets/scss/modules/media-queries';
-
 .aboutMeWrapper {
   display: flex;
   flex-direction: column;

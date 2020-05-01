@@ -77,7 +77,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/scss/main.scss'],
+  css: [],
   /*
    ** Plugins to load before mounting the App
    */
@@ -98,6 +98,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     // Doc: https://nuxt-community.github.io/nuxt-i18n
@@ -111,7 +112,7 @@ export default {
           // import whole set
           {
             set: '@fortawesome/free-solid-svg-icons',
-            icons: ['faLanguage']
+            icons: ['faLanguage', 'faAngleUp', 'faAngleDown']
           },
           {
             set: '@fortawesome/free-brands-svg-icons',
@@ -121,6 +122,11 @@ export default {
       }
     ]
   ],
+  styleResources: {
+    scss: [
+      '@/assets/scss/main.scss'
+    ]
+  },
   /*
    ** Translation module configuration
    */
@@ -139,7 +145,7 @@ export default {
     ],
     defaultLocale: 'de',
     vueI18n: {
-      fallbackLocale: 'en',
+      fallbackLocale: 'de',
       messages: {
         de: require('./src/locales/de.json'),
         en: require('./src/locales/en.json')

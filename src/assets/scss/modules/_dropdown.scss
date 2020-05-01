@@ -16,14 +16,14 @@
   }
 
   &:not(:checked) ~ .#{$className} {
-    height: 3em;
+    height: 0;
   }
 
   &:checked ~ .#{$className} {
-    height: 6em;
+    height: 9rem;
   }
 
-  &:checked + label > div > h4 > i {
+  &:checked + label > div > h4 > svg {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);

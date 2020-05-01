@@ -171,8 +171,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/assets/scss/partials/vars';
-
 .optOut {
   font-weight: $bold;
   margin: 0.8em 0;
