@@ -26,9 +26,9 @@
         v-for="(item, index) in linksDisclaimer"
         :key="index"
         target="_self"
-        :to="item.href"
+        :to="localePath(item.href)"
       >
-        {{ item.i18n }}
+        {{ $t(item.i18n) }}
       </nuxt-link>
     </div>
   </footer>
@@ -66,8 +66,8 @@ export default {
         }
       ],
       linksDisclaimer: [
-        { href: this.localePath('privacy'), i18n: this.$t('title.privacy') },
-        { href: this.localePath('imprint'), i18n: this.$t('title.imprint') }
+        { href: 'privacy', i18n: 'title.privacy' },
+        { href: 'imprint', i18n: 'title.imprint' }
       ]
     }
   },

@@ -23,7 +23,7 @@
           <div class="hamburger__line-in hamburger__line-in--cross02" />
         </div>
       </nav>
-      <langtoggle />
+      <LangToggle />
     </div>
     <div class="globalMenu">
       <div class="globalMenu__wrap">
@@ -31,9 +31,9 @@
           v-for="(item, index) in links"
           :key="index"
           class="globalMenu__item"
-          :to="item.href"
+          :to="localePath(item.href)"
         >
-          <span @click="hamburgerClick">{{ item.i18n }}</span>
+          <span @click="hamburgerClick">{{ $t(item.i18n) }}</span>
         </nuxt-link>
       </div>
     </div>
@@ -51,11 +51,11 @@
 </template>
 
 <script>
-import langtoggle from '@/components/Header/LangToggle.vue'
+import LangToggle from '@/components/Header/LangToggle.vue'
 
 export default {
   components: {
-    langtoggle
+    LangToggle
   },
   data () {
     return {
@@ -72,10 +72,10 @@ export default {
         isAnimating: false
       },
       links: [
-        { href: this.localePath('index'), i18n: this.$t('title.home') },
-        { href: this.localePath('aboutme'), i18n: this.$t('title.aboutMe') },
-        { href: '#experience', i18n: this.$t('title.experience') },
-        { href: '#contact', i18n: this.$t('title.contact') }
+        { href: 'index', i18n: 'title.home' },
+        { href: 'aboutme', i18n: 'title.aboutMe' },
+        { href: 'skills', i18n: 'title.experience' },
+        { href: 'contact', i18n: 'title.contact' }
       ]
     }
   },
