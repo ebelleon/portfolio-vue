@@ -12,7 +12,7 @@
   },
   "aboutMe": {
     "myname": "My name is Leon Ebel, I'm a",
-    "developer": "Software Developer,",
+    "developer": "Software Developer",
     "specialized": "specialized in",
     "webdev": "Web Development.",
     "workinin": "I'm working both in",
@@ -37,7 +37,25 @@
     "tv": "TV."
   },
   "skills": {
-    "employers": "Employers:"
+    "employers": "Employers:",
+    "jochenschweizer": "Jochen Schweizer",
+    "primary": "Primary Skills:",
+    "html": "HTML",
+    "css": "CSS",
+    "javascript": "JavaScript",
+    "php": "PHP",
+    "docker": "Docker",
+    "less": "LESS",
+    "sass": "SASS",
+    "bootstrap": "Bootstrap",
+    "nodejs": "Node.js",
+    "jquery": "jQuery",
+    "other": "Other Skills:",
+    "agile": "Agile",
+    "scrum": "Scrum",
+    "sql": "SQL",
+    "perl": "Perl",
+    "linux": "Linux"
   },
   "cookieBanner": {
     "consent": "This website uses cookies. By continuing to use this website, you consent to the use of the Cookies Policy."
