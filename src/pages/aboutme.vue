@@ -66,7 +66,6 @@ export default {
 <style lang="scss" scoped>
 @import '~@/assets/scss/partials/vars';
 @import '~@/assets/scss/modules/media-queries';
-@import '~@/assets/scss/modules/page-transition';
 
 .aboutMeWrapper {
   display: flex;
