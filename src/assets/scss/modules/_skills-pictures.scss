@@ -6,31 +6,31 @@ $skillsPictures:
   HTML,
   JavaScript,
   LESS,
-  MySQL,
   Nodejs,
   PHP,
   Perl,
   SASS,
   Scrum,
+  SQL,
   Tux,
   jQuery;
 
 $skillsBgSize:
-  100% 100%,  // Agile
-  70%  80%,   // Bootstrap
-  100% 100%,  // CSS
-  100% 100%,  // Docker
-  100% 100%,  // HTML
-  105% 105%,  // JavaScript
-  100% 100%,  // LESS
-  100% 57%,   // MySQL
-  100% 70%,   // Nodejs
-  115% 180%,  // PHP
-  100% 100%,  // Perl
-  85%  85%,   // SASS
-  155% 155%,  // Scrum
-  100%  100%, // Tux | Linux
-  100% 100%;  // jQuery
+  100%, // Agile
+  65%,  // Bootstrap
+  50%,  // CSS
+  90%,  // Docker
+  75%,  // HTML
+  55%,  // JavaScript
+  100%, // LESS
+  85%,  // Nodejs
+  115%, // PHP
+  70%,  // Perl
+  85%,  // SASS
+  150%, // Scrum
+  60%,  // SQL
+  65%,  // Tux | Linux
+  100%; // jQuery
 
 @mixin pic($bg-img: null, $bg-size: null) {
   background: $bg-img no-repeat center transparent;

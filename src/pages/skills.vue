@@ -23,14 +23,23 @@
     </div>
 
     <div class="skillsWrapper">
-      {{ /* eslint-disable */ }}
       <h2 class="skillsTitle">
         {{ $t('skills.primary' ) }}
       </h2>
       <br>
+      <div class="skillsPicture DockerPicture" title="Docker">
+        <h4 class="skillsLabel">
+          {{ $t('skills.docker' ) }}
+        </h4>
+      </div>
+      <div class="skillsPicture PHPPicture" title="PHP">
+        <h4 class="skillsLabel">
+          {{ $t('skills.php' ) }}
+        </h4>
+      </div>
       <div class="skillsPicture HTMLPicture" title="HTML">
         <h4 class="skillsLabel">
-        {{ $t('skills.html' ) }}
+          {{ $t('skills.html' ) }}
         </h4>
       </div>
       <input id="CSSDropdownBtn" class="CSSDropdownBtn" type="checkbox">
@@ -45,16 +54,6 @@
           <h4 class="skillsLabel">{{ $t('skills.javascript' ) }} <fa :icon="['fas', 'angle-up']" /></h4>
         </div>
       </label>
-      <div class="skillsPicture PHPPicture" title="PHP">
-        <h4 class="skillsLabel">
-          {{ $t('skills.php' ) }}
-        </h4>
-      </div>
-      <div class="skillsPicture DockerPicture" title="Docker">
-        <h4 class="skillsLabel">
-          {{ $t('skills.docker' ) }}
-        </h4>
-      </div>
 
       <!-- Dropdown Content -->
       <div class="CSSDropdownContent">
@@ -100,7 +99,7 @@
           {{ $t('skills.agile' ) }}
         </h4>
       </div>
-      <div class="skillsPicture MySQLPicture" title="MySQL">
+      <div class="skillsPicture SQLPicture" title="SQL">
         <h4 class="skillsLabel">
           {{ $t('skills.sql' ) }}
         </h4>
