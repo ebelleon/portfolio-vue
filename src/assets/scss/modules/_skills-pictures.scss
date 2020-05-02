@@ -5,15 +5,15 @@ $skillsPictures:
   Docker,
   HTML,
   JavaScript,
+  jQuery,
+  Linux,
   LESS,
   Nodejs,
   PHP,
   Perl,
   SASS,
   Scrum,
-  SQL,
-  Tux,
-  jQuery;
+  SQL;
 
 $skillsBgSize:
   100%, // Agile
@@ -22,15 +22,15 @@ $skillsBgSize:
   90%,  // Docker
   75%,  // HTML
   55%,  // JavaScript
+  100%, // jQuery
+  65%,  // Linux
   100%, // LESS
   85%,  // Nodejs
   115%, // PHP
   70%,  // Perl
   85%,  // SASS
   150%, // Scrum
-  60%,  // SQL
-  65%,  // Tux | Linux
-  100%; // jQuery
+  60%;  // SQL
 
 @mixin pic($bg-img: null, $bg-size: null) {
   background: $bg-img no-repeat center transparent;
