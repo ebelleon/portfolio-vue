@@ -44,8 +44,8 @@
       </h2>
       <br>
       <div
-        v-for="(item, index) in primarySkills"
-        :key="index"
+        v-for="item in primarySkills"
+        :key="item.id"
         class="skills-wrapper__picture"
         :class="`skills-wrapper__picture--${$t(item.label)}`"
         :title="$t(item.label)"
@@ -70,8 +70,8 @@
       <!-- Dropdown Content -->
       <div class="skills-wrapper__dropdown-content--CSS">
         <div
-          v-for="(item, index) in cssContent"
-          :key="index"
+          v-for="item in cssContent"
+          :key="item.id"
           class="skills-wrapper__picture"
           :class="`skills-wrapper__picture--${$t(item.label)}`"
           :title="$t(item.label)"
@@ -98,8 +98,8 @@
         {{ $t('skills.other' ) }}
       </h2>
       <div
-        v-for="(item, index) in otherSkill"
-        :key="index"
+        v-for="item in otherSkill"
+        :key="item.id"
         class="skills-wrapper__picture"
         :class="`skills-wrapper__picture--${$t(item.label)}`"
         :title="$t(item.label)"
@@ -117,21 +117,21 @@ export default {
   data () {
     return {
       primarySkills: [
-        { label: 'skills.docker' },
-        { label: 'skills.php' },
-        { label: 'skills.html' }
+        { id: 1, label: 'skills.docker' },
+        { id: 2, label: 'skills.php' },
+        { id: 3, label: 'skills.html' }
       ],
       cssContent: [
-        { label: 'skills.less' },
-        { label: 'skills.sass' },
-        { label: 'skills.bootstrap' }
+        { id: 4, label: 'skills.less' },
+        { id: 5, label: 'skills.sass' },
+        { id: 6, label: 'skills.bootstrap' }
       ],
       otherSkill: [
-        { label: 'skills.scrum' },
-        { label: 'skills.agile' },
-        { label: 'skills.sql' },
-        { label: 'skills.perl' },
-        { label: 'skills.linux' }
+        { id: 7, label: 'skills.scrum' },
+        { id: 8, label: 'skills.agile' },
+        { id: 9, label: 'skills.sql' },
+        { id: 10, label: 'skills.perl' },
+        { id: 11, label: 'skills.linux' }
       ]
     }
   },
