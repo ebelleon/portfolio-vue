@@ -73,8 +73,12 @@ section {
   align-self: center;
   font-size: $headlineDefault;
   font-weight: $bold;
-  margin-bottom: 2rem;
+  margin: 4rem 0 2rem;
   text-transform: uppercase;
+
+  @include desktop {
+    margin-bottom: 6rem;
+  }
 }
 
 // disclaimer

@@ -57,7 +57,7 @@
       <!-- Dropdown Content -->
       <div class="skills-wrapper__dropdown-content--CSS">
         <div
-          v-for="item in cssContent"
+          v-for="item in cssDropdownContent"
           :key="item.id"
           class="skills-wrapper__picture"
           :class="`skills-wrapper__picture--${$t(item.label)}`"
@@ -69,21 +69,19 @@
         </div>
       </div>
       <div class="skills-wrapper__dropdown-content--JavaScript">
-        <div class="skills-wrapper__picture skills-wrapper__picture--Nodejs" title="Node.js">
+        <div
+          v-for="item in jsDropdownContent"
+          :key="item.id"
+          class="skills-wrapper__picture"
+          :class="`skills-wrapper__picture--${item.className}`"
+          :title="$t(item.label)"
+        >
           <h4 class="skills-wrapper__label">
-            {{ $t('skills.nodejs' ) }}
-          </h4>
-        </div>
-        <div class="skills-wrapper__picture skills-wrapper__picture--jQuery" title="jQuery">
-          <h4 class="skills-wrapper__label">
-            {{ $t('skills.jquery' ) }}
+            {{ $t(item.label) }}
           </h4>
         </div>
       </div>
 
-      <h2 class="skills-wrapper__title">
-        {{ $t('skills.other' ) }}
-      </h2>
       <div
         v-for="item in otherSkill"
         :key="item.id"
@@ -128,17 +126,21 @@ export default {
         { id: 4, label: 'skills.php' },
         { id: 5, label: 'skills.html' }
       ],
-      cssContent: [
+      cssDropdownContent: [
         { id: 6, label: 'skills.less' },
         { id: 7, label: 'skills.sass' },
         { id: 8, label: 'skills.bootstrap' }
       ],
+      jsDropdownContent: [
+        { id: 9, label: 'skills.nodejs', className: 'Nodejs' },
+        { id: 10, label: 'skills.jquery', className: 'jQuery' }
+      ],
       otherSkill: [
-        { id: 9, label: 'skills.scrum' },
-        { id: 10, label: 'skills.agile' },
-        { id: 11, label: 'skills.sql' },
-        { id: 12, label: 'skills.perl' },
-        { id: 13, label: 'skills.linux' }
+        { id: 11, label: 'skills.scrum' },
+        { id: 12, label: 'skills.agile' },
+        { id: 13, label: 'skills.sql' },
+        { id: 14, label: 'skills.perl' },
+        { id: 15, label: 'skills.linux' }
       ]
     }
   },
@@ -229,7 +231,7 @@ export default {
 
 .skills-wrapper {
   overflow: hidden;
-  padding: 10em 0 0;
+  padding: 15rem 0 0;
   text-align: center;
 
   ul {
@@ -286,11 +288,6 @@ export default {
     );
     @if $name == 'Scrum' {
       width: 115px;
-    }
-    @if $name == 'PHP' {
-      .skills-wrapper__label {
-        margin-top: 7.5em;
-      }
     }
   }
   @if $name == 'CSS' or $name == 'JavaScript' {

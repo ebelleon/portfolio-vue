@@ -39,7 +39,7 @@
   "skills": {
     "employers": "Employers:",
     "jochenschweizer": "Jochen Schweizer",
-    "primary": "Primary Skills:",
+    "primary": "Acquire Skills:",
     "html": "HTML",
     "css": "CSS",
     "javascript": "JavaScript",
@@ -50,7 +50,6 @@
     "bootstrap": "Bootstrap",
     "nodejs": "Node.js",
     "jquery": "jQuery",
-    "other": "Other Skills:",
     "agile": "Agile",
     "scrum": "Scrum",
     "sql": "SQL",
