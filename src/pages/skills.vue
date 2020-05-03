@@ -11,28 +11,15 @@
 
       <div class="employer-wrapper__content">
         <ul>
-          <li>
-            <a href="https://www.jochen-schweizer.de" target="_blank" rel="noopener nofollow" class="employer-wrapper__link">
-              <svg class="employer-wrapper__link--jochenschweizer">
-                <use xlink:href="../assets/img/logos.svg#jochen-schweizer-without-slogan" />
+          <li v-for="item in employers" :key="item.id">
+            <a :href="item.url" target="_blank" rel="noopener nofollow" class="employer-wrapper__link">
+              <svg :class="`employer-wrapper__link--${item.svgClass}`">
+                <use :xlink:href="require('@/assets/img/logos.svg') + item.svgName" />
               </svg>
             </a>
-            {{ /* eslint-disable-next-line */ }}
-            <p>2016</p>
-            <p>{{ $t('aboutMe.developer') }}</p>
-            <p>{{ $t('skills.jochenschweizer') }}</p>
-          </li>
-
-          <li>
-            <a href="https://www.myposter.de" target="_blank" rel="noopener nofollow" class="employer-wrapper__link">
-              <svg class="employer-wrapper__link--myposter">
-                <use xlink:href="../assets/img/logos.svg#myposter" />
-              </svg>
-            </a>
-            {{ /* eslint-disable-next-line */ }}
-            <p>2020</p>
-            <p>{{ $t('aboutMe.developer') }}</p>
-            <p>{{ $t('skills.myposter') }}</p>
+            <p>{{ item.year }}</p>
+            <p>{{ $t(item.position) }}</p>
+            <p>{{ $t(item.company) }}</p>
           </li>
         </ul>
       </div>
@@ -116,22 +103,42 @@
 export default {
   data () {
     return {
+      employers: [
+        {
+          id: 1,
+          url: 'https://www.jochen-schweizer.de',
+          svgClass: 'jochenschweizer',
+          svgName: '#jochen-schweizer-without-slogan',
+          year: 2016,
+          position: 'aboutMe.developer',
+          company: 'skills.jochenschweizer'
+        },
+        {
+          id: 2,
+          url: 'https://www.myposter.de',
+          svgClass: 'myposter',
+          svgName: '#myposter',
+          year: 2020,
+          position: 'aboutMe.developer',
+          company: 'skills.myposter'
+        }
+      ],
       primarySkills: [
-        { id: 1, label: 'skills.docker' },
-        { id: 2, label: 'skills.php' },
-        { id: 3, label: 'skills.html' }
+        { id: 3, label: 'skills.docker' },
+        { id: 4, label: 'skills.php' },
+        { id: 5, label: 'skills.html' }
       ],
       cssContent: [
-        { id: 4, label: 'skills.less' },
-        { id: 5, label: 'skills.sass' },
-        { id: 6, label: 'skills.bootstrap' }
+        { id: 6, label: 'skills.less' },
+        { id: 7, label: 'skills.sass' },
+        { id: 8, label: 'skills.bootstrap' }
       ],
       otherSkill: [
-        { id: 7, label: 'skills.scrum' },
-        { id: 8, label: 'skills.agile' },
-        { id: 9, label: 'skills.sql' },
-        { id: 10, label: 'skills.perl' },
-        { id: 11, label: 'skills.linux' }
+        { id: 9, label: 'skills.scrum' },
+        { id: 10, label: 'skills.agile' },
+        { id: 11, label: 'skills.sql' },
+        { id: 12, label: 'skills.perl' },
+        { id: 13, label: 'skills.linux' }
       ]
     }
   },
