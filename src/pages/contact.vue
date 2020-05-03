@@ -8,7 +8,7 @@
       <input
         type="text"
         name="name"
-        title="Your Name"
+        :title="$t('contact.nameTitle')"
         class="contactInput"
         placeholder="Name*"
         required
@@ -16,7 +16,7 @@
       <input
         type="email"
         name="email"
-        title="Your E-Mail address"
+        :title="$t('contact.emailTitle')"
         class="contactInput"
         placeholder="E-Mail*"
         required
@@ -30,10 +30,10 @@
         tabindex="-1"
         autocomplete="off"
       >
-      <button type="button" class="valMessage" title="validate Message" tabindex="-1" />
-      <textarea name="message" class="contactMessage" title="Your message" placeholder="Message*" required />
+      <button type="button" class="valMessage" :title="$t('contact.validateTitle')" tabindex="-1" />
+      <textarea name="message" class="contactMessage" :title="$t('contact.messageTitle')" :placeholder="$t('contact.messagePlaceholder')" required />
       <br>
-      <input type="submit" class="contactSubmit" name="submit" value="Send" @click="submit">
+      <input type="submit" class="contactSubmit" name="submit" :value="$t('contact.send')" @click="submit">
     </form>
   </section>
 </template>

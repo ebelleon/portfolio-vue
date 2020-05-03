@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     home () {
-      return this.$route.path === this.localePath('/')
+      return this.$route.path === this.localePath('index')
     }
   },
   head () {

@@ -39,7 +39,8 @@
   "skills": {
     "employers": "Employers:",
     "jochenschweizer": "Jochen Schweizer",
-    "primary": "Acquire Skills:",
+    "myposter": "myposter",
+    "primary": "Acquired Skills:",
     "html": "HTML",
     "css": "CSS",
     "javascript": "JavaScript",
@@ -55,6 +56,14 @@
     "sql": "SQL",
     "perl": "Perl",
     "linux": "Linux"
+  },
+  "contact": {
+    "send": "Send",
+    "nameTitle": "Your Name",
+    "emailTitle": "Your E-Mail address",
+    "validateTitle": "validate Message",
+    "messageTitle": "Your message",
+    "messagePlaceholder": "Message*"
   },
   "cookieBanner": {
     "consent": "This website uses cookies. By continuing to use this website, you consent to the use of the Cookies Policy."

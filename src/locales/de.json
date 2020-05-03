@@ -57,6 +57,14 @@
     "perl": "Perl",
     "linux": "Linux"
   },
+  "contact": {
+    "send": "Senden",
+    "nameTitle": "Ihr Name",
+    "emailTitle": "Ihre E-Mail Addresse",
+    "validateTitle": "Nachricht validieren",
+    "messageTitle": "Ihre Nachricht",
+    "messagePlaceholder": "Nachricht*"
+  },
   "cookieBanner": {
     "consent": "Diese Website verwendet Cookies. Durch die weitere Nutzung der Website stimmst du der Cookie-Nutzung zu."
   },
