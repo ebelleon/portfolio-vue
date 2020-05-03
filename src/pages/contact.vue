@@ -1,8 +1,40 @@
 <template>
   <section id="contact">
     <h1 class="title">
-      {{ $t('title.contact') }}
+      {{ $t("title.contact") }}
     </h1>
+
+    <form name="contactForm" class="contactForm">
+      <input
+        type="text"
+        name="name"
+        title="Your Name"
+        class="contactInput"
+        placeholder="Name*"
+        required
+      >
+      <input
+        type="email"
+        name="email"
+        title="Your E-Mail address"
+        class="contactInput"
+        placeholder="E-Mail*"
+        required
+      >
+      <input
+        id="honeypot"
+        type="text"
+        name="honeypot"
+        value=""
+        style="opacity: 0; position: absolute;"
+        tabindex="-1"
+        autocomplete="off"
+      >
+      <button type="button" class="valMessage" title="validate Message" tabindex="-1" />
+      <textarea name="message" class="contactMessage" title="Your message" placeholder="Message*" required />
+      <br>
+      <input type="submit" class="contactSubmit" name="submit" value="Send" @click="submit">
+    </form>
   </section>
 </template>
 
@@ -12,6 +44,11 @@ export default {
     paths: {
       en: '/contact',
       de: '/kontakt'
+    }
+  },
+  methods: {
+    submit () {
+      return this.submitContactForm()
     }
   },
   head () {
@@ -25,5 +62,73 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~@/assets/scss/modules/input-field';
 
+.title {
+  @include desktop {
+    margin-bottom: 2rem;
+  }
+}
+
+.contactForm {
+  text-align: center;
+  margin: 0;
+}
+
+.contactInput {
+  @extend %inputField;
+
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.valMessage {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  color: $trackAndField;
+  font-family: inherit;
+  margin-left: 1.5em;
+  text-align: left;
+  text-decoration: underline;
+  width: 75%;
+
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.contactMessage {
+  @extend %inputField;
+  height: 370px;
+
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.contactSubmit {
+  @extend %inputField;
+  background-color: transparent;
+  border: 1px solid $codGray;
+  color: $codGray;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:hover:enabled {
+    background-color: $wildDove;
+    border-color: $wildDove;
+    color: $alabaster;
+    cursor: pointer;
+  }
+
+  @include tablet {
+    width: 50%;
+  }
+
+  @include desktop {
+    width: 25%;
+  }
+}
 </style>

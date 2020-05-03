@@ -140,4 +140,22 @@ section {
     color: $alabaster;
   }
 }
+// Contact Form Response Styles
+.formResponse {
+  border-radius: 5px;
+  color: $codGray;
+  font-weight: $bold;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 75%;
+
+  @include tablet {
+    width: 50%;
+  }
+
+  @include desktop {
+    width: 25%;
+  }
+}
 </style>
