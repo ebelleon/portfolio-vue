@@ -45,7 +45,7 @@
     </p>
     <p>
       {{ $t('shared.email') }}
-      <a href="mailto:ebel@mailbox.org"> {{ $t('shared.emailAddress') }}</a>
+      <a :href="`mailto:${$t('shared.emailAddress')}`"> {{ $t('shared.emailAddress') }}</a>
     </p>
     <p>{{ $t('privacy.responsibilityDescOne') }}</p>
 

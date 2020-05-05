@@ -5,7 +5,7 @@
 
     <p>
       {{ $t('shared.fullName') }}<br><br>
-      <nuxt-link to="/#contact">
+      <nuxt-link :to="localePath('contact')">
         {{ $t('shared.contactForm') }}
       </nuxt-link>
     </p>
