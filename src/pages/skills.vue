@@ -209,7 +209,7 @@ export default {
   }
   &__link {
     background-position-y: 55%;
-    border: 2px solid $codGray;
+    border: 2px solid $black;
     border-left-style: dashed;
     border-right-style: dashed;
     border-radius: 50%;

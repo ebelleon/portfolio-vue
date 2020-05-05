@@ -81,7 +81,7 @@ export default {
 footer {
   background-color: $footer;
   bottom: 0;
-  box-shadow: inset 0 1px 0 0 #4f4a4a, inset 0 2px 4px 0 $codGray;
+  box-shadow: inset 0 1px 0 0 #4f4a4a, inset 0 2px 4px 0 $black;
   position: fixed;
   width: 100%;
   text-align: center;
@@ -94,7 +94,7 @@ footer {
   padding: 0.32em 0;
 
   a {
-    color: $codGray;
+    color: $black;
     text-decoration: none;
     padding: 0 0.77em;
 

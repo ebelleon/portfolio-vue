@@ -81,7 +81,7 @@ export default {
 
 .aboutMePicture {
   align-self: center;
-  border: 2px solid $codGray;
+  border: 2px solid $black;
   border-left-style: dashed;
   border-radius: 50%;
   border-right-style: dashed;

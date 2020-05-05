@@ -2,13 +2,13 @@
 @import 'media-queries';
 
 @mixin cookieBanner {
-  background-color: $wildDove;
+  background-color: $gray;
   bottom: 0;
   position: fixed;
   width: 100%;
 
   p {
-    color: $alabaster;
+    color: $white;
     font-size: 0.8em;
     font-weight: $light;
     margin: 0;
@@ -21,7 +21,7 @@
   }
 
   a {
-    color: $alabaster;
+    color: $white;
     font-weight: $light;
   }
 }
@@ -42,7 +42,7 @@
     width: 100%;
 
     &:before, &:after {
-      background: $alabaster;
+      background: $white;
       border-radius: 2px;
       content: '';
       height: 2px;
@@ -60,7 +60,7 @@
     }
 
     &:hover {
-      background: $wildDove;
+      background: $gray;
     }
   }
 }

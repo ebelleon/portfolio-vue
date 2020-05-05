@@ -111,15 +111,15 @@ export default {
 .contactSubmit {
   @extend %inputField;
   background-color: transparent;
-  border: 1px solid $codGray;
-  color: $codGray;
+  border: 1px solid $black;
+  color: $black;
   -webkit-appearance: none;
   -moz-appearance: none;
 
   &:hover:enabled {
-    background-color: $wildDove;
-    border-color: $wildDove;
-    color: $alabaster;
+    background-color: $gray;
+    border-color: $gray;
+    color: $white;
     cursor: pointer;
   }
 

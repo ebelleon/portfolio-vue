@@ -33,7 +33,7 @@ export default {
 
 .langDropdown {
   border-radius: 3px;
-  border: 1px solid $codGray;
+  border: 1px solid $black;
   text-align: center;
   z-index: 110;
 
@@ -62,14 +62,14 @@ export default {
   padding: 0;
 
   a {
-    color: $codGray;
+    color: $black;
     list-style-type: none;
     text-decoration: none;
     padding: 0.6em 3.5em;
   }
 
   li {
-    color: $codGray;
+    color: $black;
     font-weight: $thin;
     line-height: 40px;
   }

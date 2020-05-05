@@ -118,7 +118,7 @@ section {
 }
 
 .container {
-  color: $codGray;
+  color: $black;
 
   @include tablet {
     font-size: 1em;
@@ -127,8 +127,8 @@ section {
 
 .buttonGrey {
   border-radius: 4px;
-  border: 1px solid $spelunking;
-  color: $spelunking;
+  border: 1px solid $darkGray;
+  color: $darkGray;
   display: inline-block;
   margin-top: 15px;
   min-width: 140px;
@@ -136,14 +136,14 @@ section {
   text-decoration: none;
 
   &:hover {
-    background-color: $spelunking;
-    color: $alabaster;
+    background-color: $darkGray;
+    color: $white;
   }
 }
 // Contact Form Response Styles
 .formResponse {
   border-radius: 5px;
-  color: $codGray;
+  color: $black;
   font-weight: $bold;
   margin-left: auto;
   margin-right: auto;

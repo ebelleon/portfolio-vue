@@ -63,23 +63,23 @@
 }
 
 /deep/ .langDropdown {
-  border-color: $alabaster;
+  border-color: $white;
 }
 
 /deep/ .langDropdownList {
   a {
-    color: $alabaster;
+    color: $white;
   }
 
   li {
-    color: $alabaster;
+    color: $white;
   }
 }
 
 /deep/ .hamburger__line-in {
   &::before,
   &::after {
-    background-color: $alabaster;
+    background-color: $white;
   }
 }
 </style>

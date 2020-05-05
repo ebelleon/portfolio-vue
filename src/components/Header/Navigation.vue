@@ -224,7 +224,7 @@ export default {
 
   a {
     border-radius: 2px;
-    color: $codGray;
+    color: $black;
     letter-spacing: 2px;
     margin-right: 0.5em;
     padding: 1px 4px 2px 6px;
@@ -232,8 +232,8 @@ export default {
     text-transform: uppercase;
 
     &:hover {
-      background-color: $spelunking;
-      color: $alabaster;
+      background-color: $darkGray;
+      color: $white;
     }
   }
 }
