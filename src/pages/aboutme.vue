@@ -67,7 +67,7 @@ export default {
 .aboutMeWrapper {
   display: flex;
   flex-direction: column;
-  padding-bottom: 2em;
+  padding-bottom: 2.5rem;
   hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -95,11 +95,9 @@ export default {
   }
 
   @include desktop {
-    height: 164px;
-    width: 164px;
-    margin-bottom: 0;
-    left: 4.5rem;
-    position: absolute;
+    height: 165px;
+    width: 165px;
+    margin: 0 5rem;
   }
 }
 
@@ -108,10 +106,6 @@ export default {
   padding: 0 2rem;
   text-align: justify;
   margin: 0;
-
-  @include desktop {
-    padding: 0 17rem;
-  }
 }
 
 .customBreak {

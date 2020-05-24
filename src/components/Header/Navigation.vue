@@ -2,7 +2,7 @@
   <header>
     <div class="headWrapper">
       <nav v-if="disclaimer" class="navbarWrapper">
-        <nuxt-link :to="localePath('/')">
+        <nuxt-link :to="localePath('index')">
           {{ $t('shared.back') }}
         </nuxt-link>
       </nav>

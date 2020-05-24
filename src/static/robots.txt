@@ -1,4 +1,5 @@
 User-Agent: *
-Disallow: /imprint/
-Disallow: /privacy/
-
+Disallow: /impressum/
+Disallow: /datenschutz/
+Disallow: /en/imprint/
+Disallow: /en/privacy/

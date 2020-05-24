@@ -3,7 +3,7 @@
     <button class="langDropdownButton" @click="toggleLangDropdown">
       <fa :icon="['fas', 'language']" /><p>{{ $t('shared.chooseLang') }}</p>
     </button>
-    <transition name="expand" @enter="enter" @after-enter="afterEnter" @leave="leave">
+    <transition name="expand" @enter="enterTransition" @after-enter="afterEnterTransition" @leave="leaveTransition">
       <ul v-if="isOpen" class="langDropdownList">
         <li v-for="locale in availableLocales" :key="locale.code" @click="toggleLangDropdown">
           <nuxt-link :to="switchLocalePath(locale.code)">
@@ -31,7 +31,7 @@ export default {
     toggleLangDropdown () {
       this.isOpen = !this.isOpen
     },
-    enter (el) {
+    enterTransition (el) {
       el.style.height = 'auto'
       const height = getComputedStyle(el).height
       el.style.height = 0
@@ -40,10 +40,10 @@ export default {
         el.style.height = height
       })
     },
-    afterEnter (el) {
+    afterEnterTransition (el) {
       el.style.height = 'auto'
     },
-    leave (el) {
+    leaveTransition (el) {
       el.style.height = getComputedStyle(el).height
       getComputedStyle(el)
       setTimeout(() => {
