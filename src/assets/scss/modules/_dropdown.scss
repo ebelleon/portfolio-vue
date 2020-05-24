@@ -1,10 +1,9 @@
 @mixin dropdownDefault {
-  -moz-transition: all 400ms ease-in-out;
-  -o-transition: all 400ms ease-in-out;
-  -webkit-transition: all 400ms ease-in-out;
-  margin: 0 auto;
+  -moz-transition: height 400ms ease-in-out;
+  -o-transition: height 400ms ease-in-out;
+  -webkit-transition: height 400ms ease-in-out;
   overflow: hidden;
-  transition: all 400ms ease-in-out;
+  transition: height 400ms ease-in-out;
 }
 
 @mixin dropdownBtn($className) {
@@ -22,7 +21,7 @@
   }
 
   &:checked ~ .#{$className} {
-    height: 9rem;
+    height: 14rem;
   }
 
   &:checked + label > div > h4 > svg {

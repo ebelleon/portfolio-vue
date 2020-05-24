@@ -1,28 +1,54 @@
 <template>
   <div class="langDropdown">
-    <label for="langDropdownToggle">
-      <input
-        id="langDropdownToggle"
-        type="checkbox"
-        class="langDropdownToggle"
-      >
-      <ul class="langDropdownList">
-        <li><fa :icon="['fas', 'language']" />{{ $t('shared.chooseLang') }}</li>
-        <li v-for="locale in availableLocales" :key="locale.code">
-          <nuxt-link :to="switchLocalePath(locale.code)">{{
-            locale.name
-          }}</nuxt-link>
+    <button class="langDropdownButton" @click="toggleLangDropdown">
+      <fa :icon="['fas', 'language']" /><p>{{ $t('shared.chooseLang') }}</p>
+    </button>
+    <transition name="expand" @enter="enter" @after-enter="afterEnter" @leave="leave">
+      <ul v-if="isOpen" class="langDropdownList">
+        <li v-for="locale in availableLocales" :key="locale.code" @click="toggleLangDropdown">
+          <nuxt-link :to="switchLocalePath(locale.code)">
+            {{ locale.name }}
+          </nuxt-link>
         </li>
       </ul>
-    </label>
+    </transition>
   </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      isOpen: false
+    }
+  },
   computed: {
     availableLocales () {
       return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+    }
+  },
+  methods: {
+    toggleLangDropdown () {
+      this.isOpen = !this.isOpen
+    },
+    enter (el) {
+      el.style.height = 'auto'
+      const height = getComputedStyle(el).height
+      el.style.height = 0
+      getComputedStyle(el)
+      setTimeout(() => {
+        el.style.height = height
+      })
+    },
+    afterEnter (el) {
+      el.style.height = 'auto'
+    },
+    leave (el) {
+      el.style.height = getComputedStyle(el).height
+      getComputedStyle(el)
+      setTimeout(() => {
+        el.style.height = 0
+      })
     }
   }
 }
@@ -34,38 +60,37 @@ export default {
 .langDropdown {
   border-radius: 3px;
   border: 1px solid $black;
+  cursor: pointer;
   text-align: center;
-  z-index: 110;
+  padding: 0 1rem;
+  z-index: 1;
 
   label {
     margin: 0;
   }
 }
 
-.langDropdownToggle {
-  opacity: 0;
-  position: absolute;
-
-  &:not(:checked) ~ .langDropdownList {
-    max-height: 2.5rem;
-  }
-
-  &:checked ~ .langDropdownList {
-    max-height: 9rem;
-  }
+.langDropdownButton {
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 0;
+  outline: none;
 }
 
 .langDropdownList {
-  @include dropdownDefault;
-  cursor: pointer;
   list-style-type: none;
   padding: 0;
+  margin: 0;
 
   a {
     color: $black;
     list-style-type: none;
     text-decoration: none;
-    padding: 0.6em 3.5em;
   }
 
   li {
@@ -73,5 +98,10 @@ export default {
     font-weight: $thin;
     line-height: 40px;
   }
+}
+
+.expand-enter-active,
+.expand-leave-active {
+  @include dropdownDefault;
 }
 </style>
