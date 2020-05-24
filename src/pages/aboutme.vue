@@ -87,7 +87,7 @@ export default {
   border-radius: 50%;
   border-right-style: dashed;
   margin: 1rem 0 3rem 0;
-  height: 150px;
+  height: 145px;
   width: 150px;
   transition: all 0.3s ease;
 
@@ -95,9 +95,12 @@ export default {
     border-radius: 5%;
   }
 
-  @include desktop {
-    height: 165px;
+  @include tablet {
+    height: 160px;
     width: 165px;
+  }
+
+  @include desktop {
     margin: 0 5rem;
   }
 }

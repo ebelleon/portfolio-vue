@@ -170,7 +170,7 @@ export default {
     height: 0;
 
     .employer-wrapper__title {
-      text-align: initial;
+      text-align: unset;
       padding-left: 10rem;
     }
   }
