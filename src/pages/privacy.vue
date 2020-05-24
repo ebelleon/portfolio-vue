@@ -83,7 +83,6 @@
     </ul>
     <p>{{ $t('privacy.limitationRightDescFive') }}</p>
 
-    <!--  -->
     {{ /* eslint-disable vue-i18n/no-raw-text */ }}
     <h2 id="cookies">
       3. {{ $t('privacy.dataCollection') }}
@@ -108,11 +107,11 @@
     <p>{{ $t('privacy.matomoDescThree') }}</p>
     <p>{{ $t('privacy.matomoDescFour') }}</p>
     <div class="optOut">
-      <input id="enableMatomo" type="radio" name="matomoPreference" checked>
+      <input id="enableMatomo" type="radio" name="matomoPreference" :checked="!disabledAnalytics" @click="enableMatomo">
       <label for="enableMatomo">{{ $t('privacy.matomoEnable') }}</label>
     </div>
     <div class="optOut">
-      <input id="disableMatomo" type="radio" name="matomoPreference">
+      <input id="disableMatomo" type="radio" name="matomoPreference" :checked="disabledAnalytics" @click="disableMatomo">
       <label for="disableMatomo">{{ $t('privacy.matomoDisable') }}</label>
     </div>
 
@@ -154,10 +153,29 @@
 
 <script>
 export default {
+  name: 'Privacy',
   nuxtI18n: {
     paths: {
       en: '/privacy',
       de: '/datenschutz'
+    }
+  },
+  data () {
+    return {
+      disabledAnalytics: false
+    }
+  },
+  beforeMount () {
+    localStorage.getItem('matomo-disabled') === '1' ? this.disabledAnalytics = true : this.disabledAnalytics = false
+  },
+  methods: {
+    disableMatomo () {
+      this.$matomo.setConsent(false)
+      localStorage.setItem('matomo-disabled', 1)
+    },
+    enableMatomo () {
+      this.$matomo.setConsent()
+      localStorage.removeItem('matomo-disabled')
     }
   },
   head () {

@@ -106,8 +106,7 @@ export default {
     // Doc: https://nuxt-community.github.io/nuxt-i18n
     'nuxt-i18n',
     // Doc: https://github.com/vaso2/nuxt-fontawesome#readme
-    [
-      'nuxt-fontawesome',
+    ['nuxt-fontawesome',
       {
         component: 'fa',
         imports: [
@@ -122,6 +121,10 @@ export default {
           }
         ]
       }
+    ],
+    // Doc: https://github.com/pimlie/nuxt-matomo
+    ['nuxt-matomo',
+      { matomoUrl: '//analytics.ebelleon.de/', siteId: 1 }
     ]
   ],
   styleResources: {
@@ -153,6 +156,12 @@ export default {
         en: require('./src/locales/en.json')
       }
     }
+  },
+  /*
+   ** Router definition
+   */
+  router: {
+    middleware: 'matomo'
   },
   /*
    ** Axios module configuration
