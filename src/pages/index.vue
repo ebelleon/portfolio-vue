@@ -43,22 +43,22 @@
 }
 
 .homeTitle {
-  font-size: 3.2em;
+  font-size: $titleMobile;
   font-weight: $light;
   margin: 0;
 
   @include tablet {
-    font-size: 4em;
+    font-size: $titleTablet;
   }
 }
 
 .homeSubtitle {
-  font-size: 1.2em;
+  font-size: $subtitleMobile;
   font-weight: $thin;
   margin: 0;
 
   @include tablet {
-    font-size: $headlineDefault;
+    font-size: $subtitleTablet;
   }
 }
 

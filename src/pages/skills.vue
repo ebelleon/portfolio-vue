@@ -170,15 +170,15 @@ export default {
 
     .employer-wrapper__title {
       text-align: initial;
-      padding-left: 5em;
+      padding-left: 10rem;
     }
   }
 
   &__content {
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin: auto;
-    width: 250px;
     height: 150px;
 
     ul {
@@ -191,22 +191,22 @@ export default {
 
     p {
       line-height: 2;
-      margin: 0 0 0 8rem;
-      font-size: 0.8rem;
+      margin: 0 0 0 12rem;
+      font-size: 1.4rem;
+      width: 100%;
     }
 
     @include tablet {
-      width: 300px;
-
       p {
-        font-size: 0.9rem;
+        font-size: 1.5rem;
       }
     }
 
     @include desktop {
-      margin-left: 5rem;
+      align-items: flex-start;
     }
   }
+
   &__link {
     background-position-y: 55%;
     border: 2px solid $black;
@@ -245,15 +245,11 @@ export default {
 }
 
 .employer-wrapper__title, .skills-wrapper__title {
-  font-size: $subtitle;
+  font-size: $skillsSubtitle;
   font-weight: $regular;
   text-align: center;
   text-transform: uppercase;
-  margin: 0 2em 0.83em;
-
-  & ~ .skills-wrapper__title {
-    margin-top: 6em;
-  }
+  margin: 0 0 3rem;
 }
 
 .skills-wrapper__picture {
@@ -298,8 +294,8 @@ export default {
       background-color: $transparent;
       @include dropdownDefault;
 
-      @include tablet {
-        width: 90%;
+      @include desktop {
+        width: 97%;
       }
     }
   }

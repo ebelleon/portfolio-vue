@@ -3,12 +3,15 @@ $robotoSlab: 'Roboto Slab', serif !default;
 $montserrat: 'Montserrat', sans-serif !default;
 
 /* FONT SIZES */
-$headlineDefault: 1.7rem !default;
-$subtitle: 1.3rem !default;
+$titleMobile: 4.5rem !default;
+$titleTablet: 5.5rem !default;
+$subtitleMobile: 2rem !default;
+$subtitleTablet: 3rem !default;
+$skillsSubtitle: 2.2rem !default;
 // Burger Menu
-$font-size-menu-desktop: 3.3rem !default;
-$font-size-menu-mobile: 2.3rem !default;
-$font-size-menu-tablet: 2.9rem !default;
+$font-size-menu-mobile: 4rem !default;
+$font-size-menu-tablet: 4.5rem !default;
+$font-size-menu-desktop: 5rem !default;
 
 /* FONT WEIGHTS */
 $thin: 100 !default;

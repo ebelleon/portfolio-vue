@@ -9,7 +9,7 @@
       </nuxt-link>
     </p>
     <div class="closeContainer">
-      <span class="close" @click="accept" />
+      <span class="close" @click="acceptedCookieBanner" />
     </div>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
         return localStorage.getItem('closedCookieBanner')
       }
     },
-    accept () {
+    acceptedCookieBanner () {
       if (process.browser) {
         this.isOpen = false
         localStorage.setItem('closedCookieBanner', 1)

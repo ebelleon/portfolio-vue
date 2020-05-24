@@ -49,6 +49,7 @@ html,
 body {
   min-height: 100%;
   scroll-behavior: smooth;
+  font-size: 10px;
 }
 
 body {
@@ -57,7 +58,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   background-color: $transparent;
-  font: 300 0.85em $robotoSlab;
+  font: 300 1.3rem $robotoSlab;
   margin: 0;
   overflow-x: hidden;
 }
@@ -71,7 +72,7 @@ section {
 
 .title {
   align-self: center;
-  font-size: $headlineDefault;
+  font-size: $subtitleTablet;
   font-weight: $bold;
   margin: 4rem 0 2rem;
   text-transform: uppercase;
@@ -119,10 +120,6 @@ section {
 
 .container {
   color: $black;
-
-  @include tablet {
-    font-size: 1em;
-  }
 }
 
 .buttonGrey {
