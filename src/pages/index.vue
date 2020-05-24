@@ -15,6 +15,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'Home'
+}
+</script>
+
 <style lang="scss" scoped>
 .homeBackground {
   background: url(../assets/img/background.jpg) no-repeat center transparent;

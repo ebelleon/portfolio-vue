@@ -26,6 +26,7 @@
 
 <script>
 export default {
+  name: 'Imprint',
   nuxtI18n: {
     paths: {
       en: '/imprint',

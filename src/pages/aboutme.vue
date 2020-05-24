@@ -47,6 +47,7 @@
 
 <script>
 export default {
+  name: 'AboutMe',
   nuxtI18n: {
     paths: {
       en: '/aboutme',

@@ -40,6 +40,7 @@
 
 <script>
 export default {
+  name: 'Contact',
   nuxtI18n: {
     paths: {
       en: '/contact',
