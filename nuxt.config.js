@@ -82,7 +82,8 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~/plugins/helpers' }
+    { src: '~/plugins/contactFormSubmit' },
+    { src: '~/plugins/mailValidation', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
