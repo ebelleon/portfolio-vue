@@ -76,6 +76,7 @@ export default {
 
   @include desktop {
     flex-direction: row;
+    justify-content: center;
     padding-bottom: 0;
   }
 }
@@ -101,7 +102,7 @@ export default {
   }
 
   @include desktop {
-    margin: 0 5rem;
+    margin: 0 5rem 0 0;
   }
 }
 
@@ -110,6 +111,11 @@ export default {
   padding: 0 2rem;
   text-align: justify;
   margin: 0;
+
+  @include desktop {
+    padding: 0;
+    width: 70%;
+  }
 }
 
 .customBreak {

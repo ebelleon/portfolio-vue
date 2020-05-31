@@ -73,9 +73,9 @@ export default {
   background: transparent;
   border: none;
   cursor: pointer;
+  color: $black;
   display: flex;
-  font-size: 1.4rem;
-  font-weight: 400;
+  font: inherit;
   padding: 0;
   outline: none;
 }
@@ -83,8 +83,6 @@ export default {
 .langDropdownList {
   background: transparent;
   border: none;
-  font-size: 1.4rem;
-  font-weight: 400;
   padding: 0;
   margin: 0;
   height: 0;
@@ -97,6 +95,8 @@ export default {
   }
 
   p {
+    font-size: 1.3rem;
+    font-weight: 300;
     margin-top: 1rem;
   }
 }
