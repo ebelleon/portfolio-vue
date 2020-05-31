@@ -13,7 +13,8 @@ $skillsPictures:
   Perl,
   SASS,
   Scrum,
-  SQL;
+  SQL,
+  Vuejs;
 
 $skillsBgSize:
   100%, // Agile
@@ -30,7 +31,8 @@ $skillsBgSize:
   70%,  // Perl
   85%,  // SASS
   150%, // Scrum
-  60%;  // SQL
+  60%,  // SQL
+  60%; // Vuejs
 
 @mixin pic($bg-img: null, $bg-size: null) {
   background: $bg-img no-repeat center transparent;

@@ -55,7 +55,8 @@
     "scrum": "Scrum",
     "sql": "SQL",
     "perl": "Perl",
-    "linux": "Linux"
+    "linux": "Linux",
+    "vuejs": "Vue.js"
   },
   "contact": {
     "send": "Send",

@@ -134,7 +134,8 @@ export default {
       ],
       jsDropdownContent: [
         { id: 9, label: 'skills.nodejs', className: 'Nodejs' },
-        { id: 10, label: 'skills.jquery', className: 'jQuery' }
+        { id: 10, label: 'skills.vuejs', className: 'Vuejs' },
+        { id: 16, label: 'skills.jquery', className: 'jQuery' }
       ],
       otherSkill: [
         { id: 11, label: 'skills.scrum' },
@@ -218,7 +219,7 @@ export default {
     position: absolute;
     justify-content: center;
     height: 100px;
-    width: 110px;
+    width: 105px;
 
     &--myposter {
       width: 90px;
