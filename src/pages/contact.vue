@@ -30,7 +30,7 @@
         tabindex="-1"
         autocomplete="off"
       >
-      <button type="button" class="valMessage" :title="$t('contact.validateTitle')" tabindex="-1" @click="valMessage" />
+      <button type="button" class="valMessage" :title="$t('contact.validateTitle')" tabindex="-1" />
       <textarea name="message" class="contactMessage" :title="$t('contact.messageTitle')" :placeholder="$t('contact.messagePlaceholder')" required />
       <br>
       <input type="submit" class="contactSubmit" name="submit" :value="$t('contact.send')" @click="submit">
@@ -43,18 +43,13 @@ export default {
   name: 'Contact',
   nuxtI18n: {
     paths: {
-      en: '/contact',
-      de: '/kontakt'
+      de: '/kontakt',
+      en: '/contact'
     }
   },
   methods: {
     submit () {
       return this.submitContactForm()
-    },
-    valMessage () {
-      if (this.$suggestedEmail()) { document.querySelector('[name="email"]').value = this.$suggestedEmail() }
-      document.querySelector('[name="email"]').focus()
-      this.$gatherDataAndCheck()
     }
   },
   head () {
