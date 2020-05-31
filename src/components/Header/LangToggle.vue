@@ -4,13 +4,11 @@
       <fa :icon="['fas', 'language']" /><p>{{ $t('shared.chooseLang') }}</p>
     </button>
     <transition name="expand" @enter="enterTransition" @after-enter="afterEnterTransition" @leave="leaveTransition">
-      <ul v-if="isOpen" class="langDropdownList">
-        <li v-for="locale in availableLocales" :key="locale.code" @click="toggleLangDropdown">
-          <nuxt-link :to="switchLocalePath(locale.code)">
-            {{ locale.name }}
-          </nuxt-link>
-        </li>
-      </ul>
+      <div v-if="isOpen" class="langDropdownList" @click="toggleLangDropdown">
+        <nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
+          <p>{{ locale.name }}</p>
+        </nuxt-link>
+      </div>
     </transition>
   </div>
 </template>
@@ -62,7 +60,7 @@ export default {
   border: 1px solid $black;
   cursor: pointer;
   text-align: center;
-  padding: 0 1rem;
+  padding: 1rem;
   z-index: 1;
 
   label {
@@ -77,26 +75,29 @@ export default {
   cursor: pointer;
   display: flex;
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 400;
   padding: 0;
   outline: none;
 }
 
 .langDropdownList {
-  list-style-type: none;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 400;
   padding: 0;
   margin: 0;
+  height: 0;
+  width: 100%;
 
   a {
     color: $black;
-    list-style-type: none;
     text-decoration: none;
+    width: 100%;
   }
 
-  li {
-    color: $black;
-    font-weight: $thin;
-    line-height: 40px;
+  p {
+    margin-top: 1rem;
   }
 }
 

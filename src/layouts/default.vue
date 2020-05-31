@@ -70,6 +70,10 @@ section {
   min-height: 85vh;
 }
 
+p {
+  margin: 0;
+}
+
 .title {
   align-self: center;
   font-size: $subtitleTablet;
