@@ -1,0 +1,46 @@
+/* FONT STYLES */
+$robotoSlab: 'Roboto Slab', serif !default;
+$montserrat: 'Montserrat', sans-serif !default;
+
+/* FONT SIZES */
+$titleMobile: 4.5rem !default;
+$titleTablet: 5.5rem !default;
+$subtitleMobile: 2rem !default;
+$subtitleTablet: 3rem !default;
+$skillsSubtitle: 2.2rem !default;
+$description: 1.3rem !default;
+// Burger Menu
+$font-size-menu-mobile: 4rem !default;
+$font-size-menu-tablet: 4.5rem !default;
+$font-size-menu-desktop: 5rem !default;
+
+/* FONT WEIGHTS */
+$thin: 100 !default;
+$light: 300 !default;
+$regular: 400 !default;
+$bold: 700 !default;
+
+/* ------------------------------------------------------------ *\
+
+   color name refenerce: https://codepen.io/meodai/full/mEvZRx
+
+\* ------------------------------------------------------------ */
+
+$white: #FBFBFB !default;
+$blueJeans: rgba(82, 168, 236, .6) !default; // valid Textfield shadow
+$black: #191919 !default;
+$lightGray: #ACACAC !default;
+$footer: #f2f2f2 !default;
+$lighthouse: #f4f4f4 !default;
+$link: #0645ad !default;
+$paleVioletRed: rgba(219, 112, 147, .8) !default; // invalid Textfield shadow
+$shuiCaoLuGreen: #3b8070 !default;
+$darkGray: #35495e !default;
+$trackAndField: #E21A11 !default;
+$transparent: #0000001A !default;
+$gray: #8A8A8A !default;
+// Burger Menu
+$button-line: #2d2c2b !default;
+$color-menu-hover: #c14343 !default;
+$path-fill-1: #c04444 !default;
+$path-fill-2: #1b1a19 !default;
