@@ -202,7 +202,6 @@ export default {
     p {
       line-height: 2;
       margin: 0 0 0 12rem;
-      width: 100%;
     }
 
     @include desktop {

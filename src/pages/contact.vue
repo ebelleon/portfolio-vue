@@ -23,10 +23,10 @@
       >
       <input
         id="honeypot"
+        class="honeypot"
         type="text"
         name="honeypot"
         value=""
-        style="opacity: 0; position: absolute;"
         tabindex="-1"
         autocomplete="off"
       >
@@ -82,6 +82,14 @@ export default {
   @include desktop {
     width: 50%;
   }
+}
+
+.honeypot {
+  opacity: 0;
+  position: absolute;
+  left: 5rem;
+  bottom: 0rem;
+  z-index: -100000;
 }
 
 .valMessage {

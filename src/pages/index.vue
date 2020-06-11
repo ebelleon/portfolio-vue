@@ -1,18 +1,17 @@
 <template>
-  <div class="homeBackground">
-    <section id="home">
-      <div class="homeWrapper">
-        <div class="homeText">
-          <h1 class="homeTitle">
-            {{ $t('shared.fullName') }}
-          </h1>
-          <h2 class="homeSubtitle">
-            {{ $t('home.jobTitle') }}
-          </h2>
-        </div>
+  <section id="home">
+    <div class="homeBackground" />
+    <div class="homeWrapper">
+      <div class="homeText">
+        <h1 class="homeTitle">
+          {{ $t('shared.fullName') }}
+        </h1>
+        <h2 class="homeSubtitle">
+          {{ $t('home.jobTitle') }}
+        </h2>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -30,13 +29,14 @@ export default {
   background-size: cover;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 95%;
   top: 0;
 }
 
 .homeWrapper {
   justify-content: center;
   display: flex;
+  z-index: 0;
 
   @include tablet {
     justify-content: left;
@@ -66,6 +66,10 @@ export default {
   @include tablet {
     font-size: $subtitleTablet;
   }
+}
+
+section {
+  min-height: 80vh;
 }
 
 /deep/ .langDropdown {

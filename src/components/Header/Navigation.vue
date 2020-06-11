@@ -216,7 +216,7 @@ export default {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 0.77em;
+  padding: 1.2rem;
 }
 
 .navbarWrapper {
@@ -226,7 +226,7 @@ export default {
     border-radius: 2px;
     color: $black;
     letter-spacing: 2px;
-    margin-right: 0.5em;
+    margin-right: 0.75rem;
     padding: 1px 4px 2px 6px;
     text-decoration: none;
     text-transform: uppercase;

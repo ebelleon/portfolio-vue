@@ -22,6 +22,10 @@
 
   &:checked ~ .#{$className} {
     height: 17rem;
+
+    @media screen and (max-width: 374px) {
+      height: 35rem;
+    }
   }
 
   &:checked + label > div > h4 > svg {
