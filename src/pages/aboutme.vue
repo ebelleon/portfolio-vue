@@ -12,34 +12,50 @@
       <p class="aboutMeParagraph">
         {{ $t('aboutMe.myname') }}
         {{ /* eslint-disable-next-line */ }}
-        <span class="strong">{{ $t('aboutMe.developer') }},</span>
+        <span class="semi-bold">{{ $t('aboutMe.developer') }},</span>
         {{ $t('aboutMe.specialized') }}
-        <span class="strong">{{ $t('aboutMe.webdev') }}</span>
+        <span class="semi-bold">{{ $t('aboutMe.webdev') }}</span>
         {{ $t('aboutMe.workinin') }}
-        <span class="strong">{{ $t('aboutMe.frontend') }}</span>
+        <span class="semi-bold">{{ $t('aboutMe.frontend') }}</span>
         {{ $t('aboutMe.aswellas') }}
-        <span class="strong">{{ $t('aboutMe.backend') }}</span>
+        <span class="semi-bold">{{ $t('aboutMe.backend') }}</span>
         {{ $t('aboutMe.technologies') }}
-        <span class="customBreak"><br></span>
+        <br><br>
         {{ $t('aboutMe.since') }}
         {{ /* eslint-disable-next-line */ }}
-        <span class="strong">{{ $t('shared.city') }}.</span>
+        <span class="semi-bold">{{ $t('shared.city') }},</span>
+        {{ $t('aboutMe.before') }}
         {{ $t('aboutMe.apprenticeship') }}
-        <span class="strong">{{ $t('aboutMe.apprenticeshipName') }}</span>
+        <span class="semi-bold">{{ $t('aboutMe.apprenticeshipName') }}</span>
         {{ $t('aboutMe.completed') }}
-        <span class="customBreak"><br></span>
-        {{ $t('aboutMe.my') }}
-        <span class="strong">{{ $t('aboutMe.interest') }}</span>
-        {{ $t('aboutMe.began') }}
-        <span class="customBreak"><br></span>
-        {{ $t('aboutMe.whenIm') }}
-        <span class="strong">{{ $t('aboutMe.notDevelop') }}</span>
-        {{ $t('aboutMe.orAt') }}
-        <span class="strong">{{ $t('aboutMe.work') }}</span>
-        {{ $t('aboutMe.iWillBe') }}
-        <span class="strong">{{ $t('aboutMe.sport') }}</span>
-        {{ $t('aboutMe.orInFront') }}
-        <span class="strong">{{ $t('aboutMe.tv') }}</span>
+        <br><br>
+        <span class="semi-bold">{{ $t('aboutMe.started') }}</span>
+        {{ $t('aboutMe.with') }}
+        {{ $t('aboutMe.howStarted') }}
+        <span class="semi-bold">{{ $t('aboutMe.computerSoftware') }}</span>
+        {{ $t('aboutMe.whyStarted') }}
+        <br><br>
+        {{ $t('aboutMe.basically') }}
+        <span class="semi-bold">{{ $t('aboutMe.prototypeDev') }}</span>
+        {{ $t('aboutMe.whatIDo') }}
+        <br><br>
+        {{ $t('aboutMe.butOk') }}
+        <span class="semi-bold">{{ $t('aboutMe.luckily') }}</span>
+        {{ $t('aboutMe.notAll') }}
+        <span class="semi-bold">{{ $t('aboutMe.besideJob') }}</span>
+        {{ $t('aboutMe.whichAlso') }}
+        <span class="semi-bold">{{ $t('aboutMe.hobby') }}</span>
+        {{ $t('aboutMe.isAlso') }}
+        <span class="semi-bold">{{ $t('aboutMe.sport') }}</span>
+        {{ $t('aboutMe.important') }}
+        {{ $t('aboutMe.watchSport') }}
+        {{ $t('aboutMe.couchPotato') }}
+        <span class="semi-bold">{{ $t('aboutMe.actively') }}</span>
+        {{ $t('aboutMe.hobbys') }}
+        <span class="semi-bold">{{ $t('aboutMe.handball') }}</span>
+        {{ $t('aboutMe.hobbyHandball') }}
+        <br><br>
+        {{ $t('aboutMe.closing') }}
       </p>
     </div>
   </section>
@@ -116,9 +132,5 @@ export default {
     padding: 0;
     width: 70%;
   }
-}
-
-.customBreak {
-  display: table;
 }
 </style>
