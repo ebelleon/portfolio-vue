@@ -5,9 +5,9 @@
   "author": "Leon Ebel",
   "private": true,
   "scripts": {
+    "start": "nuxt start",
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",

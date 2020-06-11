@@ -58,7 +58,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   background-color: $transparent;
-  font: 300 1.3rem $robotoSlab;
+  font: 300 1.5rem $robotoSlab;
   margin: 0;
   overflow-x: hidden;
 }
@@ -114,7 +114,7 @@ p {
   }
 }
 
-.strong {
+.semi-bold {
   font-weight: $regular;
 }
 

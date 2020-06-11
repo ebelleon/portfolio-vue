@@ -82,6 +82,7 @@ footer {
   background-color: $footer;
   bottom: 0;
   box-shadow: inset 0 1px 0 0 #4f4a4a, inset 0 2px 4px 0 $black;
+  font-size: $description;
   position: fixed;
   width: 100%;
   text-align: center;

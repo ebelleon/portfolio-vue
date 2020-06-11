@@ -60,7 +60,7 @@ export default {
   border: 1px solid $black;
   cursor: pointer;
   text-align: center;
-  padding: 1rem;
+  padding: 1.25rem;
   z-index: 1;
 
   label {
@@ -95,9 +95,8 @@ export default {
   }
 
   p {
-    font-size: 1.3rem;
     font-weight: 300;
-    margin-top: 1rem;
+    padding-top: 1.25rem;
   }
 }
 

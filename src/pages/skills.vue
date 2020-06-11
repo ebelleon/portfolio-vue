@@ -169,8 +169,16 @@ export default {
 .employer-wrapper {
   @include desktop {
     height: 0;
+  }
 
-    .employer-wrapper__title {
+  &__title {
+    font-size: $skillsSubtitle;
+    font-weight: $regular;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 3rem;
+
+    @include desktop {
       text-align: unset;
       padding-left: 10rem;
     }
@@ -194,14 +202,7 @@ export default {
     p {
       line-height: 2;
       margin: 0 0 0 12rem;
-      font-size: 1.4rem;
       width: 100%;
-    }
-
-    @include tablet {
-      p {
-        font-size: 1.5rem;
-      }
     }
 
     @include desktop {
@@ -244,36 +245,35 @@ export default {
     padding-top: 0;
     padding-left: 50vw;
   }
-}
 
-.employer-wrapper__title, .skills-wrapper__title {
-  font-size: $skillsSubtitle;
-  font-weight: $regular;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0 0 3rem;
-}
-
-.skills-wrapper__picture {
-  display: inline-block;
-  margin: 0.6em 1em 6em;
-  height: 85px;
-  width: 95px;
-
-  @include tablet{
-    width: 110px;
+  &__title {
+    font-size: $skillsSubtitle;
+    font-weight: $regular;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 3rem;
   }
-}
 
-.skills-wrapper__label {
-  font-size: 0.90625em;
-  font-weight: $light;
-  letter-spacing: 0.5px;
-  margin-top: 7.5em;
-  text-align: center;
+  &__picture {
+    display: inline-block;
+    margin: 0.6em 1em 6em;
+    height: 85px;
+    width: 95px;
 
-  @include tablet {
-    margin-top: 8em;
+    @include tablet{
+      width: 110px;
+    }
+  }
+
+  &__label {
+    font-weight: $light;
+    letter-spacing: 0.5px;
+    margin-top: 7.5em;
+    text-align: center;
+
+    @include tablet {
+      margin-top: 8em;
+    }
   }
 }
 
