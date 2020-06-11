@@ -29,7 +29,7 @@ export default {
   background-size: cover;
   position: absolute;
   width: 100%;
-  height: 95%;
+  height: calc(100% - 99px);
   top: 0;
 }
 
@@ -69,7 +69,7 @@ export default {
 }
 
 section {
-  min-height: 80vh;
+  min-height: 75vh;
 }
 
 /deep/ .langDropdown {
