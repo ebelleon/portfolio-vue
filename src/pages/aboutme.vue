@@ -4,11 +4,7 @@
       {{ $t('title.aboutMe') }}
     </h1>
     <div class="aboutMeWrapper">
-      <img
-        class="aboutMePicture"
-        src="~/assets/img/pic.jpg"
-        alt="Leon Ebel"
-      >
+      <div class="aboutMePicture" />
       <p class="aboutMeParagraph">
         {{ $t('aboutMe.myname') }}
         {{ /* eslint-disable-next-line */ }}
@@ -84,7 +80,7 @@ export default {
 .aboutMeWrapper {
   display: flex;
   flex-direction: column;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1rem;
   hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -99,13 +95,18 @@ export default {
 
 .aboutMePicture {
   align-self: center;
+  background: url(../assets/img/pic.jpg) no-repeat transparent;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   border: 2px solid $black;
   border-left-style: dashed;
   border-radius: 50%;
   border-right-style: dashed;
-  margin: 1rem 0 3rem 0;
-  height: 145px;
-  width: 150px;
+  margin: 1rem 0;
+  height: 175px;
+  width: 180px;
   transition: all 0.3s ease;
 
   &:hover {
@@ -113,8 +114,8 @@ export default {
   }
 
   @include tablet {
-    height: 160px;
-    width: 165px;
+    height: 200px;
+    width: 205px;
   }
 
   @include desktop {
@@ -124,7 +125,7 @@ export default {
 
 .aboutMeParagraph {
   line-height: 2;
-  padding: 0 2rem;
+  padding: 2rem;
   text-align: justify;
   margin: 0;
 

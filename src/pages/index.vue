@@ -31,6 +31,10 @@ export default {
   width: 100%;
   height: calc(100% - 99px);
   top: 0;
+
+  @include tablet {
+    height: calc(100% - 46px);
+  }
 }
 
 .homeWrapper {
@@ -44,8 +48,9 @@ export default {
 }
 
 .homeText {
-  padding: 0 10vw;
+  padding: 1rem 10vw;
   text-align: center;
+  background-color: #fff9;
 }
 
 .homeTitle {
