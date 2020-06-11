@@ -1,10 +1,10 @@
 <template>
-  <div class="langDropdown">
-    <button class="langDropdownButton" @click="toggleLangDropdown">
+  <div class="langDropdown" @click="toggleLangDropdown">
+    <button class="langDropdownButton">
       <fa :icon="['fas', 'language']" /><p>{{ $t('shared.chooseLang') }}</p>
     </button>
     <transition name="expand" @enter="enterTransition" @after-enter="afterEnterTransition" @leave="leaveTransition">
-      <div v-if="isOpen" class="langDropdownList" @click="toggleLangDropdown">
+      <div v-if="isOpen" class="langDropdownList">
         <nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
           <p>{{ locale.name }}</p>
         </nuxt-link>

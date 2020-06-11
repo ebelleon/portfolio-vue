@@ -21,7 +21,7 @@
   }
 
   &:checked ~ .#{$className} {
-    height: 14rem;
+    height: 17rem;
   }
 
   &:checked + label > div > h4 > svg {
