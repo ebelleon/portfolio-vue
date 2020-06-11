@@ -18,8 +18,8 @@ services:
     restart: always
     environment:
       - VIRTUAL_HOST=${VIRTUAL_HOST}
-    #   - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
-    #   - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+      - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     ports:
       - "80:80"
     volumes:
@@ -37,8 +37,8 @@ services:
       - nuxt
     networks:
       - default
-      # - nginx-proxy_default
+      - nginx-proxy_default
 
-# networks:
-#   nginx-proxy_default:
-#     external: true
+networks:
+  nginx-proxy_default:
+    external: true
