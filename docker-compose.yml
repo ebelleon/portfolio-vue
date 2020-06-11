@@ -18,12 +18,12 @@ services:
     restart: always
     environment:
       - VIRTUAL_HOST=${VIRTUAL_HOST}
-      - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
-      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    #   - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+    #   - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     ports:
       - "80:80"
     volumes:
-      - ../nginx:/etc/nginx
+      - ./nginx:/etc/nginx
     healthcheck:
       test:  wget -q -t 1 --spider http://localhost || exit 1
       interval: 30m
