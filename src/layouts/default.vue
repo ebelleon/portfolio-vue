@@ -1,9 +1,7 @@
 <template>
-  <div>
+  <div class="container">
     <Navigation />
-    <div class="container">
-      <nuxt />
-    </div>
+    <nuxt />
     <Footer v-if="home" />
 
     <client-only>
@@ -120,10 +118,6 @@ p {
 
 @keyframes slideDown {
   0% { transform: translateY(-150px) }
-}
-
-.container {
-  color: $black;
 }
 
 .buttonGrey {

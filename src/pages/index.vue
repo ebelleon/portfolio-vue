@@ -21,6 +21,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 .homeBackground {
   background: url(../assets/img/background.jpg) no-repeat center transparent;
   -webkit-background-size: cover;
@@ -29,11 +37,11 @@ export default {
   background-size: cover;
   position: absolute;
   width: 100%;
-  height: calc(100% - 99px);
+  height: calc(100% - 97px);
   top: 0;
 
   @include tablet {
-    height: calc(100% - 46px);
+    height: calc(100% - 44px);
   }
 }
 

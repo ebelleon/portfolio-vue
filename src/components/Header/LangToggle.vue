@@ -60,7 +60,7 @@ export default {
   border: 1px solid $black;
   cursor: pointer;
   text-align: center;
-  padding: 1.25rem;
+  padding: 1rem;
   z-index: 1;
 
   label {
