@@ -7,8 +7,7 @@
       <div class="aboutMePicture" />
       <p class="aboutMeParagraph">
         {{ $t('aboutMe.myname') }}
-        {{ /* eslint-disable-next-line */ }}
-        <span class="semi-bold">{{ $t('aboutMe.developer') }},</span>
+        <span class="semi-bold">{{ $t('aboutMe.developer') }}</span>
         {{ $t('aboutMe.specialized') }}
         <span class="semi-bold">{{ $t('aboutMe.webdev') }}</span>
         {{ $t('aboutMe.workinin') }}

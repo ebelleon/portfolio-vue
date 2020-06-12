@@ -36,7 +36,7 @@ export default {
         content:
           'This is the Portfolio of Leon Ebel. Currently working in Munich as a Full-Stack Web Developer.'
       },
-      { property: 'og:image', content: 'https://www.ebelleon.de/_nuxt/img/654b8da.jpg' }
+      { property: 'og:image', content: 'https://www.ebelleon.de/_nuxt/img/26ec45e.jpg' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
