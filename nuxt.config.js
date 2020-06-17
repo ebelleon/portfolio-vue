@@ -71,7 +71,8 @@ export default {
         type: 'font/woff2',
         href: '/fonts/roboto-slab-v11-latin-700.woff2',
         crossorigin: 'anonymous'
-      }
+      },
+      { rel: 'preconnect', href: 'https://cdn.jsdelivr.net' }
     ]
   },
   /*
