@@ -9,37 +9,41 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'Portfolio of Leon Ebel — Front-/ Backend Developer based in Munich, Germany.'
-      },
-      {
-        name: 'keywords',
-        content:
-          'Leon Ebel, Leon, Ebel, developer, development, entwickler, web developer, web development, Portfolio, portfolio, München, Munich, Germany, Deutschland'
-      },
+      { hid: 'description', name: 'description', content: 'Portfolio of Leon Ebel — Front-/ Backend Developer based in Munich, Germany.' },
+      { name: 'keywords', content: 'Leon Ebel, Leon, Ebel, developer, development, entwickler, web developer, web development, Portfolio, portfolio, München, Munich, Germany, Deutschland' },
       { name: 'language', content: 'DE' },
       { name: 'theme-color', content: '#FF7860' },
       { name: 'application-name', content: 'www.ebelleon.de' },
       { name: 'apple-mobile-web-app-title', content: 'www.ebelleon.de' },
       { name: 'apple-mobile-app-status-bar-style', content: '#FF7860' },
-      {
-        property: 'og:title',
-        content: 'Leon Ebel — Full Stack Developer — Portfolio'
-      },
+      { name: 'msapplication-TileColor', content: '#FFFFFF' },
+      { name: 'msapplication-square70x70logo', content: '/assets/img/favicon/mstile-70x70.png' },
+      { name: 'msapplication-TileImage', content: '/assets/img/favicon/mstile-144x144.png' },
+      { name: 'msapplication-square150x150logo', content: '/assets/img/favicon/mstile-150x150.png' },
+      { name: 'msapplication-square310x310logo', content: '/assets/img/favicon/mstile-310x310.png' },
+      { name: 'msapplication-wide310x150logo', content: '/assets/img/favicon/mstile-310x150.png' },
+
+      { property: 'og:title', content: 'Leon Ebel — Full Stack Developer — Portfolio' },
       { property: 'og:url', content: 'https://www.ebelleon.de' },
       { property: 'og:type', content: 'website' },
-      {
-        property: 'og:description',
-        content:
-          'This is the Portfolio of Leon Ebel. Currently working in Munich as a Full-Stack Web Developer.'
-      },
+      { property: 'og:description', content: 'This is the Portfolio of Leon Ebel. Currently working in Munich as a Full-Stack Web Developer.' },
       { property: 'og:image', content: 'https://www.ebelleon.de/_nuxt/img/26ec45e.jpg' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-16x16.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon/favicon-96x96.png' },
+      { rel: 'icon', type: 'image/png', sizes: '128x128', href: '/favicon/favicon-128x128.png' },
+      { rel: 'icon', type: 'image/png', sizes: '196x196', href: '/favicon/favicon-196x196.png' },
+      { rel: 'apple-touch-icon', sizes: '57x57', href: '/favicon/apple-touch-icon-57x57.png' },
+      { rel: 'apple-touch-icon', sizes: '60x60', href: '/favicon/apple-touch-icon-57x57.png' },
+      { rel: 'apple-touch-icon', sizes: '72x72', href: '/favicon/apple-touch-icon-57x57.png' },
+      { rel: 'apple-touch-icon', sizes: '76x76', href: '/favicon/apple-touch-icon-57x57.png' },
+      { rel: 'apple-touch-icon', sizes: '114x114', href: '/favicon/apple-touch-icon-57x57.png' },
+      { rel: 'apple-touch-icon', sizes: '120x120', href: '/favicon/apple-touch-icon-57x57.png' },
+      { rel: 'apple-touch-icon', sizes: '144x144', href: '/favicon/apple-touch-icon-57x57.png' },
+      { rel: 'apple-touch-icon', sizes: '152x152', href: '/favicon/apple-touch-icon-57x57.png' },
       {
         rel: 'preload',
         as: 'font',
