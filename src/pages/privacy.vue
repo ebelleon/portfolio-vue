@@ -106,11 +106,11 @@
     <p>{{ $t('privacy.matomoDescTwo') }}</p>
     <p>{{ $t('privacy.matomoDescThree') }}</p>
     <p>{{ $t('privacy.matomoDescFour') }}</p>
-    <div class="optOut">
+    <div class="opt-out">
       <input id="enableMatomo" type="radio" name="matomoPreference" :checked="!disabledAnalytics" @click="enableMatomo">
       <label for="enableMatomo">{{ $t('privacy.matomoEnable') }}</label>
     </div>
-    <div class="optOut">
+    <div class="opt-out">
       <input id="disableMatomo" type="radio" name="matomoPreference" :checked="disabledAnalytics" @click="disableMatomo">
       <label for="disableMatomo">{{ $t('privacy.matomoDisable') }}</label>
     </div>
@@ -189,7 +189,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.optOut {
+.opt-out {
   font-weight: $bold;
   margin: 0.8em 0;
 }

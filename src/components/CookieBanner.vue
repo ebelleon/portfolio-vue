@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isOpen" class="cookieBanner">
+  <div v-if="isOpen" class="cookie-banner">
     <p>
       {{ $t('cookieBanner.consent') }}
       <nuxt-link :to="localePath('privacy') + '#cookies'">
@@ -8,7 +8,7 @@
         }}
       </nuxt-link>
     </p>
-    <div class="closeContainer">
+    <div class="close-container">
       <span class="close" @click="acceptedCookieBanner" />
     </div>
   </div>
@@ -45,11 +45,11 @@ export default {
 <style lang="scss" scoped>
 @import '~@/assets/scss/modules/cookie-banner';
 
-.cookieBanner {
+.cookie-banner {
   @include cookieBanner;
 }
 
-.closeContainer {
+.close-container {
   @include closeContainer;
 }
 </style>

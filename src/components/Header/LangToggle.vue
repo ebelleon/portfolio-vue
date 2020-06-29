@@ -1,10 +1,10 @@
 <template>
-  <div class="langDropdown" @click="toggleLangDropdown">
-    <button class="langDropdownButton">
+  <div class="lang-dropdown" @click="toggleLangDropdown">
+    <button class="lang-dropdown__button">
       <fa :icon="['fas', 'language']" /><p>{{ $t('shared.chooseLang') }}</p>
     </button>
     <transition name="expand" @enter="enterTransition" @after-enter="afterEnterTransition" @leave="leaveTransition">
-      <div v-if="isOpen" class="langDropdownList">
+      <div v-if="isOpen" class="lang-dropdown__list">
         <nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
           <p>{{ locale.name }}</p>
         </nuxt-link>
@@ -55,7 +55,7 @@ export default {
 <style lang="scss" scoped>
 @import '~@/assets/scss/modules/dropdown';
 
-.langDropdown {
+.lang-dropdown {
   border-radius: 3px;
   border: 1px solid $black;
   cursor: pointer;
@@ -66,37 +66,37 @@ export default {
   label {
     margin: 0;
   }
-}
 
-.langDropdownButton {
-  align-items: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: $black;
-  display: flex;
-  font: inherit;
-  padding: 0;
-  outline: none;
-}
-
-.langDropdownList {
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  height: 0;
-  width: 100%;
-
-  a {
+  &__button {
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
     color: $black;
-    text-decoration: none;
-    width: 100%;
+    display: flex;
+    font: inherit;
+    padding: 0;
+    outline: none;
   }
 
-  p {
-    font-weight: 300;
-    padding-top: 1.25rem;
+  &__list {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    width: 100%;
+
+    a {
+      color: $black;
+      text-decoration: none;
+      width: 100%;
+    }
+
+    p {
+      font-weight: 300;
+      padding-top: 1.25rem;
+    }
   }
 }
 

@@ -4,16 +4,16 @@
       {{ $t('title.experience') }}
     </h1>
 
-    <div class="employer-wrapper">
-      <h2 class="employer-wrapper__title">
+    <div class="employer">
+      <h2 class="employer__title">
         {{ $t('skills.employers') }}
       </h2>
 
-      <div class="employer-wrapper__content">
+      <div class="employer__content">
         <ul>
           <li v-for="item in employers" :key="item.id">
-            <a :href="item.url" target="_blank" rel="noopener nofollow" class="employer-wrapper__link">
-              <svg :class="`employer-wrapper__link--${item.svgClass}`">
+            <a :href="item.url" target="_blank" rel="noopener nofollow" class="employer__link">
+              <svg :class="`employer__link--${item.svgClass}`">
                 <use :xlink:href="require('@/assets/img/logos.svg') + item.svgName" />
               </svg>
             </a>
@@ -25,58 +25,58 @@
       </div>
     </div>
 
-    <div class="skills-wrapper">
-      <h2 class="skills-wrapper__title">
+    <div class="skills">
+      <h2 class="skills__title">
         {{ $t('skills.primary' ) }}
       </h2>
       <br>
       <div
         v-for="item in primarySkills"
         :key="item.id"
-        class="skills-wrapper__picture"
-        :class="`skills-wrapper__picture--${$t(item.label)}`"
+        class="skills__picture"
+        :class="`skills__picture--${$t(item.label)}`"
         :title="$t(item.label)"
       >
-        <h4 class="skills-wrapper__label">
+        <h4 class="skills__label">
           {{ $t(item.label) }}
         </h4>
       </div>
-      <input id="skills-wrapper__dropdown-btn--CSS" class="skills-wrapper__dropdown-btn--CSS" type="checkbox">
-      <label for="skills-wrapper__dropdown-btn--CSS">
-        <div class="skills-wrapper__picture skills-wrapper__picture--CSS" title="CSS">
-          <h4 class="skills-wrapper__label">{{ $t('skills.css' ) }} <fa :icon="['fas', 'angle-up']" /></h4>
+      <input id="skills__dropdown-btn--CSS" class="skills__dropdown-btn--CSS" type="checkbox">
+      <label for="skills__dropdown-btn--CSS">
+        <div class="skills__picture skills__picture--CSS" title="CSS">
+          <h4 class="skills__label">{{ $t('skills.css' ) }} <fa :icon="['fas', 'angle-up']" /></h4>
         </div>
       </label>
-      <input id="skills-wrapper__dropdown-btn--JavaScript" class="skills-wrapper__dropdown-btn--JavaScript" type="checkbox">
-      <label for="skills-wrapper__dropdown-btn--JavaScript">
-        <div class="skills-wrapper__picture skills-wrapper__picture--JavaScript" title="JavaScript">
-          <h4 class="skills-wrapper__label">{{ $t('skills.javascript' ) }} <fa :icon="['fas', 'angle-up']" /></h4>
+      <input id="skills__dropdown-btn--JavaScript" class="skills__dropdown-btn--JavaScript" type="checkbox">
+      <label for="skills__dropdown-btn--JavaScript">
+        <div class="skills__picture skills__picture--JavaScript" title="JavaScript">
+          <h4 class="skills__label">{{ $t('skills.javascript' ) }} <fa :icon="['fas', 'angle-up']" /></h4>
         </div>
       </label>
 
       <!-- Dropdown Content -->
-      <div class="skills-wrapper__dropdown-content--CSS">
+      <div class="skills__dropdown-content--CSS">
         <div
           v-for="item in cssDropdownContent"
           :key="item.id"
-          class="skills-wrapper__picture"
-          :class="`skills-wrapper__picture--${$t(item.label)}`"
+          class="skills__picture"
+          :class="`skills__picture--${$t(item.label)}`"
           :title="$t(item.label)"
         >
-          <h4 class="skills-wrapper__label">
+          <h4 class="skills__label">
             {{ $t(item.label) }}
           </h4>
         </div>
       </div>
-      <div class="skills-wrapper__dropdown-content--JavaScript">
+      <div class="skills__dropdown-content--JavaScript">
         <div
           v-for="item in jsDropdownContent"
           :key="item.id"
-          class="skills-wrapper__picture"
-          :class="`skills-wrapper__picture--${item.className}`"
+          class="skills__picture"
+          :class="`skills__picture--${item.className}`"
           :title="$t(item.label)"
         >
-          <h4 class="skills-wrapper__label">
+          <h4 class="skills__label">
             {{ $t(item.label) }}
           </h4>
         </div>
@@ -85,11 +85,11 @@
       <div
         v-for="item in otherSkill"
         :key="item.id"
-        class="skills-wrapper__picture"
-        :class="`skills-wrapper__picture--${$t(item.label)}`"
+        class="skills__picture"
+        :class="`skills__picture--${$t(item.label)}`"
         :title="$t(item.label)"
       >
-        <h4 class="skills-wrapper__label">
+        <h4 class="skills__label">
           {{ $t(item.label) }}
         </h4>
       </div>
@@ -166,7 +166,7 @@ export default {
 @import '~@/assets/scss/modules/skills-pictures';
 @import '~@/assets/scss/modules/dropdown';
 
-.employer-wrapper {
+.employer {
   @include desktop {
     height: 0;
   }
@@ -231,7 +231,7 @@ export default {
   }
 }
 
-.skills-wrapper {
+.skills {
   overflow: hidden;
   padding: 15rem 0 0;
   text-align: center;
@@ -278,7 +278,7 @@ export default {
 
 @each $name in $skillsPictures {
   $i: index($skillsPictures, $name);
-  .skills-wrapper__picture--#{$name} {
+  .skills__picture--#{$name} {
     @include pic(
       $bg-img: url('../assets/img/skills/#{$name}.svg'),
       $bg-size: nth($skillsBgSize, $i)
@@ -288,10 +288,10 @@ export default {
     }
   }
   @if $name == 'CSS' or $name == 'JavaScript' {
-    .skills-wrapper__dropdown-btn--#{$name} {
-      @include dropdownBtn(skills-wrapper__dropdown-content--#{$name});
+    .skills__dropdown-btn--#{$name} {
+      @include dropdownBtn(skills__dropdown-content--#{$name});
     }
-    .skills-wrapper__dropdown-content--#{$name} {
+    .skills__dropdown-content--#{$name} {
       background-color: $transparent;
       @include dropdownDefault;
 

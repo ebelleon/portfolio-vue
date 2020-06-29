@@ -1,7 +1,7 @@
 <template>
   <header>
-    <div class="headWrapper">
-      <nav v-if="disclaimer" class="navbarWrapper">
+    <div class="navbar">
+      <nav v-if="disclaimer" class="navbar__back-button">
         <nuxt-link :to="localePath('index')">
           {{ $t('shared.back') }}
         </nuxt-link>
@@ -25,12 +25,12 @@
       </nav>
       <LangToggle />
     </div>
-    <div class="globalMenu">
-      <div class="globalMenu__wrap">
+    <div class="global-menu">
+      <div class="global-menu__wrap">
         <nuxt-link
           v-for="(item, index) in links"
           :key="index"
-          class="globalMenu__item"
+          class="global-menu__item"
           :to="localePath(item.href)"
         >
           <span @click="hamburgerClick">{{ $t(item.i18n) }}</span>
@@ -39,12 +39,12 @@
     </div>
     <svg
       ref="shapeOverlays"
-      class="shapeOverlays"
+      class="shape-overlays"
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
     >
-      <path class="shapeOverlays__path" />
-      <path class="shapeOverlays__path" />
+      <path class="shape-overlays__path" />
+      <path class="shape-overlays__path" />
       <path class="shape-overlays__path" />
     </svg>
   </header>
@@ -110,13 +110,13 @@ export default {
     },
     open () {
       this.overlay.isOpened = true
-      this.overlay.elem.classList.add('isOpened')
+      this.overlay.elem.classList.add('is-opened')
       this.overlay.timeStart = Date.now()
       this.renderLoop()
     },
     close () {
       this.overlay.isOpened = false
-      this.overlay.elem.classList.remove('isOpened')
+      this.overlay.elem.classList.remove('is-opened')
       this.overlay.timeStart = Date.now()
       this.renderLoop()
     },
@@ -188,20 +188,20 @@ export default {
     },
     hamburgerClick () {
       const elemHamburger = this.$refs.hamburger
-      const gNavItems = document.querySelectorAll('.globalMenu__item')
+      const gNavItems = document.querySelectorAll('.global-menu__item')
       if (this.overlay.isAnimating) {
         return false
       }
       this.toggle()
       if (this.overlay.isOpened === true) {
-        elemHamburger.classList.add('isOpenedNavi')
+        elemHamburger.classList.add('is-opened-navi')
         for (let i = 0; i < gNavItems.length; i++) {
-          gNavItems[i].classList.add('isOpened')
+          gNavItems[i].classList.add('is-opened')
         }
       } else {
-        elemHamburger.classList.remove('isOpenedNavi')
+        elemHamburger.classList.remove('is-opened-navi')
         for (let j = 0; j < gNavItems.length; j++) {
-          gNavItems[j].classList.remove('isOpened')
+          gNavItems[j].classList.remove('is-opened')
         }
       }
     }
@@ -212,28 +212,28 @@ export default {
 <style lang="scss" scoped>
 @import '~@/assets/scss/vendor/burger_menu/hamburger';
 
-.headWrapper {
+.navbar {
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 1.2rem;
-}
 
-.navbarWrapper {
-  display: flex;
+  &__back-button {
+    display: flex;
 
-  a {
-    border-radius: 2px;
-    color: $black;
-    letter-spacing: 2px;
-    margin-right: 0.75rem;
-    padding: 1px 4px 2px 6px;
-    text-decoration: none;
-    text-transform: uppercase;
+    a {
+      border-radius: 2px;
+      color: $black;
+      letter-spacing: 2px;
+      margin-right: 0.75rem;
+      padding: 1px 4px 2px 6px;
+      text-decoration: none;
+      text-transform: uppercase;
 
-    &:hover {
-      background-color: $darkGray;
-      color: $white;
+      &:hover {
+        background-color: $darkGray;
+        color: $white;
+      }
     }
   }
 }

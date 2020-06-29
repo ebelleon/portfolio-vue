@@ -1,12 +1,12 @@
 <template>
   <section id="home">
-    <div class="homeBackground" />
-    <div class="homeWrapper">
-      <div class="homeText">
-        <h1 class="homeTitle">
+    <span class="background-picture" />
+    <div class="home">
+      <div class="home__text">
+        <h1 class="home__text--title">
           {{ $t('shared.fullName') }}
         </h1>
-        <h2 class="homeSubtitle">
+        <h2 class="home__text--subtitle">
           {{ $t('home.jobTitle') }}
         </h2>
       </div>
@@ -29,7 +29,43 @@ export default {
   left: 0;
 }
 
-.homeBackground {
+.home {
+  justify-content: center;
+  display: flex;
+  z-index: 0;
+
+  @include tablet {
+    justify-content: left;
+  }
+
+  &__text {
+    padding: 1rem 10vw;
+    text-align: center;
+    background-color: #fff9;
+
+    &--title {
+      font-size: $titleMobile;
+      font-weight: $light;
+      margin: 0;
+
+      @include tablet {
+        font-size: $titleTablet;
+      }
+    }
+
+    &--subtitle {
+      font-size: $subtitleMobile;
+      font-weight: $thin;
+      margin: 0;
+
+      @include tablet {
+        font-size: $subtitleTablet;
+      }
+    }
+  }
+}
+
+.background-picture {
   background: url(../assets/img/background.jpg) no-repeat center transparent;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -42,42 +78,6 @@ export default {
 
   @include tablet {
     height: calc(100% - 44px);
-  }
-}
-
-.homeWrapper {
-  justify-content: center;
-  display: flex;
-  z-index: 0;
-
-  @include tablet {
-    justify-content: left;
-  }
-}
-
-.homeText {
-  padding: 1rem 10vw;
-  text-align: center;
-  background-color: #fff9;
-}
-
-.homeTitle {
-  font-size: $titleMobile;
-  font-weight: $light;
-  margin: 0;
-
-  @include tablet {
-    font-size: $titleTablet;
-  }
-}
-
-.homeSubtitle {
-  font-size: $subtitleMobile;
-  font-weight: $thin;
-  margin: 0;
-
-  @include tablet {
-    font-size: $subtitleTablet;
   }
 }
 

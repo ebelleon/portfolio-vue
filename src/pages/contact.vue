@@ -4,12 +4,12 @@
       {{ $t("title.contact") }}
     </h1>
 
-    <form name="contactForm" class="contactForm">
+    <form name="contact-form" class="contact-form">
       <input
         type="text"
         name="name"
         :title="$t('contact.nameTitle')"
-        class="contactInput"
+        class="contact-form__input"
         placeholder="Name*"
         required
       >
@@ -17,7 +17,7 @@
         type="email"
         name="email"
         :title="$t('contact.emailTitle')"
-        class="contactInput"
+        class="contact-form__input"
         placeholder="E-Mail*"
         required
       >
@@ -30,10 +30,10 @@
         tabindex="-1"
         autocomplete="off"
       >
-      <button type="button" class="valMessage" :title="$t('contact.validateTitle')" tabindex="-1" />
-      <textarea name="message" class="contactMessage" :title="$t('contact.messageTitle')" :placeholder="$t('contact.messagePlaceholder')" required />
+      <button type="button" class="val-message" :title="$t('contact.validateTitle')" tabindex="-1" />
+      <textarea name="message" class="contact-form__message" :title="$t('contact.messageTitle')" :placeholder="$t('contact.messagePlaceholder')" required />
       <br>
-      <input type="submit" class="contactSubmit" name="submit" :value="$t('contact.send')" @click="submit">
+      <input type="submit" class="contact-form__submit" name="submit" :value="$t('contact.send')" @click="submit">
     </form>
   </section>
 </template>
@@ -71,16 +71,49 @@ export default {
   }
 }
 
-.contactForm {
+.contact-form {
   text-align: center;
   margin: 0;
-}
 
-.contactInput {
-  @extend %inputField;
+  &__input {
+    @extend %inputField;
 
-  @include desktop {
-    width: 50%;
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &__message {
+    @extend %inputField;
+    height: 370px;
+
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &__submit {
+    @extend %inputField;
+    background-color: transparent;
+    border: 1px solid $black;
+    color: $black;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:hover:enabled {
+      background-color: $gray;
+      border-color: $gray;
+      color: $white;
+      cursor: pointer;
+    }
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include desktop {
+      width: 25%;
+    }
   }
 }
 
@@ -92,7 +125,7 @@ export default {
   z-index: -100000;
 }
 
-.valMessage {
+.val-message {
   border: 0;
   background-color: transparent;
   cursor: pointer;
@@ -106,39 +139,6 @@ export default {
 
   @include desktop {
     width: 50%;
-  }
-}
-
-.contactMessage {
-  @extend %inputField;
-  height: 370px;
-
-  @include desktop {
-    width: 50%;
-  }
-}
-
-.contactSubmit {
-  @extend %inputField;
-  background-color: transparent;
-  border: 1px solid $black;
-  color: $black;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  &:hover:enabled {
-    background-color: $gray;
-    border-color: $gray;
-    color: $white;
-    cursor: pointer;
-  }
-
-  @include tablet {
-    width: 50%;
-  }
-
-  @include desktop {
-    width: 25%;
   }
 }
 </style>

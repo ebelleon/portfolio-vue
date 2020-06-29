@@ -5,23 +5,23 @@ Vue.mixin({
     submitContactForm () {
       const form = document.querySelector('form')
       const url = 'https://ynm902zoa2.execute-api.eu-west-1.amazonaws.com/dev/static-site-mailer'
-      const contactSubmit = document.querySelector('.contactSubmit')
+      const submit = document.querySelector('.contact-form__submit')
 
       function success () {
-        contactSubmit.insertAdjacentHTML('beforebegin', '<p class="formResponse" style="color:#2E7D32;background-color:#E6F4EA;border:1px solid #2E7D32;font-size:1.2rem">Danke für Ihre Nachricht</p>')
-        contactSubmit.blur()
+        submit.insertAdjacentHTML('beforebegin', '<p class="formResponse" style="color:#2E7D32;background-color:#E6F4EA;border:1px solid #2E7D32;font-size:1.2rem">Danke für Ihre Nachricht</p>')
+        submit.blur()
         setTimeout(function () {
           document.querySelector('.formResponse').remove()
-          contactSubmit.disabled = false
+          submit.disabled = false
         }, 5000)
         form.reset()
       }
 
       function error (err) {
-        contactSubmit.insertAdjacentHTML('beforebegin', '<p class="formResponse" style="color:#E21A11;background-color:#ffefef;border:1px solid #E21A11;font-size:1.2rem;">Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</p>')
+        submit.insertAdjacentHTML('beforebegin', '<p class="formResponse" style="color:#E21A11;background-color:#ffefef;border:1px solid #E21A11;font-size:1.2rem;">Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</p>')
         setTimeout(function () {
           document.querySelector('.formResponse').remove()
-          contactSubmit.disabled = false
+          submit.disabled = false
         }, 5000)
         // eslint-disable-next-line
         console.error(err)
@@ -41,7 +41,7 @@ Vue.mixin({
           message: form.message.value
         }
 
-        contactSubmit.disabled = true
+        submit.disabled = true
         if (document.getElementById('honeypot').value || req.status >= 400) {
           error()
         } else if (form.name.value && form.email.value && form.message.value) {

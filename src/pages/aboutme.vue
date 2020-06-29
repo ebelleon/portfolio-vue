@@ -3,9 +3,9 @@
     <h1 class="title">
       {{ $t('title.aboutMe') }}
     </h1>
-    <div class="aboutMeWrapper">
-      <div class="aboutMePicture" />
-      <p class="aboutMeParagraph">
+    <div class="about-me">
+      <span class="about-me__picture" />
+      <p class="about-me__paragraph">
         {{ $t('aboutMe.myname') }}
         <span class="semi-bold">{{ $t('aboutMe.developer') }}</span>
         {{ $t('aboutMe.specialized') }}
@@ -76,7 +76,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.aboutMeWrapper {
+.about-me {
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
@@ -90,47 +90,47 @@ export default {
     justify-content: center;
     padding-bottom: 0;
   }
-}
 
-.aboutMePicture {
-  align-self: center;
-  background: url(../assets/img/pic.jpg) no-repeat transparent;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border: 2px solid $black;
-  border-left-style: dashed;
-  border-radius: 50%;
-  border-right-style: dashed;
-  margin: 1rem 0;
-  height: 175px;
-  width: 180px;
-  transition: all 0.3s ease;
+  &__picture {
+    align-self: center;
+    background: url(../assets/img/pic.jpg) no-repeat transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: 2px solid $black;
+    border-left-style: dashed;
+    border-radius: 50%;
+    border-right-style: dashed;
+    margin: 1rem 0;
+    height: 175px;
+    width: 180px;
+    transition: all 0.3s ease;
 
-  &:hover {
-    border-radius: 5%;
+    &:hover {
+      border-radius: 5%;
+    }
+
+    @include tablet {
+      height: 200px;
+      width: 205px;
+    }
+
+    @include desktop {
+      margin: 0 5rem 0 0;
+    }
   }
 
-  @include tablet {
-    height: 200px;
-    width: 205px;
-  }
+  &__paragraph {
+    line-height: 2;
+    padding: 2rem;
+    text-align: justify;
+    margin: 0;
 
-  @include desktop {
-    margin: 0 5rem 0 0;
-  }
-}
-
-.aboutMeParagraph {
-  line-height: 2;
-  padding: 2rem;
-  text-align: justify;
-  margin: 0;
-
-  @include desktop {
-    padding: 0;
-    width: 70%;
+    @include desktop {
+      padding: 0;
+      width: 70%;
+    }
   }
 }
 </style>

@@ -1,7 +1,7 @@
 @import '../../../modules/media-queries';
 
 @if index($hamburger-types, landonfire) {
-  .globalMenu {
+  .global-menu {
     align-items: center;
     display: flex;
     height: 90vh;
@@ -13,85 +13,85 @@
     text-align: center;
     top: 0;
     z-index: 100;
-  }
 
-  .globalMenu__item {
-    color: $white;
-    display: block;
-    font-family: $montserrat;
-    font-size: $font-size-menu-mobile;
-    font-weight: $bold;
-    margin: 1.25rem 0;
-    opacity: 0;
-    outline: none;
-    pointer-events: none;
-    text-decoration: none;
-    transform: translateY(-100%);
-    transition-timing-function: ease-out;
-    transition: transform 0.1s, opacity 0.1s;
+    &__item {
+      color: $white;
+      display: block;
+      font-family: $montserrat;
+      font-size: $font-size-menu-mobile;
+      font-weight: $bold;
+      margin: 1.25rem 0;
+      opacity: 0;
+      outline: none;
+      pointer-events: none;
+      text-decoration: none;
+      transform: translateY(-100%);
+      transition-timing-function: ease-out;
+      transition: transform 0.1s, opacity 0.1s;
 
-    @include tablet {
-      font-size: $font-size-menu-tablet;
-    }
+      @include tablet {
+        font-size: $font-size-menu-tablet;
+      }
 
-    @include desktop {
-      font-size: $font-size-menu-desktop;
-    }
+      @include desktop {
+        font-size: $font-size-menu-desktop;
+      }
 
-    &:nth-child(odd) {
-      transform: translateX(100%) rotate(10deg) scale(0.5);
-    }
+      &:nth-child(odd) {
+        transform: translateX(100%) rotate(10deg) scale(0.5);
+      }
 
-    &:nth-child(even) {
-      transform: translateX(100%) rotate(-10deg) scale(0.5);
-    }
+      &:nth-child(even) {
+        transform: translateX(100%) rotate(-10deg) scale(0.5);
+      }
 
-    &:hover {
-      color: $color-menu-hover;
-    }
-
-    &:nth-of-type(1) {
-      transition-delay: 0.05s;
-    }
-
-    &:nth-of-type(2) {
-      transition-delay: 0.1s;
-    }
-
-    &:nth-of-type(3) {
-      transition-delay: 0.15s;
-    }
-
-    &:nth-of-type(4) {
-      transition-delay: 0.2s;
-    }
-
-    &.isOpened {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateX(0) rotate(0);
-      transition-duration: 0.4s;
-      transition-timing-function: ease;
+      &:hover {
+        color: $color-menu-hover;
+      }
 
       &:nth-of-type(1) {
-        transition-delay: 0.55s;
+        transition-delay: 0.05s;
       }
 
       &:nth-of-type(2) {
-        transition-delay: 0.6s;
+        transition-delay: 0.1s;
       }
 
       &:nth-of-type(3) {
-        transition-delay: 0.65s;
+        transition-delay: 0.15s;
       }
 
       &:nth-of-type(4) {
-        transition-delay: 0.7s;
+        transition-delay: 0.2s;
+      }
+
+      &.is-opened {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0) rotate(0);
+        transition-duration: 0.4s;
+        transition-timing-function: ease;
+
+        &:nth-of-type(1) {
+          transition-delay: 0.55s;
+        }
+
+        &:nth-of-type(2) {
+          transition-delay: 0.6s;
+        }
+
+        &:nth-of-type(3) {
+          transition-delay: 0.65s;
+        }
+
+        &:nth-of-type(4) {
+          transition-delay: 0.7s;
+        }
       }
     }
   }
 
-  .shapeOverlays {
+  .shape-overlays {
     height: 100vh;
     width: 100vw;
     left: 0;
@@ -100,18 +100,18 @@
     top: 0;
     z-index: 1;
 
-    &.isOpened {
+    &.is-opened {
       pointer-events: auto;
     }
-  }
 
-  .shapeOverlays__path {
-    &:nth-of-type(1) {
-      fill: $path-fill-1;
-    }
+    &__path {
+      &:nth-of-type(1) {
+        fill: $path-fill-1;
+      }
 
-    &:nth-of-type(2) {
-      fill: $path-fill-2;
+      &:nth-of-type(2) {
+        fill: $path-fill-2;
+      }
     }
   }
 }

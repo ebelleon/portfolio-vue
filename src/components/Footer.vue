@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="socialMedia">
+    <div class="social-media">
       <a
         v-for="(item, index) in linksSocialMedia"
         :key="index"
@@ -90,7 +90,7 @@ footer {
 }
 
 .copyright,
-.socialMedia,
+.social-media,
 .disclaimer {
   padding: .4rem 0;
 
