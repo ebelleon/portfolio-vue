@@ -87,7 +87,7 @@ p {
 // disclaimer
 .content {
   font-weight: $light;
-  padding: 0.5em 1em;
+  padding: .7rem 1.5rem;
   word-break: break-word;
 
   h1 {
@@ -104,11 +104,11 @@ p {
   }
 
   ul {
-    padding-left: 2.35em;
+    padding-left: 4rem;
   }
 
   @include desktop {
-    padding-left: 2em;
+    padding-left: 3rem;
   }
 }
 

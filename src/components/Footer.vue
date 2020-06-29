@@ -92,12 +92,12 @@ footer {
 .copyright,
 .socialMedia,
 .disclaimer {
-  padding: 0.32em 0;
+  padding: .4rem 0;
 
   a {
     color: $black;
     text-decoration: none;
-    padding: 0 0.77em;
+    padding: 0 1rem;
 
     &:hover {
       .fa-twitter {
@@ -120,7 +120,7 @@ footer {
     width: 33%;
 
     a {
-      padding: 0 0.385em;
+      padding: 0 .5rem;
     }
   }
 }

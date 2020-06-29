@@ -88,7 +88,7 @@ export default {
   opacity: 0;
   position: absolute;
   left: 5rem;
-  bottom: 0rem;
+  bottom: 0;
   z-index: -100000;
 }
 
@@ -99,7 +99,7 @@ export default {
   color: $trackAndField;
   display: none;
   font-family: inherit;
-  margin-left: 1.5em;
+  margin-left: 2rem;
   text-align: left;
   text-decoration: underline;
   width: 75%;

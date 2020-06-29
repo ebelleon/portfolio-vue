@@ -255,7 +255,7 @@ export default {
 
   &__picture {
     display: inline-block;
-    margin: 0.6em 1em 6em;
+    margin: .9rem 1.5rem 9rem;
     height: 85px;
     width: 95px;
 
@@ -267,11 +267,11 @@ export default {
   &__label {
     font-weight: $light;
     letter-spacing: 0.5px;
-    margin-top: 7.5em;
+    margin-top: 11rem;
     text-align: center;
 
     @include tablet {
-      margin-top: 8em;
+      margin-top: 12rem;
     }
   }
 }
