@@ -47,16 +47,16 @@ export default {
       en: '/contact'
     }
   },
-  methods: {
-    submit () {
-      return this.submitContactForm()
-    }
-  },
   head () {
     return {
       title: `${
         this.$i18n.messages[this.$i18n.locale].title.contact
       } — Leon Ebel — Full Stack Developer`
+    }
+  },
+  methods: {
+    submit () {
+      return this.submitContactForm()
     }
   }
 }

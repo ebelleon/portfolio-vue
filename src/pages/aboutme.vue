@@ -10,9 +10,9 @@
         <span class="semi-bold">{{ $t('aboutMe.developer') }}</span>
         {{ $t('aboutMe.specialized') }}
         <span class="semi-bold">{{ $t('aboutMe.webdev') }}</span>
-        {{ $t('aboutMe.workinin') }}
+        {{ $t('aboutMe.workiniIn') }}
         <span class="semi-bold">{{ $t('aboutMe.frontend') }}</span>
-        {{ $t('aboutMe.aswellas') }}
+        {{ $t('aboutMe.asWellAs') }}
         <span class="semi-bold">{{ $t('aboutMe.backend') }}</span>
         {{ $t('aboutMe.technologies') }}
         <br><br>

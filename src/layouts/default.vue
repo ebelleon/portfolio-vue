@@ -21,16 +21,16 @@ export default {
     Footer,
     CookieBanner
   },
-  computed: {
-    home () {
-      return this.$route.path === this.localePath('index')
-    }
-  },
   head () {
     return {
       htmlAttrs: {
         lang: this.$i18n.locale
       }
+    }
+  },
+  computed: {
+    home () {
+      return this.$route.path === this.localePath('index')
     }
   }
 }

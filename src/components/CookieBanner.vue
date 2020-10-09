@@ -2,10 +2,8 @@
   <div v-if="isOpen" class="cookie-banner">
     <p>
       {{ $t('cookieBanner.consent') }}
-      <nuxt-link :to="localePath('privacy') + '#cookies'">
-        {{
-          $t('shared.moreInfo')
-        }}
+      <nuxt-link :to="`${localePath('privacy')}#cookies`">
+        {{ $t('shared.moreInfo') }}
       </nuxt-link>
     </p>
     <div class="close-container">

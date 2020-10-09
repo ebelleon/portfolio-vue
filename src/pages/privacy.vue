@@ -169,7 +169,9 @@ export default {
     }
   },
   beforeMount () {
-    localStorage.getItem('matomo-disabled') === '1' ? this.disabledAnalytics = true : this.disabledAnalytics = false
+    localStorage.getItem('matomo-disabled') === '1'
+      ? this.disabledAnalytics = true
+      : this.disabledAnalytics = false
   },
   methods: {
     disableMatomo () {
