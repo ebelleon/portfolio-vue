@@ -15,10 +15,8 @@
     </div>
 
     <div class="copyright">
-      {{ /* eslint-disable vue-i18n/no-raw-text */ }}
       &copy; 2018 - <span>{{ currentYear }}</span> -
       {{ $t('shared.fullName') }}
-      {{ /* eslint-disable vue-i18n/no-raw-text */ }}
     </div>
 
     <div class="disclaimer">

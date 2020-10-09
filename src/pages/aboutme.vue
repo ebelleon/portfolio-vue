@@ -17,7 +17,6 @@
         {{ $t('aboutMe.technologies') }}
         <br><br>
         {{ $t('aboutMe.since') }}
-        {{ /* eslint-disable-next-line */ }}
         <span class="semi-bold">{{ $t('shared.city') }},</span>
         {{ $t('aboutMe.before') }}
         {{ $t('aboutMe.apprenticeship') }}

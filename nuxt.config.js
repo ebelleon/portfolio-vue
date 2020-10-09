@@ -1,6 +1,5 @@
 export default {
   srcDir: 'src/',
-  mode: 'universal',
   /*
    ** Headers of the page
    */
@@ -167,6 +166,14 @@ export default {
    */
   router: {
     middleware: 'matomo'
+  },
+  /*
+ ** PWA module definition
+ */
+  pwa: {
+    icon: {
+      fileName: 'logo.png'
+    }
   },
   /*
    ** Axios module configuration

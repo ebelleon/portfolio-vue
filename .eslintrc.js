@@ -16,7 +16,9 @@ module.exports = {
     'plugin:vue-i18n/recommended'
   ],
   // add your custom rules here
-  rules: {},
+  rules: {
+    'vue-i18n/no-raw-text': 'off'
+  },
   settings: {
     'vue-i18n': {
       localeDir: './locales/*.json'

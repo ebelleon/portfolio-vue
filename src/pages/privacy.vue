@@ -83,11 +83,9 @@
     </ul>
     <p>{{ $t('privacy.limitationRightDescFive') }}</p>
 
-    {{ /* eslint-disable vue-i18n/no-raw-text */ }}
     <h2 id="cookies">
       3. {{ $t('privacy.dataCollection') }}
     </h2>
-    {{ /* eslint-disable vue-i18n/no-raw-text */ }}
     <h3>{{ $t('privacy.cookies') }}</h3>
     <p>{{ $t('privacy.cookiesDesc') }}</p>
     <p>{{ $t('privacy.cookiesDescOne') }}</p>
@@ -137,9 +135,7 @@
       >
         {{ $t('privacy.googlePrivacyPolicy') }}
       </a>
-      {{ /* eslint-disable vue-i18n/no-raw-text */ }}
       &amp;
-      {{ /* eslint-disable vue-i18n/no-raw-text */ }}
       <a
         href="https://www.google.com/recaptcha/intro/android.html"
         target="_blank"
@@ -165,6 +161,13 @@ export default {
       disabledAnalytics: false
     }
   },
+  head () {
+    return {
+      title: `${
+        this.$i18n.messages[this.$i18n.locale].privacy.privacyStatement
+      } - Leon Ebel - Full Stack Developer`
+    }
+  },
   beforeMount () {
     localStorage.getItem('matomo-disabled') === '1' ? this.disabledAnalytics = true : this.disabledAnalytics = false
   },
@@ -176,13 +179,6 @@ export default {
     enableMatomo () {
       this.$matomo.setConsent()
       localStorage.removeItem('matomo-disabled')
-    }
-  },
-  head () {
-    return {
-      title: `${
-        this.$i18n.messages[this.$i18n.locale].privacy.privacyStatement
-      } - Leon Ebel - Full Stack Developer`
     }
   }
 }

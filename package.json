@@ -15,30 +15,31 @@
     "stylelint:scss": "npx stylelint assets/scss/*/*.scss"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.29",
-    "@fortawesome/free-brands-svg-icons": "5.13.1",
-    "@fortawesome/free-solid-svg-icons": "5.13.1",
-    "@fortawesome/vue-fontawesome": "0.1.10",
-    "@nuxtjs/axios": "5.11.0",
+    "@fortawesome/fontawesome-svg-core": "1.2.32",
+    "@fortawesome/free-brands-svg-icons": "5.15.1",
+    "@fortawesome/free-solid-svg-icons": "5.15.1",
+    "@fortawesome/vue-fontawesome": "2.0.0",
+    "@nuxtjs/axios": "5.12.2",
     "@nuxtjs/dotenv": "1.4.1",
-    "@nuxtjs/pwa": "3.0.0-beta.20",
+    "@nuxtjs/pwa": "3.1.2",
     "@nuxtjs/style-resources": "1.0.0",
-    "nuxt": "2.13.2",
+    "nuxt": "2.14.6",
     "nuxt-fontawesome": "0.4.0",
-    "nuxt-i18n": "6.12.2",
+    "nuxt-i18n": "6.15.1",
     "nuxt-matomo": "1.2.3"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "3.0.0",
-    "@nuxtjs/eslint-module": "2.0.0",
+    "@nuxt/types": "2.14.6",
+    "@nuxtjs/eslint-config": "3.1.0",
+    "@nuxtjs/eslint-module": "3.0.0",
     "@nuxtjs/stylelint-module": "4.0.0",
     "babel-eslint": "10.1.0",
-    "eslint": "7.3.1",
+    "eslint": "7.10.0",
     "eslint-plugin-nuxt": "1.0.0",
-    "eslint-plugin-vue": "6.2.2",
+    "eslint-plugin-vue": "7.0.1",
     "eslint-plugin-vue-i18n": "0.3.0",
     "node-sass": "4.14.1",
-    "sass-loader": "8.0.2",
-    "stylelint": "13.6.1"
+    "sass-loader": "10.0.2",
+    "stylelint": "13.7.2"
   }
 }
