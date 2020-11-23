@@ -1,7 +1,7 @@
 {
   "name": "portfolio-vue",
   "version": "1.1.0",
-  "description": "My portfolio",
+  "description": "Porfolio of Leon Ebel",
   "author": "Leon Ebel",
   "private": true,
   "scripts": {
@@ -29,6 +29,7 @@
     "nuxt-matomo": "1.2.3"
   },
   "devDependencies": {
+    "@nuxt/types": "^2.13.3",
     "@nuxtjs/eslint-config": "3.0.0",
     "@nuxtjs/eslint-module": "2.0.0",
     "@nuxtjs/stylelint-module": "4.0.0",

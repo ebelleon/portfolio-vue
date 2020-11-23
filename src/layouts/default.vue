@@ -3,7 +3,6 @@
     <Navigation />
     <nuxt />
     <Footer v-if="home" />
-
     <client-only>
       <CookieBanner />
     </client-only>
