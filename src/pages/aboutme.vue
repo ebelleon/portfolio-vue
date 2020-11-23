@@ -92,17 +92,14 @@ export default {
 
   &__picture {
     align-self: center;
-    background: url(../assets/img/pic.jpg) no-repeat transparent;
+    background: url(../assets/img/avatar.jpg) no-repeat transparent;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border: 2px solid $black;
-    border-left-style: dashed;
     border-radius: 50%;
-    border-right-style: dashed;
     margin: 1rem 0;
-    height: 175px;
+    height: 180px;
     width: 180px;
     transition: all 0.3s ease;
 
@@ -112,7 +109,7 @@ export default {
 
     @include tablet {
       height: 200px;
-      width: 205px;
+      width: 200px;
     }
 
     @include desktop {

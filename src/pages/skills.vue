@@ -120,6 +120,15 @@ export default {
           year: 2020,
           position: 'aboutMe.developer',
           company: 'skills.myposter'
+        },
+        {
+          id: 3,
+          url: 'https://www.brainbirds.com',
+          svgClass: 'brainbirds',
+          svgName: '#brainbirds',
+          year: 2020,
+          position: 'aboutMe.developer',
+          company: 'skills.brainbirds'
         }
       ],
       primarySkills: [
@@ -189,7 +198,6 @@ export default {
     align-items: center;
     flex-direction: column;
     margin: auto;
-    height: 150px;
 
     ul {
       list-style-type: none;
@@ -210,30 +218,34 @@ export default {
   }
 
   &__link {
-    background-position-y: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     border: 2px solid $black;
     border-left-style: dashed;
     border-right-style: dashed;
     border-radius: 50%;
-    display: flex;
-    position: absolute;
-    justify-content: center;
     height: 100px;
     width: 105px;
 
-    &--myposter {
-      width: 90px;
+    &--jochenschweizer {
+      height: 90px;
     }
 
-    &--jochenschweizer {
-      height: 100px;
+    &--myposter {
+      width: 85px;
+    }
+
+    &--brainbirds {
+      width: 85px;
     }
   }
 }
 
 .skills {
   overflow: hidden;
-  padding: 15rem 0 0;
+  padding: 5rem 0 0;
   text-align: center;
 
   ul {
